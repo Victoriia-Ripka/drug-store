@@ -1,0 +1,153 @@
+section {
+    display: flex;
+    width: 1447px;
+    height: 594px;
+    padding-right: 80px;
+    align-items: center;
+    gap: 40px;
+    flex-shrink: 0;
+    border: 2px solid black;
+    margin: 0 auto;
+    position: relative;
+}
+
+p {
+    margin: 0;
+}
+
+.hero__img-div {
+    width: 710px;
+    height: 594px;
+    border-radius: 0px 0px 50px 0px;
+    background: url('../../img/hero-bcgr.png'), lightgray 0% 0% / 80.0000011920929px 80.0000011920929px repeat, #5CADF8;
+    margin-right: 40px;
+}
+
+.hero-info {
+    padding: 67px 0;
+    
+}
+
+.pre-title {
+    color: var(--dark-green-15, #1A3129);
+    font-family: Urbanist;
+    font-size: 22px;
+    font-weight: 600;
+    width: 330px;
+    border-bottom: 3px solid #0F67FE;
+    margin-bottom: 10px;
+    padding: 8px 0;
+
+    img {
+        width: 41px;
+        height: 41px;
+        display: inline-block;
+    }
+}
+
+h1 {
+    color: var(--dark-green-15, #1A3129);
+    font-family: Urbanist;
+    font-size: 48px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+
+    span {
+        color: #0F67FE;
+        font-family: Urbanist;
+        font-size: 48px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+    }
+}
+
+.extra-info {
+    color: #333;
+    font-family: Urbanist;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 1.5;
+    width: 617px;
+    margin-bottom: 40px;
+}
+
+.btn-request {
+    width: 270px;
+    height: 64px;
+    padding: 16px 32px;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid transparent;
+    gap: 10px;
+    border-radius: 12px;
+    background: #0F67FE;
+    color: #FFF;
+    font-family: 'Plus Jakarta Sans';
+    font-size: 18px;
+    font-weight: 700;
+    letter-spacing: -0.18px;
+    margin-bottom: 50px;
+    cursor: pointer;
+}
+
+.reviews-div {
+    display: flex;
+    width: 617px;
+    gap: 6px;
+    justify-content: flex-start;
+    align-items: center;
+
+    ul {
+        display: flex;
+        gap: -17px;
+        border-radius: 50px;
+        border: 1px solid #C5D9FA;
+        padding: 6px 8px;
+
+        li {
+            width: 40px;
+            height: 40px;
+            background-color: #0F67FE;
+            border-radius: 50%;
+        }
+    }
+
+    p {
+        color: #234338;
+        font-family: Urbanist;
+        font-size: 18px;
+        font-weight: 600;
+        line-height: 150%;
+
+        span {
+            color: #0F67FE;
+            font-family: Urbanist;
+            font-size: 18px;
+            font-weight: 700;
+            line-height: 1.5;
+        }
+    }
+}
+
+.btn {
+    display: flex;
+    width: 64px;
+    height: 64px;
+    padding: 16px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    flex-shrink: 0;
+    border-radius: 12px;
+    border: 1px solid #242E49;
+    background-color: transparent;
+
+    position: absolute;
+    bottom: 33px;
+    left: 24px;
+
+    cursor: pointer;
+}

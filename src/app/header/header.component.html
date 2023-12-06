@@ -1,55 +1,59 @@
 <header>
     <div class="header-top">
-        <div class="header-top__logo">
-            <img class="header-top__logo-img" src="./logo.png" alt="logo" />
-            <div>
-                <span class="header-top__logo-text italic">Canadian</span>
-                <span class="header-top__logo-text bold">Drug</span><span
-                    class="header-top__logo-text normal">Store</span>
+        <div class="container">
+            <div class="header-top__logo">
+                <img class="header-top__logo-img" src="./logo.png" alt="logo" />
+                <div>
+                    <span class="header-top__logo-text italic">Canadian</span>
+                    <span class="header-top__logo-text bold">Drug</span><span
+                        class="header-top__logo-text normal">Store</span>
+                </div>
             </div>
-        </div>
-        <div class="header-top__search">
-            <input type="" placeholder="Search" />
-            <button>search</button>
-        </div>
-        <div class="header-top__actions">
-            <div class="header-top__div">
-                <mat-icon>shopping_cart</mat-icon>
-                <p class="header-top__text">my cart</p>
+            <div class="header-top__search">
+                <input type="" placeholder="Search" />
+                <button>search</button>
             </div>
-            <div class="header-top__div">
-                <mat-icon>person</mat-icon>
-                <p class="header-top__text">my account</p>
+            <div class="header-top__actions">
+                <div class="header-top__div">
+                    <mat-icon>shopping_cart</mat-icon>
+                    <p class="header-top__text">my cart</p>
+                </div>
+                <div class="header-top__div">
+                    <mat-icon>person</mat-icon>
+                    <p class="header-top__text">my account</p>
+                </div>
             </div>
         </div>
     </div>
     <div class="header-bottom">
-        <div class="header-bottom__categories">
-            <button mat-button [matMenuTriggerFor]="categories">Categories</button>
-            <mat-menu #categories="matMenu">
-                <button mat-menu-item>Anti Acidity</button>
-                <button mat-menu-item>Anti Allergic and Asthma</button>
-            </mat-menu>
-        </div>
-        <div class="header-bottom__menu">
-            <nav>
-                <ul>
-                    <li><a>About us</a></li>
-                    <li><a>Shipping</a></li>
-                    <li><a>Testimonials</a></li>
-                    <li><a>FAQ</a></li>
-                    <li><a>Policies</a></li>
-                    <li><a>Contact us</a></li>
-                </ul>
-
-            </nav>
-        </div>
-        <div class="header-bottom__settings">
-            <div>
-                <p>Languages</p>
+        <div class="container-bottom">
+            <div class="header-bottom__categories">
+                <button mat-button [matMenuTriggerFor]="categories">Categories</button>
+                <mat-menu #categories="matMenu">
+                    <button mat-menu-item>Anti Acidity</button>
+                    <button mat-menu-item>Anti Allergic and Asthma</button>
+                </mat-menu>
             </div>
-            <div>
-                <p>USD</p>
+            <div class="header-bottom__menu">
+                <nav>
+                    <ul>
+                        <li><a>About us</a></li>
+                        <li><a>Shipping</a></li>
+                        <li><a>Testimonials</a></li>
+                        <li><a>FAQ</a></li>
+                        <li><a>Policies</a></li>
+                        <li><a>Contact us</a></li>
+                    </ul>
+
+                </nav>
+            </div>
+            <div class="header-bottom__settings">
+                <div>
+                    <p>Languages</p>
+                </div>
+                <div>
+                    <p>USD</p>
+                </div>
             </div>
         </div>
     </div>
