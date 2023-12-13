@@ -1,0 +1,117 @@
+section {
+    width: 1385px;
+    padding: 50px 188px;
+    background-color: #fff;
+    border-radius: 24px;
+    margin: 45px auto 0;
+}
+
+h2 {
+    color:  #242E49;
+    font-family: Plus Jakarta Sans;
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 800;
+    line-height: 1.4;
+    letter-spacing: -0.8px;
+    text-align: center;
+    text-transform: capitalize;
+}
+
+li {
+    display: flex;
+    width: 859px;
+    align-items: flex-start;
+    gap: 128px;
+    margin-bottom: 60px;
+
+    &:last-child{
+        margin-bottom: 0px;
+    }
+}
+
+.img-div {
+    display: flex;
+    height: 251.592px;
+    padding: 37.459px 29.955px 39.128px 46.633px;
+    justify-content: flex-end;
+    align-items: center;
+    border-radius: 8.051px;
+}
+
+.img-div.one {
+    background: #EDF5FF;
+}
+
+.img-div.two {
+    background: #242E49;
+}
+
+.img-div.three {
+    background: #0F67FE;
+}
+
+img {
+    width: 175.004px;
+    height: 175.004px;
+}
+
+h3 {
+    color:#242E49;
+    /* Heading md/ExtraBold */
+    font-family: Plus Jakarta Sans;
+    font-size: 36px;
+    font-style: normal;
+    font-weight: 800;
+    line-height: 1.22;
+    letter-spacing: -0.72px;
+}
+
+.pill-infodiv {
+    width: 491.401px;
+    display: flex;
+    flex-direction: column;
+}
+
+.after-title {
+    color: #242E49;
+    font-family: Plus Jakarta Sans;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 44px;
+    letter-spacing: -0.36px;
+    margin: 16px 0;
+
+    span {
+        color: #0F67FE;
+        font-family: Plus Jakarta Sans;
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 44px;
+        letter-spacing: -0.4px;
+    }
+}
+
+button {
+    margin-top: 21px;
+    display: flex;
+    width: 252px;
+    height: 64px;
+    padding: 16px 32px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    border-radius: 12px;
+    border-color: transparent;
+    background:  #0F67FE;
+    color: white;
+    text-transform: capitalize;
+    font-family: Plus Jakarta Sans;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    letter-spacing: -0.18px;
+}
