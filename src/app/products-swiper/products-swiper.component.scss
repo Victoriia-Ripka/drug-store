@@ -1,0 +1,166 @@
+section {
+    width: 1156px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    padding: 50px;
+    gap: 50px;
+}
+
+.info-div {
+    width: 1156px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.label {
+    color: #3D4966;
+    font-family: 'Plus Jakarta Sans';
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    letter-spacing: -0.18px;
+
+    &::before{
+        content: '';
+        width: 8px;
+        height: 8px;
+        border-radius: 2px;
+        background: #0F67FE;
+    }
+}
+
+h3 {
+    color: var(--asklepios-gray-80, #242E49);
+    text-align: center;
+    font-family: 'Plus Jakarta Sans';
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 800;
+    line-height: 1.7;
+    letter-spacing: -0.8px;
+}
+
+ul {
+    display: flex;
+    gap: 19.267px;
+
+    li {
+        padding: 13px;
+        width: 274px;
+        height: 404px;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        gap: 19.27px;
+        background-color: #fff;
+        border-radius: 19.3px;
+    }
+    .item-background {
+        border-radius: 12.844px;
+        background: #EDF5FF;
+        height: 248.861px;
+        width: 248px;
+        padding: 12.844px;
+
+        img {
+            margin: 28px auto 0;
+        }
+    }
+}
+
+.dosage-div{
+    display: flex;
+    gap: 2.5px;
+}
+
+.dosage-container{
+    border-radius: 4.817px;
+    border: 0.803px solid #3D4966;
+    padding: 6px;
+}
+
+.dosage-quantity{
+    color: #3D4966;
+    font-family: Plus Jakarta Sans;
+    font-size: 10px;
+    font-style: normal;
+    font-weight: 800;
+    line-height: normal;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.info{
+    position: relative;
+}
+
+.info-accessibility{
+    color: #5D6A85;
+    font-family: Plus Jakarta Sans;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    letter-spacing: -0.14px;
+    margin-bottom: 6.5px;
+}
+
+.info-title {
+    color: #242E49;
+    font-family: Plus Jakarta Sans;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 800;
+    line-height: normal;
+    letter-spacing: -0.2px;
+    margin-bottom: 19.27px;
+}
+
+.info-price {
+    color: rgba(36, 46, 73, 0.60);
+    font-family: Plus Jakarta Sans;
+    font-size: 14.45px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: -0.144px;
+    margin-bottom: 15px;
+
+    span{
+        color: #0F67FE;
+        font-family: Plus Jakarta Sans;
+        font-size: 16.056px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+        letter-spacing: -0.161px;
+    }
+}
+
+a {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+
+    img {
+        width: 51.378px;
+        height: 51.378px;
+    }
+}
+
+.extra{ 
+    width: 1156px;
+    height: 80px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.extra-arrows-div {
+    
+    display: flex;
+    gap: 16px;
+}
