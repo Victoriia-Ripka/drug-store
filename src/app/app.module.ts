@@ -8,12 +8,22 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatIconModule } from '@angular/material/icon';
 import { MatMenuModule } from '@angular/material/menu';
 import { HeroComponent } from './hero/hero.component';
+import { BestsellersComponent } from './bestsellers/bestsellers.component';
+import { CertificatesComponent } from './certificates/certificates.component';
+import { ProductsSwiperComponent } from './products-swiper/products-swiper.component';
+import { ReviewsComponent } from './reviews/reviews.component';
+import { FooterComponent } from './footer/footer.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
-    HeroComponent
+    HeroComponent,
+    BestsellersComponent,
+    CertificatesComponent,
+    ProductsSwiperComponent,
+    ReviewsComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,
