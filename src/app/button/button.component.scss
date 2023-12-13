@@ -1,0 +1,51 @@
+button {
+    width: 270px;
+    height: 64px;
+    padding: 16px 32px;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid transparent;
+    gap: 10px;
+    border-radius: 12px;
+    background-color: #0F67FE;
+    color: #FFF;
+    font-family: 'Plus Jakarta Sans';
+    font-size: 18px;
+    font-weight: 700;
+    letter-spacing: -0.18px;
+    margin-bottom: 50px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+
+    &:focus,
+    &:hover {
+        background-color: var(--ui-primary-hovered-blue);
+    }
+
+    &:visited,
+    &:active {
+        background-color: var(--ui-primary-pressed-blue);
+    }
+}
+
+// button {
+
+//     display: flex;
+//     width: 252px;
+//     height: 64px;
+//     padding: 16px 32px;
+//     justify-content: center;
+//     align-items: center;
+//     gap: 10px;
+//     border-radius: 12px;
+//     border-color: transparent;
+//     background: #0F67FE;
+//     color: white;
+//     text-transform: capitalize;
+//     font-family: Plus Jakarta Sans;
+//     font-size: 18px;
+//     font-style: normal;
+//     font-weight: 700;
+//     line-height: normal;
+//     letter-spacing: -0.18px;
+// }

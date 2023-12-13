@@ -13,6 +13,7 @@ import { CertificatesComponent } from './certificates/certificates.component';
 import { ProductsSwiperComponent } from './products-swiper/products-swiper.component';
 import { ReviewsComponent } from './reviews/reviews.component';
 import { FooterComponent } from './footer/footer.component';
+import { ButtonComponent } from './button/button.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import { FooterComponent } from './footer/footer.component';
     CertificatesComponent,
     ProductsSwiperComponent,
     ReviewsComponent,
-    FooterComponent
+    FooterComponent,
+    ButtonComponent
   ],
   imports: [
     BrowserModule,

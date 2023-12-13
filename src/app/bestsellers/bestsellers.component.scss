@@ -3,7 +3,7 @@ section {
     padding: 50px 188px;
     background-color: #fff;
     border-radius: 24px;
-    margin: 45px auto 0;
+    margin: 45px auto 12px;
 }
 
 h2 {
@@ -16,6 +16,12 @@ h2 {
     letter-spacing: -0.8px;
     text-align: center;
     text-transform: capitalize;
+    margin-bottom: 56px;
+}
+
+ul {
+    width: 859px;
+    margin: 0 auto;
 }
 
 li {
@@ -94,24 +100,7 @@ h3 {
     }
 }
 
-button {
-    margin-top: 21px;
-    display: flex;
-    width: 252px;
-    height: 64px;
-    padding: 16px 32px;
-    justify-content: center;
-    align-items: center;
-    gap: 10px;
-    border-radius: 12px;
-    border-color: transparent;
-    background:  #0F67FE;
-    color: white;
-    text-transform: capitalize;
-    font-family: Plus Jakarta Sans;
-    font-size: 18px;
-    font-style: normal;
-    font-weight: 700;
-    line-height: normal;
-    letter-spacing: -0.18px;
+.pill-info {
+    margin-bottom: 21px;
 }
+
