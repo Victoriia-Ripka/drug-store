@@ -4,7 +4,6 @@ section {
     height: 594px;
     padding-right: 80px;
     align-items: center;
-    gap: 40px;
     flex-shrink: 0;
     margin: 0 auto;
     position: relative;
@@ -15,13 +14,13 @@ p {
 }
 
 .hero__img-div {
-    width: 710px;
+    width: 700px;
     height: 594px;
     position: relative;
-    border-radius: 0px 0px 50px 0px; // /assets/img/hero-bcgr.png'
+    border-radius: 0px 0px 50px 0px;
     background-color: var(--ui-primary-blue-color);
-    background: url('/src/assets/img/hero-bcgr.png') lightgray 0% 0% / 80.0000011920929px 80.0000011920929px repeat, #5CADF8;
-    margin-right: 40px;
+    background-image: url('/assets/img/hero-bcgr.png');
+    background-repeat: no-repeat;
 }
 
 .hero {
@@ -31,11 +30,13 @@ p {
 }
 
 .hero-info {
+    margin-left: 40px;
+    width:617px;
     padding: 67px 0;
 }
 
 .pre-title {
-    color: var(--dark-green-15, #1A3129);
+    color: #1A3129;
     font-family: Urbanist;
     font-size: 22px;
     font-weight: 600;
@@ -57,12 +58,11 @@ p {
 }
 
 h1 {
-    color: var(--dark-green-15, #1A3129);
+    color: #1A3129;
     font-family: Urbanist;
     font-size: 48px;
-    font-style: normal;
     font-weight: 700;
-    line-height: normal;
+    line-height: 1.2;
 
     span {
         color: #0F67FE;
@@ -115,6 +115,7 @@ h1 {
 }
 
 .reviews-div {
+    margin-top: 50px;
     display: flex;
     width: 617px;
     gap: 6px;
@@ -122,8 +123,6 @@ h1 {
     align-items: center;
 
     ul {
-        // display: flex;
-        // gap: -17px;
         width: 102px;
         height: 52px;
         position: relative;

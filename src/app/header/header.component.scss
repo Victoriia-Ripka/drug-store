@@ -6,7 +6,8 @@ $desktop: 1280px;
 // LOGO
 .header-top {
     background-color: var(--ui-primary-dark-color);
-    color: #fff;    
+    color: #fff;   
+    width: 1447px; 
 }
 
 .container {
@@ -14,10 +15,7 @@ $desktop: 1280px;
     align-items: center;
     justify-content: space-between;
     padding: 10px 8px;
-    width: 100vw;
     height: 86px;
-    // width: 1607px;
-    // margin: 0 auto;
     
     @media screen and (min-width: $mobile) {
         padding: 23px 80px;

@@ -11,10 +11,11 @@ section {
     width: 1156px;
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: flex-end;
 }
 
 .label {
+    display: block;
     color: #3D4966;
     font-family: 'Plus Jakarta Sans';
     font-size: 18px;
@@ -22,9 +23,12 @@ section {
     font-weight: 700;
     line-height: normal;
     letter-spacing: -0.18px;
+    margin-left: 15px;
 
     &::before{
-        content: '';
+        content: ' ';
+        display: block;
+        transform: translate(-15px, 15px);
         width: 8px;
         height: 8px;
         border-radius: 2px;
@@ -61,7 +65,7 @@ ul {
     .item-background {
         border-radius: 12.844px;
         background: #EDF5FF;
-        height: 248.861px;
+        height: 248px;
         width: 248px;
         padding: 12.844px;
 
@@ -85,16 +89,14 @@ ul {
 .dosage-quantity{
     color: #3D4966;
     font-family: Plus Jakarta Sans;
-    font-size: 10px;
-    font-style: normal;
+    font-size: 8px;
     font-weight: 800;
-    line-height: normal;
-    letter-spacing: 1px;
     text-transform: uppercase;
 }
 
 .info{
     position: relative;
+    width: 100%;
 }
 
 .info-accessibility{
