@@ -26,9 +26,16 @@ import { PrivacyComponent } from './sections/privacy/privacy.component';
 import { AboutUsComponent } from './sections/about-us/about-us.component';
 import { ShippingComponent } from './sections/shipping/shipping.component';
 import { PoliciesComponent } from './sections/policies/policies.component';
+import { QuestionItemComponent } from './components/question-item/question-item.component';
+import { ShippingFaqComponent } from './sections/faq-shipping/faq.component';
+import { OrderingFaqComponent } from './sections/faq-ordering/faq.component';
+import { ProductsFaqComponent } from './sections/faq-products/faq.component';
 
 @NgModule({
   declarations: [
+    ShippingFaqComponent,
+    OrderingFaqComponent,
+    ProductsFaqComponent,
     AppComponent,
     HeaderComponent,
     HeroComponent,
@@ -48,7 +55,8 @@ import { PoliciesComponent } from './sections/policies/policies.component';
     PrivacyComponent,
     AboutUsComponent,
     ShippingComponent,
-    PoliciesComponent
+    PoliciesComponent,
+    QuestionItemComponent
   ],
   imports: [
     BrowserModule,
