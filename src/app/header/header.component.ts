@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { ScrollService } from '../scroll.service';
+// import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-header',
@@ -6,5 +8,9 @@ import { Component } from '@angular/core';
   styleUrls: ['./header.component.scss'],
 })
 export class HeaderComponent {
-
+  constructor(private scrollService: ScrollService) { }
+  
+  navigateToTestimonials() {
+    this.scrollService.scrollToSection('testimonials')
+  }
 }

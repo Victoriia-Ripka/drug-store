@@ -1,5 +1,5 @@
 section {
-    width: 1156px;
+    width: 1392px;
     margin: 0 auto;
     display: flex;
     flex-direction: column;
@@ -9,6 +9,7 @@ section {
 
 .info-div {
     width: 1156px;
+    margin: 0 auto;
     display: flex;
     justify-content: space-between;
     align-items: flex-end;
@@ -48,6 +49,8 @@ h3 {
 }
 
 ul {
+    width: 1156px;
+    margin: 0 auto;
     display: flex;
     gap: 19.267px;
 
@@ -155,6 +158,7 @@ a {
 
 .extra{ 
     width: 1156px;
+    margin: 0 auto;
     height: 80px;
     display: flex;
     justify-content: space-between;

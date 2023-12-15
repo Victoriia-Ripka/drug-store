@@ -1,27 +1,27 @@
 <header>
     <div class="header-top">
         <div class="container">
-            <div class="header-top__logo">
+            <a href="/" class="header-top__logo">
                 <img class="header-top__logo-img" src="assets/img/logo-min.png" alt="logo" />
                 <div>
                     <span class="header-top__logo-text italic">Canadian</span>
                     <span class="header-top__logo-text bold">Drug</span><span
                         class="header-top__logo-text normal">Store</span>
                 </div>
-            </div>
+            </a>
             <div class="header-top__search">
                 <input type="" placeholder="Search" />
                 <button>search</button>
             </div>
             <div class="header-top__actions">
-                <div class="header-top__div">
+                <a href="" class="header-top__div">
                     <mat-icon>shopping_cart</mat-icon>
                     <p class="header-top__text">my cart</p>
-                </div>
-                <div class="header-top__div">
+                </a>
+                <a href="" class="header-top__div">
                     <mat-icon>person</mat-icon>
                     <p class="header-top__text">my account</p>
-                </div>
+                </a>
             </div>
         </div>
     </div>
@@ -37,12 +37,12 @@
             <div class="header-bottom__menu">
                 <nav>
                     <ul>
-                        <li><a>About us</a></li>
-                        <li><a>Shipping</a></li>
-                        <li><a>Testimonials</a></li>
-                        <li><a>FAQ</a></li>
-                        <li><a>Policies</a></li>
-                        <li><a>Contact us</a></li>
+                        <li><a href="">About us</a></li>
+                        <li><a href="">Shipping</a></li>
+                        <li><a (click)="navigateToTestimonials()">Testimonials</a></li>
+                        <li><a href="">FAQ</a></li>
+                        <li><a href="">Policies</a></li>
+                        <li><a href="">Contact us</a></li>
                     </ul>
 
                 </nav>

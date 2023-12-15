@@ -14,6 +14,7 @@ import { ProductsSwiperComponent } from './products-swiper/products-swiper.compo
 import { ReviewsComponent } from './reviews/reviews.component';
 import { FooterComponent } from './footer/footer.component';
 import { ButtonComponent } from './button/button.component';
+import { RouterModule } from '@angular/router';
 
 @NgModule({
   declarations: [
@@ -31,7 +32,11 @@ import { ButtonComponent } from './button/button.component';
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    MatIconModule, MatMenuModule
+    MatIconModule, MatMenuModule,
+    RouterModule.forRoot([
+      // { path: '', component: ProductListComponent },
+      // { path: 'products/:productId', component: ProductDetailsComponent },
+    ])
   ],
   providers: [],
   bootstrap: [AppComponent]
