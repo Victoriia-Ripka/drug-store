@@ -24,6 +24,7 @@ import { BenefitsComponent } from './sections/benefits/benefits.component';
 import { GuaranteeComponent } from './sections/guarantee/guarantee.component';
 import { PrivacyComponent } from './sections/privacy/privacy.component';
 import { AboutUsComponent } from './sections/about-us/about-us.component';
+import { ShippingComponent } from './sections/shipping/shipping.component';
 
 @NgModule({
   declarations: [
@@ -44,7 +45,8 @@ import { AboutUsComponent } from './sections/about-us/about-us.component';
     BenefitsComponent,
     GuaranteeComponent,
     PrivacyComponent,
-    AboutUsComponent
+    AboutUsComponent,
+    ShippingComponent
   ],
   imports: [
     BrowserModule,
