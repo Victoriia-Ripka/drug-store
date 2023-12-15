@@ -1,5 +1,5 @@
 <footer id="contactus">
-    <a href="/" class="footer__logo">
+    <a routerLink="/" routerLinkActive="active" ariaCurrentWhenActive="page" class="footer__logo">
         <img class="footer__logo-img" src="assets/img/logo-min.png" alt="logo" />
         <div>
             <span class="footer__logo-text italic">Canadian</span>
@@ -15,10 +15,10 @@
         <nav>
             <ul class="footer__nav-ul">
                 <li><a (click)="navigateToBestsellers()">BestSellers</a></li>
-                <li><a>About</a></li>
+                <li><a routerLink="/about-us" routerLinkActive="active" ariaCurrentWhenActive="page">About</a></li>
                 <li><a>Help</a></li>
                 <li><a (click)="navigateToTestimonials()">Testimonials</a></li>
-                <li><a>Shipping</a></li>
+                <li><a routerLink="/shipping" routerLinkActive="active" ariaCurrentWhenActive="page">Shipping</a></li>
                 <li><a>Moneyback</a></li>
                 <li><a (click)="navigateToContacs()">Contact Us</a></li>
             </ul>

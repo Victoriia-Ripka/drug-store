@@ -1,7 +1,7 @@
 <header>
     <div class="header-top">
         <div class="container">
-            <a href="/" class="header-top__logo">
+            <a routerLink="/" routerLinkActive="active" ariaCurrentWhenActive="page" class="header-top__logo">
                 <img class="header-top__logo-img" src="assets/img/logo-min.png" alt="logo" />
                 <div>
                     <span class="header-top__logo-text italic">Canadian</span>
@@ -37,11 +37,11 @@
             <div class="header-bottom__menu">
                 <nav>
                     <ul>
-                        <li><a href="">About us</a></li>
-                        <li><a href="">Shipping</a></li>
+                        <li><a routerLink="/about-us" routerLinkActive="active" ariaCurrentWhenActive="page">About us</a></li>
+                        <li><a routerLink="/shipping" routerLinkActive="active" ariaCurrentWhenActive="page">Shipping</a></li>
                         <li><a (click)="navigateToTestimonials()">Testimonials</a></li>
-                        <li><a href="">FAQ</a></li>
-                        <li><a href="">Policies</a></li>
+                        <li><a  routerLink="/faq" routerLinkActive="active" ariaCurrentWhenActive="page">FAQ</a></li>
+                        <li><a  routerLink="/policies" routerLinkActive="active" ariaCurrentWhenActive="page">Policies</a></li>
                         <li><a (click)="navigateToContacs()">Contact us</a></li>
                     </ul>
 

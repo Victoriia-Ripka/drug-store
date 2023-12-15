@@ -16,6 +16,9 @@ import { FooterComponent } from './sections/footer/footer.component';
 import { ButtonComponent } from './components/button/button.component';
 import { RouterModule } from '@angular/router';
 import { HomePageComponent } from './pages/home/home-page.component';
+import { ShippingPageComponent } from './pages/shipping/shipping-page.component';
+import { FaqPageComponent } from './pages/faq/faq-page.component';
+import { PoliciesPageComponent } from './pages/policies/policies-page.component';
 
 @NgModule({
   declarations: [
@@ -28,7 +31,10 @@ import { HomePageComponent } from './pages/home/home-page.component';
     ReviewsComponent,
     FooterComponent,
     ButtonComponent,
-    HomePageComponent
+    HomePageComponent,
+    ShippingPageComponent,
+    FaqPageComponent,
+    PoliciesPageComponent
   ],
   imports: [
     BrowserModule,
