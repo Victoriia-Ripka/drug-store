@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { ScrollService } from '../scroll.service';
+import { ScrollService } from '../../services/scroll.service';
 
 @Component({
   selector: 'app-footer',
@@ -7,7 +7,7 @@ import { ScrollService } from '../scroll.service';
   styleUrls: ['./footer.component.scss']
 })
 export class FooterComponent {
-  constructor (private scrollService: ScrollService) {}
+  constructor(private scrollService: ScrollService) { }
 
 
   navigateToBestsellers() {
@@ -16,5 +16,9 @@ export class FooterComponent {
 
   navigateToTestimonials() {
     this.scrollService.scrollToSection('testimonials')
+  }
+
+  navigateToContacs() {
+    this.scrollService.scrollToSection('contactus')
   }
 }

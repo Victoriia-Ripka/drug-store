@@ -3,18 +3,19 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { HeaderComponent } from './header/header.component';
+import { HeaderComponent } from './sections/header/header.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatIconModule } from '@angular/material/icon';
 import { MatMenuModule } from '@angular/material/menu';
-import { HeroComponent } from './hero/hero.component';
-import { BestsellersComponent } from './bestsellers/bestsellers.component';
-import { CertificatesComponent } from './certificates/certificates.component';
-import { ProductsSwiperComponent } from './products-swiper/products-swiper.component';
-import { ReviewsComponent } from './reviews/reviews.component';
-import { FooterComponent } from './footer/footer.component';
-import { ButtonComponent } from './button/button.component';
+import { HeroComponent } from './sections/hero/hero.component';
+import { BestsellersComponent } from './sections/bestsellers/bestsellers.component';
+import { CertificatesComponent } from './sections/certificates/certificates.component';
+import { ProductsSwiperComponent } from './sections/products-swiper/products-swiper.component';
+import { ReviewsComponent } from './sections/reviews/reviews.component';
+import { FooterComponent } from './sections/footer/footer.component';
+import { ButtonComponent } from './components/button/button.component';
 import { RouterModule } from '@angular/router';
+import { HomePageComponent } from './pages/home/home-page.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import { RouterModule } from '@angular/router';
     ProductsSwiperComponent,
     ReviewsComponent,
     FooterComponent,
-    ButtonComponent
+    ButtonComponent,
+    HomePageComponent
   ],
   imports: [
     BrowserModule,
