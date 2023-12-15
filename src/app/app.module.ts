@@ -16,9 +16,14 @@ import { FooterComponent } from './sections/footer/footer.component';
 import { ButtonComponent } from './components/button/button.component';
 import { RouterModule } from '@angular/router';
 import { HomePageComponent } from './pages/home/home-page.component';
+import { AboutUsPageComponent } from './pages/about/about-us-page.component';
 import { ShippingPageComponent } from './pages/shipping/shipping-page.component';
 import { FaqPageComponent } from './pages/faq/faq-page.component';
 import { PoliciesPageComponent } from './pages/policies/policies-page.component';
+import { BenefitsComponent } from './sections/benefits/benefits.component';
+import { GuaranteeComponent } from './sections/guarantee/guarantee.component';
+import { PrivacyComponent } from './sections/privacy/privacy.component';
+import { AboutUsComponent } from './sections/about-us/about-us.component';
 
 @NgModule({
   declarations: [
@@ -32,9 +37,14 @@ import { PoliciesPageComponent } from './pages/policies/policies-page.component'
     FooterComponent,
     ButtonComponent,
     HomePageComponent,
+    AboutUsPageComponent,
     ShippingPageComponent,
     FaqPageComponent,
-    PoliciesPageComponent
+    PoliciesPageComponent,
+    BenefitsComponent,
+    GuaranteeComponent,
+    PrivacyComponent,
+    AboutUsComponent
   ],
   imports: [
     BrowserModule,
