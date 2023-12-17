@@ -1,13 +1,16 @@
+<div class="item">
+    <div>
+        <h3>{{item.question}}</h3>
+        <p *ngIf="selectedQuestion == item.id">{{item.answer}}</p>
+    </div>
 
-<div>
-    <!-- <h3>{{item.question}}</h3> -->
-    <!-- <p *ngIf="selectedQuestion == item.id">{{item.answer}}</p> -->
+    <!-- (click)="selectQuestion(item.id)" -->
+    <button *ngIf="selectedQuestion !== item.id" type="button" (click)="show()">
+        <mat-icon>add_circle_outline</mat-icon>
+    </button>
+
+    <!-- (click)="hideAnswer()" -->
+    <button *ngIf="selectedQuestion == item.id" type="button" (click)="hide()">
+        <mat-icon>cancel</mat-icon>
+    </button>
 </div>
-
-<!-- <button *ngIf="selectedQuestion !== item.id" type="button" (click)="selectQuestion(item.id)"> -->
-    <mat-icon>add_circle_outline</mat-icon>
-<!-- </button> -->
-
-<!-- <button *ngIf="selectedQuestion == item.id" type="button" (click)="hideAnswer()"> -->
-    <mat-icon>cancel</mat-icon>
-<!-- </button> -->

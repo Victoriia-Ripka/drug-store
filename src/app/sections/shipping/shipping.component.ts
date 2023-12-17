@@ -1,10 +1,5 @@
 import { Component } from '@angular/core';
-
-type Content = {
-  id: number,
-  question: string,
-  answer: string
-}
+import { Content } from 'src/app/types/type';
 
 const content: Array<Content> = [
   {

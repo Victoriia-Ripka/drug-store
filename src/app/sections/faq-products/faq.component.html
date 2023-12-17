@@ -1,1 +1,10 @@
-<p>faq works!</p>
+<section>
+    <h2>Shipping</h2>
+    <ul>
+        <li *ngFor="let item of content">
+            <div [ngClass]="{'selected-item': isItemSelected(item.id)}">
+                <question-item [item]="item" [selectedQuestion]="selectedQuestion" (click)="showAnswer($event)"></question-item>
+            </div>
+        </li>
+    </ul>
+</section>
