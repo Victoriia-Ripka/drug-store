@@ -13,18 +13,22 @@ export const routes: Routes = [
     },
     {
         path: 'about-us',
+        title: 'About us - Canadian Drug Store',
         component: AboutUsPageComponent
     },
     {
         path: 'shipping',
+        title: 'Shipping - Canadian Drug Store',
         component: ShippingPageComponent
     },
     {
         path: 'faq',
+        title: 'FAQ - Canadian Drug Store',
         component: FaqPageComponent
     },
     {
         path: 'policies',
+        title: 'Policies - Canadian Drug Store',
         component: PoliciesPageComponent
     },
 ]

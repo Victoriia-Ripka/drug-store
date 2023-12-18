@@ -195,9 +195,10 @@ ul li a {
     font-weight: 500;
     line-height: 1.5;
     cursor: pointer;
+    transition: 0.3s color ease;
 
     &:hover, &:focus {
-        font-weight: 600;
+        color: var(--ui-primary-blue-color);
     }
 }
 
