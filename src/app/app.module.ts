@@ -31,7 +31,7 @@ import { OrderingFaqComponent } from './sections/faq-ordering/faq.component';
 import { ProductsFaqComponent } from './sections/faq-products/faq.component';
 import { ContactusComponent } from './sections/contactus/contactus.component';
 import { ContactusPageComponent } from './pages/contactus/contactus-page.component';
-
+import { ReactiveFormsModule } from '@angular/forms';
 import { MatSelectModule } from '@angular/material/select';
 import { MatInputModule } from '@angular/material/input';
 import { MatFormFieldModule } from '@angular/material/form-field';
@@ -72,6 +72,7 @@ import { MatFormFieldModule } from '@angular/material/form-field';
     BrowserAnimationsModule,
     MatIconModule,
     MatMenuModule,
+    ReactiveFormsModule,
     MatFormFieldModule, MatInputModule, MatSelectModule
   ],
   providers: [],

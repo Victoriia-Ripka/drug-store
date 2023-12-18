@@ -3,9 +3,10 @@ import {
   Validators,
   FormsModule,
   ReactiveFormsModule,
-  UntypedFormGroup,
-  UntypedFormControl, } from '@angular/forms';
-
+  FormGroup,
+  FormControl,
+} from '@angular/forms';
+import { contactUsMessage } from 'src/app/types/type';
 
 @Component({
   selector: 'contactus',
@@ -13,11 +14,32 @@ import {
   styleUrls: ['./contactus.component.scss']
 })
 export class ContactusComponent {
-  public contactForm: UntypedFormGroup = new UntypedFormGroup({
-    name: new UntypedFormControl('', Validators.required),
-    email: new UntypedFormControl('', Validators.required),
-    subject: new UntypedFormControl('', Validators.required),
-    message: new UntypedFormControl('', Validators.required),
+
+  contactForm = new FormGroup({
+    name: new FormControl('', Validators.required),
+    email: new FormControl('', Validators.required),
+    subject: new FormControl('', Validators.required),
+    message: new FormControl('', Validators.required),
   });
 
+  get nameControl() {
+    return this.contactForm.get('name') as FormControl;
+  }
+
+  get emailControl() {
+    return this.contactForm.get('email') as FormControl;
+  }
+
+  get subjectControl() {
+    return this.contactForm.get('subject') as FormControl;
+  }
+
+  get messageControl() {
+    return this.contactForm.get('message') as FormControl;
+  }
+
+  sendData() {
+    console.log(this.contactForm.value)
+    this.contactForm.reset()
+  }
 }

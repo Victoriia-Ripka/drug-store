@@ -17,27 +17,26 @@
             <p class="gray-text">Sesam Street 323b, 4010, Norway</p>
         </div>
     </div>
-    <!-- [formGroup]="contactForm" -->
-    <form>
+    <form [formGroup]="contactForm" (ngSubmit)="sendData()">
         <div class="two-inputs">
             <div> 
                 <label for="name">Full Name *</label>
-                <input type="text" id="name" placeholder="Nina Jone"/>
+                <input type="text" id="name" placeholder="Nina Jone" [formControl]="nameControl"/>
             </div>
             <div>
                 <label for="email">Your email *</label>
-                <input type="email" id="email" placeholder="ninajone@gmail.com"/>
+                <input type="email" id="email" placeholder="ninajone@gmail.com"  [formControl]="emailControl"/>
             </div>
            
         </div>
         <div>
             <label for="subject">Subject *</label>
-            <input type="text" id="subject" placeholder="This is an optional"  class="input-secondtype"/>
+            <input type="text" id="subject" placeholder="This is an optional"  class="input-secondtype"  [formControl]="subjectControl"/>
         </div>
         <div>
             <label for="message">Message *</label>
-            <textarea id="message" placeholder="Hi! I'd like to ask about"></textarea>
+            <textarea id="message" placeholder="Hi! I'd like to ask about" [formControl]="messageControl"></textarea>
         </div>
-        <button type="submit">Send Message</button>
+        <button type="submit" [disabled]="!contactForm.valid">Send Message</button>
     </form>
 </section>
