@@ -52,11 +52,11 @@ export class ProductsFaqComponent {
     this.content = content;
   }
 
-  showAnswer(click: any): void {
-    this.selectedQuestion = click
+  showAnswer(id: number): void {
+    this.selectedQuestion = id
   }
 
-  hideAnswer(click: any): void {
+  hideAnswer(): void {
     this.selectedQuestion = 0
   }
   

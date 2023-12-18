@@ -5,12 +5,12 @@
     </div>
 
     <!-- (click)="selectQuestion(item.id)" -->
-    <button *ngIf="selectedQuestion !== item.id" type="button" (click)="show()">
+    <button *ngIf="selectedQuestion !== item.id" type="button" (click)="toggle()">
         <mat-icon>add_circle_outline</mat-icon>
     </button>
 
     <!-- (click)="hideAnswer()" -->
-    <button *ngIf="selectedQuestion == item.id" type="button" (click)="hide()">
+    <button *ngIf="selectedQuestion == item.id" type="button" (click)="toggle()">
         <mat-icon>cancel</mat-icon>
     </button>
 </div>

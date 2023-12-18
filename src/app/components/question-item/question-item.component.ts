@@ -18,16 +18,9 @@ export class QuestionItemComponent {
   selectedQuestion: number | null = null
 
   @Output()
-  clickOn: EventEmitter<number> = new EventEmitter()
+  clickQuestion: EventEmitter<number> = new EventEmitter()
 
-  @Output()
-  clickOff: EventEmitter<number> = new EventEmitter()
-
-  show() {
-    
-  }
-
-  hide() {
+  toggle() {
     
   }
 }

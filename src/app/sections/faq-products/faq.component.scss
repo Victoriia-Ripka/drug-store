@@ -15,11 +15,60 @@ h2 {
     text-transform: uppercase;
 }
 
-div {
-    background-color: #F2F5F9;
-}
+// div {
+//     background-color: #F2F5F9;
+// }
 
 .selected-item {
     background-color: #CADDF6;
     height: auto;
+}
+
+// ////////////////////////
+
+li {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    background-color: inherit;
+    width: 975.708px;
+    padding: 39px;
+}
+
+h3 {
+    width: 850px;
+    color: #000;
+    font-family: Plus Jakarta Sans;
+    font-size: 22.5px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 1.2
+}
+
+p {
+    width: 800px;
+    color: #292929;
+    font-family: Montserrat;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 140%;
+    margin-top: 18px;
+}
+
+button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: #fff;
+    border: 0px solid transparent;
+    cursor: pointer;
+
+    mat-icon {
+        position: absolute;
+    }
 }

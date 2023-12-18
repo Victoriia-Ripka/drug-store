@@ -1,10 +1,31 @@
 <section>
-    <h2>Shipping</h2>
-    <ul>
+    <h2>Products FAQ</h2>
+    <!-- <ul>
         <li *ngFor="let item of content">
             <div [ngClass]="{'selected-item': isItemSelected(item.id)}">
-                <question-item [item]="item" [selectedQuestion]="selectedQuestion" (click)="showAnswer($event)"></question-item>
+                <question-item 
+                    [item]="item" 
+                    [selectedQuestion]="selectedQuestion" 
+                    (clickQuestion)="showAnswer($event)">
+                </question-item>
             </div>
+        </li>
+    </ul> -->
+    <ul>
+        <li *ngFor="let item of content" [ngClass]="{'selected-item': isItemSelected(item.id)}">
+            <div>
+                <h3>{{item.question}}</h3>
+                <p *ngIf="selectedQuestion == item.id">{{item.answer}}</p>
+            </div>
+    
+            <button *ngIf="selectedQuestion !== item.id" type="button" (click)="showAnswer(item.id)">
+                <mat-icon>add_circle_outline</mat-icon>
+            </button>
+    
+            <button *ngIf="selectedQuestion == item.id" type="button" (click)="hideAnswer()">
+                <mat-icon>cancel</mat-icon>
+            </button>
+    
         </li>
     </ul>
 </section>
