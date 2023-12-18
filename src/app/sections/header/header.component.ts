@@ -1,6 +1,8 @@
 import { Component } from '@angular/core';
+import { Router, NavigationEnd } from '@angular/router';
+import { takeUntil } from 'rxjs/operators';
+import { Subject } from 'rxjs';
 import { ScrollService } from '../../services/scroll.service';
-// import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-header',
@@ -8,13 +10,37 @@ import { ScrollService } from '../../services/scroll.service';
   styleUrls: ['./header.component.scss'],
 })
 export class HeaderComponent {
-  constructor(private scrollService: ScrollService) { }
+  private destroy$ = new Subject<void>();
+
+  constructor(private router: Router, private scrollService: ScrollService) {
+    this.router.events.pipe(takeUntil(this.destroy$)).subscribe((event) => {
+      if (event instanceof NavigationEnd) {
+        const urlTree = this.router.parseUrl(event.url);
+        const fragment = urlTree.fragment || '';
+        this.handleNavigationEnd(event.url, fragment);
+      }
+    });
+  }
+
+  ngOnDestroy() {
+    this.destroy$.next();
+    this.destroy$.complete();
+  }
 
   navigateToTestimonials() {
-    this.scrollService.scrollToSection('testimonials')
+    this.router.navigate([''], { fragment: 'testimonials' });
   }
 
   navigateToContacs() {
-    this.scrollService.scrollToSection('contactus')
+    this.scrollService.scrollToSection('contactus');
+  }
+
+  private handleNavigationEnd(url: string, fragment: string) {
+    // if (fragment === 'testimonials') {
+    //   this.scrollService.scrollToSection('testimonials', -750);
+    // }
+    if (fragment) {
+      this.scrollService.scrollToSection(fragment);
+    }
   }
 }
