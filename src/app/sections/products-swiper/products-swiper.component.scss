@@ -15,6 +15,10 @@ section {
     align-items: flex-end;
 }
 
+.link-button{
+    position: static;
+}
+
 .label {
     display: block;
     color: #3D4966;
@@ -149,6 +153,7 @@ a {
     position: absolute;
     bottom: 0;
     right: 0;
+    cursor: pointer;
 
     img {
         width: 51.378px;

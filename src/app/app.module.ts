@@ -35,6 +35,8 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { MatSelectModule } from '@angular/material/select';
 import { MatInputModule } from '@angular/material/input';
 import { MatFormFieldModule } from '@angular/material/form-field';
+import { ProductsComponent } from './sections/products/products.component';
+import { ProductsPageComponent } from './pages/allProducts/products-page.component';
 
 @NgModule({
   declarations: [
@@ -64,7 +66,9 @@ import { MatFormFieldModule } from '@angular/material/form-field';
     QuestionItemComponent,
     ContactusComponent,
     ContactusPageComponent,
-    
+    ProductsComponent,
+    ProductsPageComponent,
+
   ],
   imports: [
     BrowserModule,
