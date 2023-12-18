@@ -14,7 +14,6 @@ import { ProductsSwiperComponent } from './sections/products-swiper/products-swi
 import { ReviewsComponent } from './sections/reviews/reviews.component';
 import { FooterComponent } from './sections/footer/footer.component';
 import { ButtonComponent } from './components/button/button.component';
-import { RouterModule } from '@angular/router';
 import { HomePageComponent } from './pages/home/home-page.component';
 import { AboutUsPageComponent } from './pages/about/about-us-page.component';
 import { ShippingPageComponent } from './pages/shipping/shipping-page.component';
@@ -30,6 +29,12 @@ import { QuestionItemComponent } from './components/question-item/question-item.
 import { ShippingFaqComponent } from './sections/faq-shipping/faq.component';
 import { OrderingFaqComponent } from './sections/faq-ordering/faq.component';
 import { ProductsFaqComponent } from './sections/faq-products/faq.component';
+import { ContactusComponent } from './sections/contactus/contactus.component';
+import { ContactusPageComponent } from './pages/contactus/contactus-page.component';
+
+import { MatSelectModule } from '@angular/material/select';
+import { MatInputModule } from '@angular/material/input';
+import { MatFormFieldModule } from '@angular/material/form-field';
 
 @NgModule({
   declarations: [
@@ -56,17 +61,18 @@ import { ProductsFaqComponent } from './sections/faq-products/faq.component';
     AboutUsComponent,
     ShippingComponent,
     PoliciesComponent,
-    QuestionItemComponent
+    QuestionItemComponent,
+    ContactusComponent,
+    ContactusPageComponent,
+    
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    MatIconModule, MatMenuModule,
-    RouterModule.forRoot([
-      // { path: '', component: ProductListComponent },
-      // { path: 'products/:productId', component: ProductDetailsComponent },
-    ])
+    MatIconModule,
+    MatMenuModule,
+    MatFormFieldModule, MatInputModule, MatSelectModule
   ],
   providers: [],
   bootstrap: [AppComponent]

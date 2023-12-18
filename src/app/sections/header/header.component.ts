@@ -31,10 +31,6 @@ export class HeaderComponent {
     this.router.navigate([''], { fragment: 'testimonials' });
   }
 
-  navigateToContacs() {
-    this.scrollService.scrollToSection('contactus');
-  }
-
   private handleNavigationEnd(url: string, fragment: string) {
     // if (fragment === 'testimonials') {
     //   this.scrollService.scrollToSection('testimonials', -750);

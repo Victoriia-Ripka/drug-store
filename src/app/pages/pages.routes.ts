@@ -5,6 +5,7 @@ import { AboutUsPageComponent } from "./about/about-us-page.component";
 import { ShippingPageComponent } from "./shipping/shipping-page.component";
 import { FaqPageComponent } from "./faq/faq-page.component";
 import { PoliciesPageComponent } from "./policies/policies-page.component";
+import { ContactusComponent } from "../sections/contactus/contactus.component";
 
 export const routes: Routes = [
     {
@@ -30,5 +31,10 @@ export const routes: Routes = [
         path: 'policies',
         title: 'Policies - Canadian Drug Store',
         component: PoliciesPageComponent
+    },
+    {
+        path: 'contact-us',
+        title: 'Contact us - Canadian Drug Store',
+        component: ContactusComponent
     },
 ]
