@@ -52,13 +52,19 @@ h3 {
     letter-spacing: -0.8px;
 }
 
-ul {
+.swiper{
     width: 1156px;
     margin: 0 auto;
-    display: flex;
-    gap: 19.267px;
+    overflow: hidden;
+}
 
-    li {
+.swiper-wrapper{
+    width: 1156px;
+    margin: 0 auto 50px;
+    display: flex;
+    gap: 19px;
+
+    .swiper-slide {
         padding: 13px;
         width: 274px;
         height: 404px;
@@ -68,6 +74,7 @@ ul {
         gap: 19.27px;
         background-color: #fff;
         border-radius: 19.3px;
+        margin: 0 !important;
     }
     .item-background {
         border-radius: 12.844px;
@@ -149,6 +156,13 @@ ul {
     }
 }
 
+// .swiper-pagination{
+//     position: absolute;
+//     // width: 100px;
+//     // height: 40px;
+//     // background-color: #0F67FE;
+// }
+
 a {
     position: absolute;
     bottom: 0;
@@ -174,4 +188,12 @@ a {
     
     display: flex;
     gap: 16px;
+
+    img{
+        cursor: pointer;
+    }
+}
+
+.nav-button{
+    position: static !important;
 }

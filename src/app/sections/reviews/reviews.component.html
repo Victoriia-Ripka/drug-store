@@ -4,9 +4,9 @@
         <p>Our satisfied clients share their success stories and experiences on their journey to better health and
             well-being.</p>
     </div>
-    <div class="rewievs-section">
-        <ul>
-            <li>
+    <div class="swiper" id="reviewsSwiper">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide">
                 <div>
                     <div class="quote">
                         <svg xmlns="http://www.w3.org/2000/svg" width="34" height="35" viewBox="0 0 34 35" fill="none">
@@ -23,8 +23,8 @@
                     <img src="assets/img/user1-min.png" alt="rewiever" />
                     <p class="rewiev-name">John Anderson</p>
                 </div>
-            </li>
-            <li>
+            </div>
+            <div class="swiper-slide">
                 <div>
                     <div class="quote">
                         <svg xmlns="http://www.w3.org/2000/svg" width="34" height="35" viewBox="0 0 34 35" fill="none">
@@ -42,8 +42,8 @@
                     <img src="assets/img/user2-min.png" alt="rewiever" />
                     <p class="rewiev-name">Robert Johnson</p>
                 </div>
-            </li>
-            <li>
+            </div>
+            <div class="swiper-slide">
                 <div>
                     <div class="quote">
                         <svg xmlns="http://www.w3.org/2000/svg" width="34" height="35" viewBox="0 0 34 35" fill="none">
@@ -61,11 +61,32 @@
                     <img src="assets/img/user3-min.png" alt="rewiever" />
                     <p class="rewiev-name">Emil Davis</p>
                 </div>
-            </li>
-        </ul>
-    </div>
-    <div class="pagination-section">
-        <div class="left"><mat-icon>arrow_back_ios</mat-icon></div>
-        <div class="right"><mat-icon>arrow_forward_ios</mat-icon></div>
+            </div>
+            
+            <div class="swiper-slide">
+                <div>
+                    <div class="quote">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="34" height="35" viewBox="0 0 34 35" fill="none">
+                            <path
+                                d="M3.41284 29.3308V23.0363C3.41284 21.2261 3.74331 19.3439 4.40426 17.3897C5.08523 15.415 6.00655 13.5533 7.16821 11.8049C8.34989 10.0358 9.67178 8.54446 11.1339 7.33081L16.1811 10.6941C14.9994 12.5248 14.008 14.4379 13.2068 16.4332C12.4257 18.4079 12.0452 20.5884 12.0652 22.9746V29.3308H3.41284ZM18.6446 29.3308V23.0363C18.6446 21.2261 18.9751 19.3439 19.636 17.3897C20.317 15.415 21.2383 13.5533 22.4 11.8049C23.5817 10.0358 24.9035 8.54446 26.3656 7.33081L31.4128 10.6941C30.2312 12.5248 29.2397 14.4379 28.4386 16.4332C27.6575 18.4079 27.2769 20.5884 27.297 22.9746V29.3308H18.6446Z"
+                                fill="#0F67FE" />
+                        </svg>
+                    </div>
+                    <p class="rewiev-text">This store has been a real lifesaver for me! A vast selection of tablets for
+                        men's health, confidential delivery, and
+                        excellent product quality. Highly recommend!</p>
+                </div>
+                <div class="rewiev-info">
+                    <img src="assets/img/user1-min.png" alt="rewiever" />
+                    <p class="rewiev-name">John Anderson</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="pagination-section">
+            <div class="left swiper-button-prev" (click)="prevSlide()"><mat-icon>arrow_back_ios</mat-icon></div>
+            <div class="swiper-pagination">pagination</div>
+            <div class="right swiper-button-next" (click)="nextSlide()"><mat-icon>arrow_forward_ios</mat-icon></div>
+        </div>
     </div>
 </section>

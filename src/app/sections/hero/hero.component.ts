@@ -7,7 +7,7 @@ import { ScrollService } from 'src/app/services/scroll.service';
   styleUrls: ['./hero.component.scss']
 })
 export class HeroComponent {
-  constructor(private scrollService: ScrollService){}
+  constructor(private scrollService: ScrollService) { }
 
   navigateToBestsellers() {
     this.scrollService.scrollToSection('bestsellers', -150);

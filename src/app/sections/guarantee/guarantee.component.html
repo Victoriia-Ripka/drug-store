@@ -48,6 +48,8 @@
     </ul>
     <div class="extra-info">
         <p>Do You have questions? <span>Contact Us!</span></p>
-        <app-button [text]="'REQUEST A CALLBACK'"></app-button>
+        <a routerLink="contact-us" routerLinkActive="active">
+            <app-button text="REQUEST A CALLBACK" ariaCurrentWhenActive="page"></app-button>
+        </a>
     </div>
 </section>

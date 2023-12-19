@@ -1,42 +1,48 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
-import { AppRoutingModule } from './app-routing.module';
-import { AppComponent } from './app.component';
-import { HeaderComponent } from './sections/header/header.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatIconModule } from '@angular/material/icon';
 import { MatMenuModule } from '@angular/material/menu';
-import { HeroComponent } from './sections/hero/hero.component';
-import { BestsellersComponent } from './sections/bestsellers/bestsellers.component';
-import { CertificatesComponent } from './sections/certificates/certificates.component';
-import { ProductsSwiperComponent } from './sections/products-swiper/products-swiper.component';
-import { ReviewsComponent } from './sections/reviews/reviews.component';
-import { FooterComponent } from './sections/footer/footer.component';
-import { ButtonComponent } from './components/button/button.component';
-import { HomePageComponent } from './pages/home/home-page.component';
-import { AboutUsPageComponent } from './pages/about/about-us-page.component';
-import { ShippingPageComponent } from './pages/shipping/shipping-page.component';
-import { FaqPageComponent } from './pages/faq/faq-page.component';
-import { PoliciesPageComponent } from './pages/policies/policies-page.component';
-import { BenefitsComponent } from './sections/benefits/benefits.component';
-import { GuaranteeComponent } from './sections/guarantee/guarantee.component';
-import { PrivacyComponent } from './sections/privacy/privacy.component';
-import { AboutUsComponent } from './sections/about-us/about-us.component';
-import { ShippingComponent } from './sections/shipping/shipping.component';
-import { PoliciesComponent } from './sections/policies/policies.component';
-import { QuestionItemComponent } from './components/question-item/question-item.component';
-import { ShippingFaqComponent } from './sections/faq-shipping/faq.component';
-import { OrderingFaqComponent } from './sections/faq-ordering/faq.component';
-import { ProductsFaqComponent } from './sections/faq-products/faq.component';
-import { ContactusComponent } from './sections/contactus/contactus.component';
-import { ContactusPageComponent } from './pages/contactus/contactus-page.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { MatSelectModule } from '@angular/material/select';
 import { MatInputModule } from '@angular/material/input';
 import { MatFormFieldModule } from '@angular/material/form-field';
-import { ProductsComponent } from './sections/products/products.component';
-import { ProductsPageComponent } from './pages/allProducts/products-page.component';
+import { AppRoutingModule } from './app-routing.module';
+
+import { AppComponent } from './app.component';
+import {
+  HeaderComponent,
+  HeroComponent,
+  BestsellersComponent,
+  CertificatesComponent,
+  ProductsSwiperComponent,
+  ReviewsComponent,
+  FooterComponent,
+  ProductsComponent,
+  BenefitsComponent,
+  GuaranteeComponent,
+  PrivacyComponent,
+  AboutUsComponent,
+  ShippingComponent,
+  PoliciesComponent,
+  ShippingFaqComponent,
+  OrderingFaqComponent,
+  ProductsFaqComponent,
+  ContactusComponent
+} from 'src/app/sections/index'
+import {
+  ButtonComponent,
+  QuestionItemComponent
+} from 'src/app/components/index';
+import {
+  HomePageComponent,
+  AboutUsPageComponent,
+  ShippingPageComponent,
+  FaqPageComponent,
+  ProductsPageComponent,
+  PoliciesPageComponent,
+  ContactusPageComponent
+} from 'src/app/pages/index'
 
 @NgModule({
   declarations: [
@@ -77,7 +83,9 @@ import { ProductsPageComponent } from './pages/allProducts/products-page.compone
     MatIconModule,
     MatMenuModule,
     ReactiveFormsModule,
-    MatFormFieldModule, MatInputModule, MatSelectModule
+    MatFormFieldModule,
+    MatInputModule,
+    MatSelectModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
