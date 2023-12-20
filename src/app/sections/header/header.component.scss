@@ -150,6 +150,14 @@ mat-icon {
     background-color: #fff;
 }
 
+.header-bottom__categories{
+    position: relative;
+}
+
+.categories_menu{
+    position: absolute;
+}
+
 .container-bottom {
     display: flex;
     height: 67px;
@@ -166,7 +174,8 @@ button {
     color: #fff;
     width: 183px;
     height: 35px;
-    justify-content: center;
+    display: flex;
+    justify-content: space-between;
     align-items: center;
     background: var(--ui-primary-blue-color);
     font-family: Urbanist;
@@ -175,10 +184,11 @@ button {
     line-height: 1.5;
     text-transform: capitalize;
     cursor: pointer;
+    transition: background-color 0.3s ease;
 
     &:hover,
     &:focus {
-        font-weight: 500;
+        background-color: var(--ui-primary-hovered-blue);
     }
 }
 

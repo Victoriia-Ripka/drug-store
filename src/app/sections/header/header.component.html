@@ -28,21 +28,30 @@
     <div class="header-bottom">
         <div class="container-bottom">
             <div class="header-bottom__categories">
-                <button mat-button [matMenuTriggerFor]="categories">Categories</button>
-                <mat-menu #categories="matMenu">
-                    <button mat-menu-item>Anti Acidity</button>
-                    <button mat-menu-item>Anti Allergic and Asthma</button>
+                <button mat-button [matMenuTriggerFor]="categoriesMenu">
+                    <mat-icon>menu</mat-icon>
+                    Categories
+                    <mat-icon>expand_less</mat-icon>
+                </button>
+                <mat-menu class="categories_menu" #categoriesMenu="matMenu">
+                    <div *ngFor="let item of categories">
+                        <button mat-menu-item>{{item}}</button>
+                    </div>
                 </mat-menu>
             </div>
             <div class="header-bottom__menu">
                 <nav>
                     <ul>
-                        <li><a routerLink="/about-us" routerLinkActive="active" ariaCurrentWhenActive="page">About us</a></li>
-                        <li><a routerLink="/shipping" routerLinkActive="active" ariaCurrentWhenActive="page">Shipping</a></li>
+                        <li><a routerLink="/about-us" routerLinkActive="active" ariaCurrentWhenActive="page">About
+                                us</a></li>
+                        <li><a routerLink="/shipping" routerLinkActive="active"
+                                ariaCurrentWhenActive="page">Shipping</a></li>
                         <li><a (click)="navigateToTestimonials()">Testimonials</a></li>
                         <li><a routerLink="/faq" routerLinkActive="active" ariaCurrentWhenActive="page">FAQ</a></li>
-                        <li><a routerLink="/policies" routerLinkActive="active" ariaCurrentWhenActive="page">Policies</a></li>
-                        <li><a  routerLink="/contact-us" routerLinkActive="active" ariaCurrentWhenActive="page">Contact us</a></li>
+                        <li><a routerLink="/policies" routerLinkActive="active"
+                                ariaCurrentWhenActive="page">Policies</a></li>
+                        <li><a routerLink="/contact-us" routerLinkActive="active" ariaCurrentWhenActive="page">Contact
+                                us</a></li>
                     </ul>
                 </nav>
             </div>

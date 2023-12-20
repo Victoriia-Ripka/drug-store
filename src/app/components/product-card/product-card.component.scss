@@ -1,0 +1,94 @@
+.card {
+    width: 285px;
+    height: 381.618px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    border-radius: 12.31px;
+    background-color: #E0ECFC;
+    padding: 18px;
+}
+
+.addToCartBottom{
+    border-radius: 50%;
+    width: 39.827px;
+    height: 39.827px;
+    margin-left: 217px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid black;
+    cursor: pointer;
+    transition: 0.3s ease border;
+
+    .cart{
+        transition: 0.3s ease fill;
+    }
+
+    &:hover, &:focus{
+        border: 1px solid var(--ui-primary-blue-color);
+
+        .cart {
+            fill: var(--ui-primary-blue-color)
+        }
+    }
+}
+
+.podium {
+    width: 100%;
+    height: 162px;
+    background-color: #fff;
+    border-radius: 14.5px;
+    margin: 18px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.info{
+    margin-bottom: 27px;
+
+    h3{
+        color: #000;
+        font-family: Plus Jakarta Sans;
+        font-size: 18px;
+        font-weight: 600;
+    }
+
+    p{
+        color: rgba(0, 0, 0, 0.60);
+        font-family: Plus Jakarta Sans;
+        font-size: 16px;
+        font-weight: 400;
+    }
+}
+
+.price{
+    color: #000;
+    font-family: Plus Jakarta Sans;
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.button{
+    width: 58.655px;
+    height: 37.655px;
+    position: absolute;
+    bottom: 18px;
+    right: 18px;
+    border-radius: 5.069px;
+    border: 0.724px solid rgba(77, 66, 134, 0.50);
+    background: #0F67FE;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: 0.3s ease border;
+    transition: 0.3s ease background-color;
+
+    &:focus,
+    &:hover {
+        background-color: var(--ui-primary-hovered-blue);
+        border: 0.724px solid var(--ui-primary-hovered-blue);
+    }
+}

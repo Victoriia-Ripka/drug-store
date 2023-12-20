@@ -54,6 +54,10 @@ body {
     min-height: 100vh;
 }
 
+main {
+    flex: 1;
+}
+
 header,
 footer {
     flex-shrink: 0;

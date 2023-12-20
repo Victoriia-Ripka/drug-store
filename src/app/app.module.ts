@@ -8,6 +8,7 @@ import { MatSelectModule } from '@angular/material/select';
 import { MatInputModule } from '@angular/material/input';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { AppRoutingModule } from './app-routing.module';
+import { MatSidenavModule } from '@angular/material/sidenav';
 
 import { AppComponent } from './app.component';
 import {
@@ -42,7 +43,8 @@ import {
   ProductsPageComponent,
   PoliciesPageComponent,
   ContactusPageComponent
-} from 'src/app/pages/index'
+} from 'src/app/pages/index';
+import { ProductCardComponent } from './components/product-card/product-card.component'
 
 @NgModule({
   declarations: [
@@ -74,6 +76,7 @@ import {
     ContactusPageComponent,
     ProductsComponent,
     ProductsPageComponent,
+    ProductCardComponent,
 
   ],
   imports: [
@@ -86,6 +89,7 @@ import {
     MatFormFieldModule,
     MatInputModule,
     MatSelectModule,
+    MatSidenavModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
