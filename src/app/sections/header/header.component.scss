@@ -119,15 +119,18 @@ header {
     cursor: pointer;
 
 
+    &:hover > mat-icon,
+    &:focus > mat-icon,
     &:hover > .header-top__text,
     &:focus > .header-top__text {
-        font-weight: 500;
+        color: var(--ui-primary-hovered-blue);
     }
 }
 
 mat-icon {
     width: 21px;
     height: auto;
+    transition: 0.3s ease color;
 }
 
 .header-top__text {
@@ -139,24 +142,109 @@ mat-icon {
     text-align: center;
     text-transform: capitalize;
     letter-spacing: 0.05em;
-
-    
+    transition: 0.3s ease color;
 }
 
 
 // HEADER BOTTOM 
-// INPUT MENU
+// DROPDOWN MENU
 .header-bottom {
     background-color: #fff;
 }
 
-.header-bottom__categories{
+.dropdown{
     position: relative;
+    display: inline-block;
+
+    &:hover .dropdown-content,
+    &:focus .dropdown-content {
+        display: flex;
+    }
+}
+.dropdown-content {
+    display: none;
+    position: absolute;
+    top: 35px;
+    background-color: #fff;
+    width: 1285px;
+    height: 781px;
+    z-index: 1;
+    overflow: scroll;
+    border-radius: 0 0 30px 30px;
+    
+    .line{
+        position: fixed;
+        top: 134px;
+        width: 1285px;
+        margin: 0 auto;
+        height: 19px;
+        background-color: #fff;
+        border-bottom: 1px solid #0F67FE;
+        z-index: 2;
+    }
+
+    .first-dropdown-content-container{
+        width: 260px;
+        margin: 19px 0 27px 46px;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .first-dropdown-content {
+        color: #000;
+        width: 212.886px;
+        position: relative;
+        margin: 8px 0;
+
+        a{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            p{
+                font-family: 'Plus Jakarta Sans';
+                font-size: 16.445px;
+                font-weight: 600;
+                line-height: 1.2;
+                max-width: 170px;
+
+                
+            }
+
+            &:hover .second-dropdown-content-container {
+                display: block;
+            }
+
+            &:hover p, 
+            &:focus p{
+                font-weight: 800;
+            }
+
+            
+        }
+        
+        &:not(:last-child){
+            &:after {
+                content: ' ';
+                width: 100%;
+                height: 0.63px;
+                background-color: #7DA1E0;
+                position: absolute;
+                bottom: -8px;
+                left: 0px;
+            }
+        }
+    }
+
+    .second-dropdown-content-container {
+        display: none;
+        width: 728px;
+        border: 2px solid #0F67FE;
+        height: 100px;
+        margin-left: 58px;
+    }
 }
 
-.categories_menu{
-    position: absolute;
-}
+
 
 .container-bottom {
     display: flex;

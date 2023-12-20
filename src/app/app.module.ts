@@ -44,7 +44,7 @@ import {
   PoliciesPageComponent,
   ContactusPageComponent
 } from 'src/app/pages/index';
-import { ProductCardComponent } from './components/product-card/product-card.component'
+import { ProductCardComponent } from './components/product-card/product-card.component';
 
 @NgModule({
   declarations: [
@@ -76,8 +76,7 @@ import { ProductCardComponent } from './components/product-card/product-card.com
     ContactusPageComponent,
     ProductsComponent,
     ProductsPageComponent,
-    ProductCardComponent,
-
+    ProductCardComponent
   ],
   imports: [
     BrowserModule,
@@ -89,9 +88,10 @@ import { ProductCardComponent } from './components/product-card/product-card.com
     MatFormFieldModule,
     MatInputModule,
     MatSelectModule,
-    MatSidenavModule,
+    MatSidenavModule
   ],
   providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
+

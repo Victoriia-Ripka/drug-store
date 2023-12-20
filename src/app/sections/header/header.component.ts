@@ -3,31 +3,7 @@ import { Router, NavigationEnd } from '@angular/router';
 import { takeUntil } from 'rxjs/operators';
 import { Subject } from 'rxjs';
 import { ScrollService } from '../../services/scroll.service';
-
-const categoriesList = [
-  'Anti Acidity',
-  'Anti Allergic And Asthma',
-  'Anti Depressant',
-  'Anti Diabetic',
-  'Anti Fungus',
-  'Anti Herpes',
-  'Anti Viral',
-  'Antibiotics Blood Pressure',
-  'Cholesterol',
-  'Erectile Dysfunction',
-  'Gastrointestinal',
-  'General Health',
-  'Hair Loss Healthy Bones',
-  'Heart Disease',
-  'Herbal Men\'s Health',
-  'Other',
-  'Pain Relief',
-  'Skin Care',
-  'Sleep Aid',
-  'Stop Smoking',
-  'Weight Loss',
-  'Women\'s Health'
-]
+import { categoriesList } from 'src/app/data';
 
 @Component({
   selector: 'app-header',
@@ -48,6 +24,10 @@ export class HeaderComponent {
     });
   }
 
+  ngOnInit() {
+    console.log(this.categories)
+  }
+
   ngOnDestroy() {
     this.destroy$.next();
     this.destroy$.complete();
@@ -58,11 +38,10 @@ export class HeaderComponent {
   }
 
   private handleNavigationEnd(url: string, fragment: string) {
-    // if (fragment === 'testimonials') {
-    //   this.scrollService.scrollToSection('testimonials', -750);
-    // }
     if (fragment) {
       this.scrollService.scrollToSection(fragment);
     }
   }
 }
+
+
