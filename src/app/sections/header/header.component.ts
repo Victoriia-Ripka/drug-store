@@ -24,10 +24,6 @@ export class HeaderComponent {
     });
   }
 
-  ngOnInit() {
-    console.log(this.categories)
-  }
-
   ngOnDestroy() {
     this.destroy$.next();
     this.destroy$.complete();

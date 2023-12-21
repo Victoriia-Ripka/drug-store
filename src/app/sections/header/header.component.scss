@@ -161,25 +161,39 @@ mat-icon {
         display: flex;
     }
 }
+
 .dropdown-content {
     display: none;
     position: absolute;
-    top: 35px;
+    // top: 35px;
     background-color: #fff;
     width: 1285px;
-    height: 781px;
+    max-height: 781px;
     z-index: 1;
-    overflow: scroll;
+    overflow-y: scroll;
+    overflow-x: hidden;
     border-radius: 0 0 30px 30px;
+
+    &::-webkit-scrollbar {
+        width: 6px;
+        height: 751px;
+    }
+    &::-webkit-scrollbar-track {
+        background: #f1f1f1;
+    }
+    &::-webkit-scrollbar-thumb {
+        background: var(--ui-primary-blue-color);
+    }
     
     .line{
+        // position: absolute;
         position: fixed;
         top: 134px;
         width: 1285px;
         margin: 0 auto;
         height: 19px;
         background-color: #fff;
-        border-bottom: 1px solid #0F67FE;
+        border-bottom: 1px solid var(--ui-primary-blue-color);
         z-index: 2;
     }
 
@@ -206,12 +220,12 @@ mat-icon {
                 font-weight: 600;
                 line-height: 1.2;
                 max-width: 170px;
-
-                
             }
 
-            &:hover .second-dropdown-content-container {
+            &:hover .second-dropdown-content-container,
+            &:focus .second-dropdown-content-container {
                 display: block;
+                background-color: red;
             }
 
             &:hover p, 
@@ -234,17 +248,28 @@ mat-icon {
             }
         }
     }
+    
+}
 
-    .second-dropdown-content-container {
-        display: none;
-        width: 728px;
-        border: 2px solid #0F67FE;
-        height: 100px;
-        margin-left: 58px;
+.line-vertical{
+    position: fixed;
+    left: 420px;
+}
+
+.first-dropdown-content:focus {
+    &:hover .second-dropdown-content-container,
+    &:focus .second-dropdown-content-container {
+        display: block;
     }
 }
 
-
+.second-dropdown-content-container {
+    display: none;
+    width: 728px;
+    border: 2px solid #0F67FE;
+    height: 100px;
+    margin: 19px 0 27px 58px;
+}
 
 .container-bottom {
     display: flex;
