@@ -7,7 +7,8 @@ import {
     FaqPageComponent,
     PoliciesPageComponent,
     ContactusPageComponent,
-    ProductsPageComponent
+    ProductsPageComponent,
+    ProductPageComponent
 } from "./index";
 
 export const routes: Routes = [
@@ -44,5 +45,10 @@ export const routes: Routes = [
         path: 'products',
         title: 'All Products - Canadian Drug Store',
         component: ProductsPageComponent
+    },
+    {
+        path: 'products/:id',
+        title: 'Product - Canadian Drug Store',
+        component: ProductPageComponent
     },
 ]

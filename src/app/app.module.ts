@@ -9,6 +9,7 @@ import { MatInputModule } from '@angular/material/input';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { AppRoutingModule } from './app-routing.module';
 import { MatSidenavModule } from '@angular/material/sidenav';
+import { HttpClientModule } from '@angular/common/http';
 
 import { AppComponent } from './app.component';
 import {
@@ -29,11 +30,13 @@ import {
   ShippingFaqComponent,
   OrderingFaqComponent,
   ProductsFaqComponent,
-  ContactusComponent
+  ContactusComponent,
+  ProductComponent
 } from 'src/app/sections/index'
 import {
   ButtonComponent,
-  QuestionItemComponent
+  QuestionItemComponent,
+  ProductCardComponent
 } from 'src/app/components/index';
 import {
   HomePageComponent,
@@ -42,9 +45,9 @@ import {
   FaqPageComponent,
   ProductsPageComponent,
   PoliciesPageComponent,
-  ContactusPageComponent
+  ContactusPageComponent,
+  ProductPageComponent
 } from 'src/app/pages/index';
-import { ProductCardComponent } from './components/product-card/product-card.component';
 
 @NgModule({
   declarations: [
@@ -76,12 +79,15 @@ import { ProductCardComponent } from './components/product-card/product-card.com
     ContactusPageComponent,
     ProductsComponent,
     ProductsPageComponent,
-    ProductCardComponent
+    ProductCardComponent,
+    ProductPageComponent,
+    ProductComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
+    HttpClientModule,
     MatIconModule,
     MatMenuModule,
     ReactiveFormsModule,
