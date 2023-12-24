@@ -1,1 +1,36 @@
-<p>product works!</p>
+<section>
+    <div class="nav">
+        <a href="/">Home</a>
+        <mat-icon>chevron_right</mat-icon>
+        <a href="/products">Categories</a>
+        <mat-icon>chevron_right</mat-icon>
+        <a href="/">{{product?.title}}</a>
+    </div>
+    <div class="main-info-div">
+        <div class="img-wrapper"> 
+            <img />
+        </div>
+        
+        <div class="main-text-wrapper">
+            <h2>{{product?.title}}</h2>
+            <p class="main-price">from <span>€23.30</span></p>
+            <p class="short-desc-text">{{product?.shortDescription}}</p>
+            <div class="delivery">
+                <svg xmlns="http://www.w3.org/2000/svg" width="46" height="31" viewBox="0 0 46 31" fill="none">
+                    <path
+                        d="M-2.1228 9.82653C-2.1228 4.90041 1.87061 0.906982 6.79674 0.906982H40.0296C46.5114 0.906982 51.7659 6.16148 51.7659 12.6432V18.831C51.7659 25.3127 46.5114 30.5672 40.0297 30.5672H-2.1228V9.82653Z"
+                        fill="#0F67FE" />
+                </svg>
+                <p class="delivery-price">Free Standard Shipping Over €182.60</p>
+            </div>
+            <div class="extra">
+                <p>Analogs of Dutas: <a>Avodart</a></p> 
+                <p>Availability <span>In Stock ({{product?.availableAmount}} packages)</span></p>
+            </div>
+        </div>
+    </div>
+    <div class="price-container">
+        <h3>{{product?.title}} 0.5mg</h3>
+    </div>
+    <div></div>
+</section>

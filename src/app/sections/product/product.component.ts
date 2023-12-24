@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { DataService } from 'src/app/services';
+import { ActivatedRoute } from '@angular/router';
 
 // як
 
@@ -8,5 +10,18 @@ import { Component } from '@angular/core';
   styleUrls: ['./product.component.scss']
 })
 export class ProductComponent {
+  product: any = {}
+
+
+  constructor(private route: ActivatedRoute, private dataService: DataService) { }
+
+  ngOnInit() {
+    this.route.params.subscribe(params => {
+      const productId = params['id'];
+      this.dataService.getProduct(productId).subscribe((data) => {
+        this.product = Object.assign({}, data[0]);
+      })
+    });
+  }
 
 }
