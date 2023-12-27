@@ -31,7 +31,12 @@ import {
   OrderingFaqComponent,
   ProductsFaqComponent,
   ContactusComponent,
-  ProductComponent
+  ProductComponent,
+  TrackOrderComponent,
+  OrdersComponent,
+  AddressesComponent,
+  AccountDetailsComponent,
+  LogoutComponent
 } from 'src/app/sections/index'
 import {
   ButtonComponent,
@@ -46,7 +51,8 @@ import {
   ProductsPageComponent,
   PoliciesPageComponent,
   ContactusPageComponent,
-  ProductPageComponent
+  ProductPageComponent,
+  AccountPageComponent
 } from 'src/app/pages/index';
 
 @NgModule({
@@ -81,7 +87,13 @@ import {
     ProductsPageComponent,
     ProductCardComponent,
     ProductPageComponent,
-    ProductComponent
+    ProductComponent,
+    AccountPageComponent,
+    TrackOrderComponent,
+    OrdersComponent,
+    AddressesComponent,
+    AccountDetailsComponent,
+    LogoutComponent
   ],
   imports: [
     BrowserModule,

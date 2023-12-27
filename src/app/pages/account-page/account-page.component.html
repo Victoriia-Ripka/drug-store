@@ -1,0 +1,27 @@
+<section>
+    <h2>My Account</h2>
+    <ul>
+        <li><button (click)="selectAccountItem('track-order')">Track your order</button>
+            <div *ngIf="selectedAccountItem === 'track-order'"></div>
+        </li>
+        <li><button (click)="selectAccountItem('orders')">Orders</button>
+            <div *ngIf="selectedAccountItem === 'orders'"></div>
+        </li>
+        <li><button (click)="selectAccountItem('addresses')">Addresses</button>
+            <div *ngIf="selectedAccountItem === 'addresses'"></div>
+        </li>
+        <li><button (click)="selectAccountItem('account-details')">Account details</button>
+            <div *ngIf="selectedAccountItem === 'account-details'"></div>
+        </li>
+        <li><button (click)="selectAccountItem('logout')">Logout</button>
+            <div *ngIf="selectedAccountItem === 'logout'"></div>
+        </li>
+    </ul>
+    <div>
+        <track-order *ngIf="selectedAccountItem === 'track-order'"></track-order>
+        <orders *ngIf="selectedAccountItem === 'orders'"></orders>
+        <addresses *ngIf="selectedAccountItem === 'addresses'"></addresses>
+        <account-details *ngIf="selectedAccountItem === 'account-details'"></account-details>
+        <logout *ngIf="selectedAccountItem === 'logout'"></logout>
+    </div>
+</section>
