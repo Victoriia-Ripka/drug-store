@@ -7,10 +7,10 @@
         <a href="/">{{product?.title}}</a>
     </div>
     <div class="main-info-div">
-        <div class="img-wrapper"> 
+        <div class="img-wrapper">
             <img />
         </div>
-        
+
         <div class="main-text-wrapper">
             <h2>{{product?.title}}</h2>
             <p class="main-price">from <span>€23.30</span></p>
@@ -24,7 +24,7 @@
                 <p class="delivery-price">Free Standard Shipping Over €182.60</p>
             </div>
             <div class="extra">
-                <p>Analogs of Dutas: <a>Avodart</a></p> 
+                <p>Analogs of Dutas: <a>Avodart</a></p>
                 <p>Availability <span>In Stock ({{product?.availableAmount}} packages)</span></p>
             </div>
         </div>
@@ -32,5 +32,80 @@
     <div class="price-container">
         <h3>{{product?.title}} 0.5mg</h3>
     </div>
-    <div></div>
+    <div class="product-information">
+        <ul class="product-information-navigation">
+            <li><button (click)="selectInfoItem('product-description')">product description</button></li>
+            <li><button (click)="selectInfoItem('packaging')">packaging</button></li>
+            <li><button (click)="selectInfoItem('reviews')">reviews ()</button></li>
+        </ul>
+        <div class="product-information-description" *ngIf="selectedInfoItem === 'product-description'">
+            <p class="product-information-title">Dutas (Dutasteride)</p>
+            <p class="product-information-text">Frequent need of urination together with pain or difficulty with passing
+                the urine may seriously disturb
+                a life of any
+                man. Nevertheless, some of them choose to do nothing and suffer whereas some males start looking for
+                some treatment and
+                find it in Dutas capsules.</p>
+            <p class="product-information-title">Product description</p>
+            <p class="product-information-text">Dutas is a type of antiandrogen remedy, which is used to treat prostate
+                enlargement (benign prostatic hyperplasia) in
+                male patients. The drug is also used off-label to treat hair loss in men and excessive hair growth in
+                women. There may
+                be some other purposes of the drug intake, so you should consult with your doctor to learn about them.
+                The preparation is manufactured in the form of soft gelatin capsules, each containing 0.5mg of the
+                active ingredient.
+                The capsules work by reducing the urge to urinate frequently. They make the process painless or at least
+                less painful
+                and help to diminish the weak stream symptom.
+                The correct dosing regimen may be set only by your healthcare provider based on your health condition
+                and the severity
+                of the issue. Never take the drug without talking to your doctor first. Any changes in the frequency of
+                Dutas intake or
+                its dose should be done only with the doctor’s approval.</p>
+            <p class="product-information-title">Safety information</p>
+            <p class="product-information-text">The intake of the medicine by individuals suffering from any liver
+                disease or having it in their medical history should
+                be closely monitored by their medical specialist. The reason is that the remedy may seriously harm the
+                organ, especially
+                if it is already ill.
+                Dutas is not intended to be used in women and children. Nevertheless, some female patients take the drug
+                off-label to
+                cope with hirsutism. Pregnant women should avoid any contacts (including skin contacts) with the Dutas
+                capsules as the
+                preparation may be absorbed through the skin. It causes severe birth defects, especially in female
+                fetuses.
+                Breastfeeding women are also not recommended to use this remedy.
+                In addition, males who treat prostate enlargement with the help of this preparation are not allowed to
+                become blood
+                donors for at least half a year after the therapy is discontinued. The reason is that the active
+                component of the
+                remedy, which stays in blood for such a long period, may harm the fetuses of the women who may get this
+                blood.
+                People, who are allergic to Dutasteride (the active ingredient of Dutas) should also avoid taking the
+                drug.</p>
+            <p class="product-information-title">Side effects</p>
+            <p class="product-information-text">Dutas is known to induce various adverse effects. Fortunately, the bulk
+                of them is mild reactions. Among the most
+                frequently reported negative effects of the drug are:
+                Headache;
+                Skin rash;
+                Loss of libido;
+                Erectile dysfunction;
+                Premature ejaculation;
+                Breast enlargement in males;
+                Abdominal discomfort;
+                Low sperm count.
+                The list of side effects may be continued. Ask your healthcare specialist to tell you about all the
+                possible adverse
+                effects. If any of the symptoms bother you, get worse or last for too long, contact your doctor or call
+                an emergency
+                aid.
+                According to some researches, Dutas may trigger the development of rare and very aggressive types of
+                prostate cancer.
+                The drug may mask the ailment’s early development, so that the problem may be revealed only in late
+                stages.</p>
+        </div>
+        <div *ngIf="selectedInfoItem === 'packaging'">packaging</div>
+        <div *ngIf="selectedInfoItem === 'reviews'">reviews</div>
+    </div>
 </section>

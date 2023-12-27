@@ -11,6 +11,7 @@ import { ActivatedRoute } from '@angular/router';
 })
 export class ProductComponent {
   product: any = {}
+  selectedInfoItem: string = 'product-description'
 
 
   constructor(private route: ActivatedRoute, private dataService: DataService) { }
@@ -22,6 +23,10 @@ export class ProductComponent {
         this.product = Object.assign({}, data[0]);
       })
     });
+  }
+
+  selectInfoItem(item: string): void {
+    this.selectedInfoItem = item
   }
 
 }

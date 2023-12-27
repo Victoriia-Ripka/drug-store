@@ -159,3 +159,55 @@ section{
         margin-bottom: 30px;
     }
 }
+
+.product-information {
+    margin: 50px 0 75px;
+}
+
+.product-information-navigation{
+    display: flex;
+    gap: 63px;
+    margin-bottom: 45px;
+
+    li {
+        button {
+            color: #5E5E5E;
+            font-family: Plus Jakarta Sans;
+            font-size: 18.782px;
+            font-weight: 500;
+            line-height: 1.3;
+            text-transform: uppercase;
+            transition: all 0.3s ease;
+            background-color: transparent;
+            border-color: transparent;
+
+            &:hover,
+            &:focus {
+                color: #000;
+                font-weight: 700;
+            }
+        }
+    }
+}
+
+.product-information {
+    margin-bottom: -30px;
+}
+
+.product-information-title {
+    color: #000;
+    font-family: Plus Jakarta Sans;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 1.4;
+    margin-bottom: 10px;
+}
+
+.product-information-text {
+    color: #707070;
+    font-family: Plus Jakarta Sans;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 25.649px;
+    margin-bottom: 30px;
+}
