@@ -96,6 +96,10 @@ section{
                 display: flex;
                 align-items: center;
                 gap: 5px;
+                img{
+                    width: 45.977px;
+                    height: 29.66px;
+                }
 
                 p {
                     color: #0F67FE;
@@ -166,6 +170,7 @@ section{
 
 .product-information-navigation{
     display: flex;
+    align-items: start;
     gap: 63px;
     margin-bottom: 45px;
 
@@ -180,12 +185,20 @@ section{
             transition: all 0.3s ease;
             background-color: transparent;
             border-color: transparent;
+            margin: 0;
 
             &:hover,
             &:focus {
                 color: #000;
                 font-weight: 700;
             }
+        }
+
+        div{
+            margin-top: 14px;
+            width: 100%;
+            height: 1px;
+            background-color: #000
         }
     }
 }

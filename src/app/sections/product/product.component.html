@@ -16,11 +16,7 @@
             <p class="main-price">from <span>€23.30</span></p>
             <p class="short-desc-text">{{product?.shortDescription}}</p>
             <div class="delivery">
-                <svg xmlns="http://www.w3.org/2000/svg" width="46" height="31" viewBox="0 0 46 31" fill="none">
-                    <path
-                        d="M-2.1228 9.82653C-2.1228 4.90041 1.87061 0.906982 6.79674 0.906982H40.0296C46.5114 0.906982 51.7659 6.16148 51.7659 12.6432V18.831C51.7659 25.3127 46.5114 30.5672 40.0297 30.5672H-2.1228V9.82653Z"
-                        fill="#0F67FE" />
-                </svg>
+                <img src="assets/img/car.png" alt="car"/>
                 <p class="delivery-price">Free Standard Shipping Over €182.60</p>
             </div>
             <div class="extra">
@@ -34,9 +30,15 @@
     </div>
     <div class="product-information">
         <ul class="product-information-navigation">
-            <li><button (click)="selectInfoItem('product-description')">product description</button></li>
-            <li><button (click)="selectInfoItem('packaging')">packaging</button></li>
-            <li><button (click)="selectInfoItem('reviews')">reviews ()</button></li>
+            <li><button (click)="selectInfoItem('product-description')">product description</button>
+                <div *ngIf="selectedInfoItem === 'product-description'"></div>
+            </li>
+            <li><button (click)="selectInfoItem('packaging')">packaging</button>
+                <div *ngIf="selectedInfoItem === 'packaging'"></div>
+            </li>
+            <li><button (click)="selectInfoItem('reviews')">reviews ()</button>
+                <div *ngIf="selectedInfoItem === 'reviews'"></div>
+            </li>
         </ul>
         <div class="product-information-description" *ngIf="selectedInfoItem === 'product-description'">
             <p class="product-information-title">Dutas (Dutasteride)</p>
