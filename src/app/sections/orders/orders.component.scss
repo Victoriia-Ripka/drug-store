@@ -1,0 +1,76 @@
+.empty-orderList {
+    width: 1129px;
+    height: 66.841px;
+    border-radius: 3.004px;
+    background-color: rgba(246, 244, 255, 0.80);
+    padding: 20px 23px;
+    display: flex;
+    justify-content: space-between;
+    border-top: 1px solid rgba(77, 66, 134, 0.60);;
+}
+
+p {
+    color: #000;
+    font-family: Plus Jakarta Sans;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 1.12;
+}
+
+a {
+    color: #4D4286;
+    font-family: Plus Jakarta Sans;
+    font-size: 18px;
+    font-weight: 700;
+}
+
+table {
+    width: 100%;
+}
+
+thead {
+    width: 100%;
+    tr {
+        // display: inline-block;
+        padding-bottom: 30px;
+
+        th{
+            text-align: left;
+            color: #000;
+            font-family: Plus Jakarta Sans;
+            font-size: 18px;
+            font-weight: 700;
+            line-height: 1.42;
+            text-transform: uppercase;
+        }
+    }
+    
+}
+
+tr{
+    padding-bottom: 30px;
+    margin-bottom: 30px;
+
+    td {
+        color: var(--Light-Colors-Dark-gray---Light, #707070);
+        font-family: Plus Jakarta Sans;
+        font-size: 18px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 1.4;
+        margin-bottom: 30px;
+    }
+
+    a{
+        color: #4D4286;
+        font-family: Plus Jakarta Sans;
+        font-size: 18px;
+        font-weight: 700;
+        cursor: pointer;
+        text-transform: capitalize;
+    }
+}
+
+.actions {
+    text-align: right !important;
+}
