@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { FormBuilder } from '@angular/forms';
 
 @Component({
   selector: 'addresses',
@@ -21,9 +22,11 @@ export class AddressesComponent {
   ]
   shippingAddresses: Array<any> = []
 
-  ngOnInit() {
-    
+  constructor(private formBuilder: FormBuilder,) {
+
   }
+
+  ngOnInit() { }
 
   toggleBillingForm(): void {
     this.isOpenedBillingForm = !this.isOpenedBillingForm
@@ -34,6 +37,7 @@ export class AddressesComponent {
   }
 
   addBillingAddress() {
+    console.log(this)
     this.toggleBillingForm()
   }
 

@@ -18,29 +18,29 @@
                 </ul>
             </div>
         </div>
-        
-        <form class="billing-form" *ngIf="isOpenedBillingForm">
+
+        <form class="billing-form" *ngIf="isOpenedBillingForm" (ngSubmit)="addBillingAddress()">
             <div class="billing-field">
-                <label>First Name</label>
-                <input placeholder="Nina">
+                <label for="name">First Name</label>
+                <input id="name" name="name" placeholder="Nina">
             </div>
             <div class="billing-field">
-                <label>Email</label>
-                <input placeholder="ninajone@gmail.com">
+                <label for="email">Email</label>
+                <input id="email" email="name" placeholder="ninajone@gmail.com">
             </div>
             <div class="billing-field">
-                <label>Country/Region</label>
-                <input placeholder="Canada">
+                <label for="country">Country/Region</label>
+                <input id="country" country="name" placeholder="Canada">
             </div>
             <div class="billing-field">
-                <label>Street Address</label>
-                <input placeholder="456 Elmwood Avenue">
+                <label for="street">Street Address</label>
+                <input id="street" street="name" placeholder="456 Elmwood Avenue">
             </div>
             <div class="billing-field">
-                <label>Town/City</label>
-                <input placeholder="Toronto">
+                <label for="city">Town/City</label>
+                <input id="city" city="name" placeholder="Toronto">
             </div>
-            <button type="button" (click)="addBillingAddress()" class="form-btn">
+            <button type="submit" class="form-btn">
                 save address
             </button>
         </form>
@@ -64,29 +64,29 @@
                 </ul>
             </div>
         </div>
-        
-        <form class="billing-form" *ngIf="isOpenedShippingForm">
+
+        <form class="billing-form" *ngIf="isOpenedShippingForm" (ngSubmit)="addShippingAddress()">
             <div class="billing-field">
-                <label>First Name</label>
-                <input placeholder="Nina">
+                <label for="name">First Name</label>
+                <input id="name" name="name" placeholder="Nina">
             </div>
             <div class="billing-field">
-                <label>Email</label>
-                <input placeholder="ninajone@gmail.com">
+                <label for="email">Email</label>
+                <input id="email" email="name" placeholder="ninajone@gmail.com">
             </div>
             <div class="billing-field">
-                <label>Country/Region</label>
-                <input placeholder="Canada">
+                <label for="country">Country/Region</label>
+                <input id="country" country="name" placeholder="Canada">
             </div>
             <div class="billing-field">
-                <label>Street Address</label>
-                <input placeholder="456 Elmwood Avenue">
+                <label for="street">Street Address</label>
+                <input id="street" street="name" placeholder="456 Elmwood Avenue">
             </div>
             <div class="billing-field">
-                <label>Town/City</label>
-                <input placeholder="Toronto">
+                <label for="city">Town/City</label>
+                <input id="city" city="name" placeholder="Toronto">
             </div>
-            <button type="button" (click)="addShippingAddress()" class="form-btn">
+            <button type="submit" class="form-btn">
                 save address
             </button>
         </form>
