@@ -18,19 +18,133 @@
         font-weight: 600;
         line-height: 0.75;
         text-transform: uppercase;
+        margin-bottom: 40px;
     }
 
-    button{
+    .add-btn {
         color: #0F67FE;
-            font-family: Montserrat;
-            font-size: 18px;
-            font-style: normal;
-            font-weight: 700;
-            line-height: 20.25px;
-            /* 112.5% */
+        font-family: Plus Jakarta Sans;
+        font-size: 18px;
+        font-weight: 700;
+        line-height: 1.12;
+        background-color: transparent;
+        border: transparent;
+        text-transform: uppercase;
+        padding: 0;
+        margin: 0 0 7px 0;
+        transition: all 0.3s ease;
+        position: relative;
+        cursor: pointer;
+
+        &:hover,
+        &:focus {
+            &::after {
+                position: absolute;
+                content: ' ';
+                width: 120%;
+                height: 1px;
+                background-color: #0F67FE;
+                bottom: -3px;
+                left: -10%;
+            }
+        }
     }
 
     p{
+        color: #707070;
+        font-family: Plus Jakarta Sans;
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 1.26;
+        width: 268px;
+    }
+}
 
+.billing-form {
+    display: flex;
+    width: 391px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 7.5px;
+
+    .billing-field{
+        width: 100%;
+        padding: 0;
+        margin-bottom: 20px;
+    }
+
+    label {
+        color: #232536;
+        font-family: Plus Jakarta Sans;
+        font-size: 18px;
+        font-weight: 600;
+        line-height: 1.5;
+        margin-bottom: 7.5px;
+        display: block;
+    }
+
+    input {
+        display: block;
+        width: 100%;
+        height: 50px;
+        padding: 15px 23.203px 12.75px 15px;
+        align-items: center;
+        border-radius: 3.75px;
+        border: 0.967px solid rgba(109, 110, 118, 0.50);
+        background-color: transparent;
+
+        &::placeholder{
+            color: rgba(35, 37, 54, 0.50);
+            font-family: Plus Jakarta Sans;
+            font-size: 18px;
+            font-weight: 400;
+            line-height: 1.5;
+        }
+    }
+
+    .form-btn{
+        width: 100%;
+        height: 53.67px;
+        border-radius: 8.28px;
+        border: 1px transparent solid;
+        background-color: #0F67FE;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #FFF;
+        text-align: center;
+        font-family: Plus Jakarta Sans;
+        font-size: 15.02px;
+        font-weight: 600;
+        text-transform: uppercase;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+        
+        &:focus,
+        &:hover {
+            background-color: var(--ui-primary-hovered-blue);
+        }
+    
+        &:visited,
+        &:active {
+            background-color: var(--ui-primary-pressed-blue);
+        }
+    }
+}
+
+.addresses-list{
+    margin-top: 12.5px;
+    li {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+
+        p {
+            color: #707070;
+            font-family: Urbanist;
+            font-size: 16px;
+            font-weight: 400;
+            line-height: 1.26;
+        }
     }
 }

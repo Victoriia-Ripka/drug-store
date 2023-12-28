@@ -3,14 +3,92 @@
     <div class="billing-cont">
         <h3>Billing Address</h3>
 
-        <button type="button">add</button>
-        <p>You have not set up this type of address yet.</p>
+        <button type="button" *ngIf="!isOpenedBillingForm" (click)="toggleBillingForm()" class="add-btn">add</button>
+        <div *ngIf="!isOpenedBillingForm">
+            <p *ngIf="billingAddresses.length === 0">You have not set up this type of address yet.</p>
+            <div *ngIf="billingAddresses.length > 0">
+                <ul class="addresses-list">
+                    <li *ngFor="let address of billingAddresses">
+                        <p>{{address.name}}</p>
+                        <p>{{address.city}}, {{address.country}}</p>
+                        <p>{{address.street}}</p>
+                        <p>{{address.phone}}</p>
+                        <p>{{address.email}}</p>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        
+        <form class="billing-form" *ngIf="isOpenedBillingForm">
+            <div class="billing-field">
+                <label>First Name</label>
+                <input placeholder="Nina">
+            </div>
+            <div class="billing-field">
+                <label>Email</label>
+                <input placeholder="ninajone@gmail.com">
+            </div>
+            <div class="billing-field">
+                <label>Country/Region</label>
+                <input placeholder="Canada">
+            </div>
+            <div class="billing-field">
+                <label>Street Address</label>
+                <input placeholder="456 Elmwood Avenue">
+            </div>
+            <div class="billing-field">
+                <label>Town/City</label>
+                <input placeholder="Toronto">
+            </div>
+            <button type="button" (click)="addBillingAddress()" class="form-btn">
+                save address
+            </button>
+        </form>
     </div>
 
     <div class="shipping-cont">
-        <h3>Billing Address</h3>
-    
-        <button type="button">add</button>
-        <p>You have not set up this type of address yet.</p>
+        <h3>Shipping Address</h3>
+
+        <button type="button" *ngIf="!isOpenedShippingForm" (click)="toggleShippingForm()" class="add-btn">add</button>
+        <div *ngIf="!isOpenedShippingForm">
+            <p *ngIf="shippingAddresses.length === 0">You have not set up this type of address yet.</p>
+            <div *ngIf="shippingAddresses.length > 0">
+                <ul class="addresses-list">
+                    <li *ngFor="let address of shippingAddresses">
+                        <p>{{address.name}}</p>
+                        <p>{{address.city}}, {{address.country}}</p>
+                        <p>{{address.street}}</p>
+                        <p>{{address.phone}}</p>
+                        <p>{{address.email}}</p>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        
+        <form class="billing-form" *ngIf="isOpenedShippingForm">
+            <div class="billing-field">
+                <label>First Name</label>
+                <input placeholder="Nina">
+            </div>
+            <div class="billing-field">
+                <label>Email</label>
+                <input placeholder="ninajone@gmail.com">
+            </div>
+            <div class="billing-field">
+                <label>Country/Region</label>
+                <input placeholder="Canada">
+            </div>
+            <div class="billing-field">
+                <label>Street Address</label>
+                <input placeholder="456 Elmwood Avenue">
+            </div>
+            <div class="billing-field">
+                <label>Town/City</label>
+                <input placeholder="Toronto">
+            </div>
+            <button type="button" (click)="addShippingAddress()" class="form-btn">
+                save address
+            </button>
+        </form>
     </div>
 </div>
