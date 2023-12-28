@@ -145,6 +145,20 @@ mat-icon {
     transition: 0.3s ease color;
 }
 
+.modal{
+    display: none;
+    position: absolute;
+    bottom: -970%;
+    left: -257px;
+}
+
+.shopping-cart-modal-display-cont {
+    position: relative;
+    &:focus .modal,
+    &:hover .modal{
+        display: block;
+    }
+}
 
 // HEADER BOTTOM 
 // DROPDOWN MENU

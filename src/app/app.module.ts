@@ -37,7 +37,8 @@ import {
   OrdersComponent,
   AddressesComponent,
   AccountDetailsComponent,
-  LogoutComponent
+  LogoutComponent,
+  ShoppingCartModalComponent
 } from 'src/app/sections/index'
 import {
   ButtonComponent,
@@ -94,7 +95,8 @@ import {
     OrdersComponent,
     AddressesComponent,
     AccountDetailsComponent,
-    LogoutComponent
+    LogoutComponent,
+    ShoppingCartModalComponent
   ],
   imports: [
     BrowserModule,
