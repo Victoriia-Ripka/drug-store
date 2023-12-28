@@ -50,9 +50,10 @@ thead {
 tr{
     padding-bottom: 30px;
     margin-bottom: 30px;
+    // display: block;
 
     td {
-        color: var(--Light-Colors-Dark-gray---Light, #707070);
+        color: #707070;
         font-family: Plus Jakarta Sans;
         font-size: 18px;
         font-style: normal;
@@ -73,4 +74,48 @@ tr{
 
 .actions {
     text-align: right !important;
+}
+
+.table {
+    display: flex;
+    width: 100%;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 125px;
+    margin-bottom: -36px;
+
+    div{
+
+        a{
+            display: block;
+            color: #4D4286;
+            font-family: Plus Jakarta Sans;
+            font-size: 18px;
+            font-weight: 700;
+            cursor: pointer;
+            text-transform: capitalize;
+            text-align: right !important;
+        }
+    }
+}
+
+.table-head-text{
+    margin-bottom: 36px;
+    text-align: left;
+    color: #000;
+    font-family: Plus Jakarta Sans;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 1.42;
+    text-transform: uppercase;  
+}
+
+.table-text{
+    color: #707070;
+    font-family: Plus Jakarta Sans;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1.4;
+    margin-bottom: 36px;
 }

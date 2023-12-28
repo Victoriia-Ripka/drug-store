@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { FormBuilder } from '@angular/forms';
+import { FormControl, FormGroup, Validators } from '@angular/forms';
 
 @Component({
   selector: 'addresses',
@@ -22,11 +22,33 @@ export class AddressesComponent {
   ]
   shippingAddresses: Array<any> = []
 
-  constructor(private formBuilder: FormBuilder,) {
+  form = new FormGroup({
+    name: new FormControl('', Validators.required),
+    email: new FormControl('', Validators.required),
+    country: new FormControl('', Validators.required),
+    street: new FormControl('', Validators.required),
+    city: new FormControl('', Validators.required)
+  });
 
+  get nameControl() {
+    return this.form.get('name') as FormControl;
   }
 
-  ngOnInit() { }
+  get emailControl() {
+    return this.form.get('email') as FormControl;
+  }
+
+  get countryControl() {
+    return this.form.get('country') as FormControl;
+  }
+
+  get streetControl() {
+    return this.form.get('street') as FormControl;
+  }
+
+  get cityControl() {
+    return this.form.get('city') as FormControl;
+  }
 
   toggleBillingForm(): void {
     this.isOpenedBillingForm = !this.isOpenedBillingForm
@@ -37,11 +59,16 @@ export class AddressesComponent {
   }
 
   addBillingAddress() {
-    console.log(this)
+    console.log(this.form.value)
+    this.billingAddresses.push(this.form.value)
+    this.form.reset()
     this.toggleBillingForm()
   }
 
   addShippingAddress() {
+    console.log(this.form.value)
+    this.shippingAddresses.push(this.form.value)
+    this.form.reset()
     this.toggleShippingForm()
   }
 

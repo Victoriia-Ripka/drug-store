@@ -12,33 +12,33 @@
                         <p>{{address.name}}</p>
                         <p>{{address.city}}, {{address.country}}</p>
                         <p>{{address.street}}</p>
-                        <p>{{address.phone}}</p>
+                        <!-- <p>{{address.phone}}</p> -->
                         <p>{{address.email}}</p>
                     </li>
                 </ul>
             </div>
         </div>
 
-        <form class="billing-form" *ngIf="isOpenedBillingForm" (ngSubmit)="addBillingAddress()">
+        <form [formGroup]="form" class="billing-form" *ngIf="isOpenedBillingForm" (ngSubmit)="addBillingAddress()">
             <div class="billing-field">
                 <label for="name">First Name</label>
-                <input id="name" name="name" placeholder="Nina">
+                <input id="name" name="name" placeholder="Nina" [formControl]="nameControl" />
             </div>
             <div class="billing-field">
                 <label for="email">Email</label>
-                <input id="email" email="name" placeholder="ninajone@gmail.com">
+                <input id="email" email="name" placeholder="ninajone@gmail.com" [formControl]="emailControl" />
             </div>
             <div class="billing-field">
                 <label for="country">Country/Region</label>
-                <input id="country" country="name" placeholder="Canada">
+                <input id="country" country="name" placeholder="Canada" [formControl]="countryControl" />
             </div>
             <div class="billing-field">
                 <label for="street">Street Address</label>
-                <input id="street" street="name" placeholder="456 Elmwood Avenue">
+                <input id="street" street="name" placeholder="456 Elmwood Avenue" [formControl]="streetControl" />
             </div>
             <div class="billing-field">
                 <label for="city">Town/City</label>
-                <input id="city" city="name" placeholder="Toronto">
+                <input id="city" city="name" placeholder="Toronto" [formControl]="cityControl" />
             </div>
             <button type="submit" class="form-btn">
                 save address
@@ -58,33 +58,33 @@
                         <p>{{address.name}}</p>
                         <p>{{address.city}}, {{address.country}}</p>
                         <p>{{address.street}}</p>
-                        <p>{{address.phone}}</p>
+                        <!-- <p>{{address.phone}}</p> -->
                         <p>{{address.email}}</p>
                     </li>
                 </ul>
             </div>
         </div>
 
-        <form class="billing-form" *ngIf="isOpenedShippingForm" (ngSubmit)="addShippingAddress()">
+        <form [formGroup]="form" class="billing-form" *ngIf="isOpenedShippingForm" (ngSubmit)="addShippingAddress()">
             <div class="billing-field">
                 <label for="name">First Name</label>
-                <input id="name" name="name" placeholder="Nina">
+                <input id="name" name="name" placeholder="Nina" [formControl]="nameControl">
             </div>
             <div class="billing-field">
                 <label for="email">Email</label>
-                <input id="email" email="name" placeholder="ninajone@gmail.com">
+                <input id="email" email="name" placeholder="ninajone@gmail.com" [formControl]="emailControl" />
             </div>
             <div class="billing-field">
                 <label for="country">Country/Region</label>
-                <input id="country" country="name" placeholder="Canada">
+                <input id="country" country="name" placeholder="Canada" [formControl]="countryControl">
             </div>
             <div class="billing-field">
                 <label for="street">Street Address</label>
-                <input id="street" street="name" placeholder="456 Elmwood Avenue">
+                <input id="street" street="name" placeholder="456 Elmwood Avenue" [formControl]="streetControl" />
             </div>
             <div class="billing-field">
                 <label for="city">Town/City</label>
-                <input id="city" city="name" placeholder="Toronto">
+                <input id="city" city="name" placeholder="Toronto" [formControl]="cityControl" />
             </div>
             <button type="submit" class="form-btn">
                 save address

@@ -3,43 +3,25 @@
     <a href="/products">BROWSE PRODUCT</a>
 </div>
 
-<div *ngIf="ordersCount > 0">
-    <!-- <div class="table-header">
-        <p class="width">ORDER NUMBER</p>
-        <p>date</p>
-        <p>status</p>
-        <p>total</p>
-        <p>actions</p>
+<div *ngIf="ordersCount > 0" class="table">
+    <div>
+        <p class="table-head-text">order number</p>
+        <p class="table-text" *ngFor="let product of ordersList">{{product.id}}</p>
     </div>
-    <ul *ngFor="let product of ordersList">
-        <li>
-            <p>{{product.id}}</p>
-            <p>{{product.date}}</p>
-            <p>{{product.status}}</p>
-            <p>${{product.total}}</p>
-            <a>view order</a>
-        </li>
-    </ul> -->
-    <table>
-        <thead>
-            <tr>
-                <th>ORDER NUMBER</th>
-                <th>date</th>
-                <th>status</th>
-                <th>total</th>
-                <th class="actions">actions</th>
-            </tr>
-            
-        </thead>
-        <tbody>
-            <tr *ngFor="let product of ordersList">
-                <td>{{ product.id }}</td>
-                <td>{{ product.date }}</td>
-                <td>{{ product.status }}</td>
-                <td>${{ product.total }}</td>
-                <td class="actions"><a href="#">view order</a></td>
-            </tr>
-        </tbody>
-    </table>
-
+    <div>
+        <p class="table-head-text">date</p>
+        <p class="table-text" *ngFor="let product of ordersList">{{product.date}}</p>
+    </div>
+    <div>
+        <p class="table-head-text">status</p>
+        <p class="table-text" *ngFor="let product of ordersList">{{product.status}}</p>
+    </div>
+    <div>
+        <p class="table-head-text">total</p>
+        <p class="table-text" *ngFor="let product of ordersList">${{product.total}}</p>
+    </div>
+    <div>
+        <p class="table-head-text actions">actions</p>
+        <a class="table-text link" *ngFor="let product of ordersList">view order</a>
+    </div>
 </div>

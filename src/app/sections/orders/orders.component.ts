@@ -24,7 +24,9 @@ export class OrdersComponent {
       date: 'October 8,2020',
       status: 'Delivered',
       total: 65,
-    }]
+    }
+  ]
+
   ordersCount: number = this.ordersList.length
 
 }
