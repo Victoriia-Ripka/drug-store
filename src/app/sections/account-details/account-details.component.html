@@ -1,1 +1,44 @@
-<p>account-details works!</p>
+<div class="account-det-cont">
+    <h3>Account details</h3>
+
+    <form>
+        <div class="name-cont">
+            <div>
+                <label for="name">First Name</label>
+                <input type="text" name="name" id="name" placeholder="Nina" />
+            </div>
+            <div>
+                <label for="surname">Last Name</label>
+                <input type="text" name="surname" id="surname" placeholder="Jane" />
+            </div>
+        </div>
+        
+        <div>
+            <label for="nicname">Display name*</label>
+            <input type="text" name="nicname" id="nicname" placeholder="jane11" />
+            <p>This will be how your name will be displayed in the account section and in reviews.</p>
+        </div>
+        <div>
+            <label for="email">Email *</label>
+            <input type="text" name="email" id="email" placeholder="nina@gmail.com" />
+        </div>
+
+        <h4>Password change</h4>
+        <div>
+            <label for="c-password">Current password</label>
+            <input type="text" name="c-password" id="c-password" placeholder="*********" />
+            <p>Leave blank to leave unchanged</p>
+        </div>
+        <div>
+            <label for="n-password">New password</label>
+            <input type="text" name="n-password" id="n-password" placeholder="*********" />
+            <p>Leave blank to leave unchanged</p>
+        </div>
+        <div>
+            <label for="n-password2">Confirm new password</label>
+            <input type="text" name="n-password2" id="n-password2" placeholder="*********" />
+        </div>
+
+        <button type="submit">SAVE</button>
+    </form>
+</div>
