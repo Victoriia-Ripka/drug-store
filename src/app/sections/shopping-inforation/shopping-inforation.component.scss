@@ -29,11 +29,151 @@ h2{
 
 .main {
     width: 815.229px;
-    height: 483.999px;
     border-radius: 20px;
     border: 0.5px solid rgba(0, 0, 0, 0.30);
     background-color: rgba(242, 245, 249, 0.50);
     margin-right: 20px;
+    padding: 18px 0;
+
+    h3{
+        color:  #000;
+        text-align: center;
+        font-family: Plus Jakarta Sans;
+        font-size: 20px;
+        font-weight: 700;
+        line-height: 1.6;
+        margin-bottom: 10px;
+    }
+
+    .after-title {
+        color: rgba(0, 0, 0, 0.50);
+        font-family: Plus Jakarta Sans;
+        font-size: 18px;
+        font-weight: 500;
+        text-align: center;
+        line-height: 31.8px;
+        margin-bottom: 17px;
+    }
+
+    .table {
+        display: flex;
+    }
+
+
+    .table-head-text {
+        background: #E0ECFC;
+        height: 40.947px;
+        color: rgba(0, 0, 0, 0.50);
+        font-family: Plus Jakarta Sans;
+        font-size: 18px;
+        font-weight: 500;
+        line-height: 1.35;
+        text-transform: uppercase;
+        padding: 8px 0;
+    }
+
+    .table-text{
+        padding: 18px 0;
+        border-bottom: 0.5px solid rgba(15, 103, 254, 0.30);
+    }
+
+    .extra-row {
+        margin: 28px 0 20px;
+    }
+
+    .price {
+        color: #272727;
+        font-family: Plus Jakarta Sans;
+        font-size: 18px;
+        font-weight: 600;
+        line-height: 1.35
+    }
+
+    .cost {
+        color: #272727;
+        text-align: right;
+        font-family: Plus Jakarta Sans;
+        font-size: 18px;
+        font-weight: 500;
+        line-height: 1.35;
+    }
+
+
+    .table-footer{
+        display: flex;
+        background: #E0ECFC;
+        height: 52.461px;
+        align-items: center;
+        padding: 14px 24px;
+        justify-content: space-between;
+
+        
+    }
+
+    .text{
+        color: rgba(0, 0, 0, 0.50);
+        font-family: Plus Jakarta Sans;
+        font-size: 18px;
+        font-weight: 500;
+        line-height: 1.35;
+        text-transform: uppercase;
+    }
+
+    .total-price{
+        color: #0F67FE;
+        text-align: center;
+        font-family: Plus Jakarta Sans;
+        font-size: 17px;
+        font-weight: 700;
+        line-height: 1.42;
+    }
+
+    .table-nav-cont{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 18px 40px;
+
+        a{
+            color: #0F67FE;
+            font-family: Plus Jakarta Sans;
+            font-size: 18px;
+            font-weight: 500;
+            line-height: 1.7;
+            text-transform: uppercase;
+            cursor: pointer;
+
+            mat-icon{
+                padding-top: 5px;
+            }
+        }
+
+        button {
+            border-radius: 8.28px;
+            border: 1px solid transparent;
+            background: #0F67FE;
+            width: 276.001px;
+            height: 44.783px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+
+            color: #FFF;
+            text-align: center;
+            font-family: Plus Jakarta Sans;
+            font-size: 18px;
+            font-weight: 700;
+            text-transform: uppercase;
+
+            &:focus,
+            &:hover {
+                background-color: var(--ui-primary-hovered-blue);
+            }
+        }
+        
+    }
 }
 
 .content{

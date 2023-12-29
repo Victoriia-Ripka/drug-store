@@ -3,9 +3,66 @@
         Shopping Cart <mat-icon>chevron_right</mat-icon> <span>Contact information</span>
     </h2>
 
-    <div class="content">
+    <div class="content" *ngIf="step === 'first'">
         <div class="main">
+            <h3>Only Today. Finalw Sale. Big Discount</h3>
+            <p class="after-title">Low stock: Items in your cart are reserved for you for 30 minutes</p>
 
+            <div class="table">
+                <div>
+                    <p class="table-head-text">Package</p>
+                    <p class="table-text" *ngFor="let product of items">{{product.title}}
+                        <span *ngFor="let product of items">{{product.dose}}</span>
+                    </p>
+
+                    <div class="extra-row">
+                        <p>Express Delivery</p>
+                        <p>Free for orders over $300
+                            Delivery takes a few days. Online tracking is available</p>
+                    </div>
+                </div>
+                <div>
+                    <p class="table-head-text">QTY</p>
+                    <div *ngFor="let product of items">
+                        <div class="table-text">
+                            <button>-</button>
+                            <span>{{product.amount}}</span>
+                            <button>+</button>
+                        </div>
+
+                    </div>
+
+                    <div class="extra-row price">
+                        <p>€23.30</p>
+                    </div>
+                </div>
+                <div>
+                    <p class="table-head-text">Per Package</p>
+                    <p class="table-text price" *ngFor="let product of items">€{{product.price}}</p>
+
+                    <div class="extra-row">
+                        <p>Regular Delivery</p>
+                        <p>Free for orders over $200
+                            Delivery takes a few weeks. Online tracking is not available</p>
+                    </div>
+                </div>
+                <div>
+                    <p class="table-head-text">Price</p>
+                    <p class="table-text cost" *ngFor="let product of items">€{{product.cost}}</p>
+
+                    <div class="extra-row price">
+                        <p>€23.30</p>
+                    </div>
+                </div>
+            </div>
+            <div class="table-footer">
+                <p class="text">Total</p>
+                <p class="total-price">€{{totalPrice}}</p>
+            </div>
+            <div class="table-nav-cont">
+                <a href="/products"><mat-icon>chevron_left</mat-icon> Continue shopping</a>
+                <button type="button" (click)="clickToSecondStep()">Pay for order</button>
+            </div>
         </div>
 
 
@@ -16,7 +73,8 @@
             <div class="line"></div>
             <img src="assets/img/moneyback.png" />
             <p>Moneyback: <span>30 days</span></p>
-            <p class="extra">In case of any dissatisfaction or damage to the package, we will take care of it by shipping the
+            <p class="extra">In case of any dissatisfaction or damage to the package, we will take care of it by
+                shipping the
                 medicines again or
                 refunding your money</p>
         </div>
