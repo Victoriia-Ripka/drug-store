@@ -11,6 +11,8 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { AppRoutingModule } from './app-routing.module';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { HttpClientModule } from '@angular/common/http';
+import { MatButtonModule } from '@angular/material/button';
+import { MatBadgeModule } from '@angular/material/badge';
 
 import { AppComponent } from './app.component';
 import {
@@ -38,7 +40,8 @@ import {
   AddressesComponent,
   AccountDetailsComponent,
   LogoutComponent,
-  ShoppingCartModalComponent
+  ShoppingCartModalComponent,
+  ShoppingInforationComponent
 } from 'src/app/sections/index'
 import {
   ButtonComponent,
@@ -54,7 +57,8 @@ import {
   PoliciesPageComponent,
   ContactusPageComponent,
   ProductPageComponent,
-  AccountPageComponent
+  AccountPageComponent,
+  ShoppingCartPageComponent
 } from 'src/app/pages/index';
 
 @NgModule({
@@ -96,7 +100,9 @@ import {
     AddressesComponent,
     AccountDetailsComponent,
     LogoutComponent,
-    ShoppingCartModalComponent
+    ShoppingCartModalComponent,
+    ShoppingCartPageComponent,
+    ShoppingInforationComponent
   ],
   imports: [
     BrowserModule,
@@ -110,7 +116,9 @@ import {
     MatInputModule,
     MatSelectModule,
     MatSidenavModule,
-    FormsModule
+    FormsModule,
+    MatButtonModule,
+    MatBadgeModule
   ],
   providers: [],
   bootstrap: [AppComponent]

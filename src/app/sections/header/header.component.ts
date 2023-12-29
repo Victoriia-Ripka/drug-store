@@ -12,6 +12,7 @@ import { categoriesList } from 'src/app/data';
 })
 export class HeaderComponent {
   categories = categoriesList
+  cartItemCount: number = 1;
   private destroy$ = new Subject<void>();
 
   constructor(private router: Router, private scrollService: ScrollService) {
