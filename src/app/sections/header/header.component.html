@@ -15,17 +15,30 @@
             </div>
             <div class="header-top__actions">
                 <div class="shopping-cart-modal-display-cont">
-                    <a href="" class="header-top__div cart">
+                    <a href="/shopping-cart" class="header-top__div cart">
                         <mat-icon [matBadge]="cartItemCount" aria-hidden="false">shopping_cart</mat-icon>
                         <p class="header-top__text">my cart</p>
                     </a>
 
                     <shopping-cart-modal class="modal"></shopping-cart-modal>
                 </div>
-                <a class="header-top__div" routerLink="/account" routerLinkActive="active" ariaCurrentWhenActive="page">
-                    <mat-icon>person</mat-icon>
-                    <p class="header-top__text">my account</p>
-                </a>
+                <div class="shopping-cart-modal-display-cont">
+                    <a *ngIf="isAuthorizedUser" class="header-top__div" routerLink="/account" routerLinkActive="active"
+                        ariaCurrentWhenActive="page">
+                        <mat-icon>person</mat-icon>
+                        <p class="header-top__text">my account</p>
+                    </a>
+
+                    <div *ngIf="!isAuthorizedUser" class="unauthorized-account">
+                        <button class="header-top__div" type="button" (click)="toggleModal()">
+                            <mat-icon>person</mat-icon>
+                            <p class="header-top__text">my account</p>
+                        </button>
+                        <login-modal [class.inable]="isModalOpen" [class.disable]="!isModalOpen"
+                            [isModalOpen]="isModalOpen" (toggleModal)="toggleModal()"></login-modal>
+                    </div>
+
+                </div>
             </div>
         </div>
     </div>

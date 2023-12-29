@@ -11,7 +11,9 @@ import { categoriesList } from 'src/app/data';
   styleUrls: ['./header.component.scss'],
 })
 export class HeaderComponent {
-  categories = categoriesList
+  categories = categoriesList;
+  isAuthorizedUser: boolean = false
+  isModalOpen: boolean = false
   cartItemCount: number = 1;
   private destroy$ = new Subject<void>();
 
@@ -28,6 +30,10 @@ export class HeaderComponent {
   ngOnDestroy() {
     this.destroy$.next();
     this.destroy$.complete();
+  }
+
+  toggleModal() {
+    this.isModalOpen = !this.isModalOpen
   }
 
   navigateToTestimonials() {

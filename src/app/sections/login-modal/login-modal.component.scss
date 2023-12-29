@@ -1,0 +1,210 @@
+.backdrop {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    // overflow:
+    // pointer-events: '' : 'none'
+    top: 0;
+    left: 0;
+    z-index: 50;
+    height: 100vh;
+    width: 100vw;
+    background: rgba(0, 0, 0, 0.4);
+}
+
+.modal {
+    width: 462px;
+    height: 504px;
+    background-color: #fff;
+    color: black;
+    padding: 38px;
+    border-radius: 15.336px;
+    position: relative;
+    box-shadow: -5.112px 7.668px 21.725px 0px rgba(0, 0, 0, 0.25);
+}
+
+.close-btn{
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: transparent;
+    border: 1px solid transparent;
+    cursor: pointer;
+
+}
+
+.nav {
+    width: 386px;
+    height: 34px;
+    display: flex;
+    margin-bottom: 25px;
+
+    button {
+        width: 192.972px;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border: 1px solid transparent;
+        cursor: pointer;
+    }
+}
+
+.signup{
+    border-radius: 5px 0 0 5px;
+}
+
+.login {
+    border-radius: 0 5px 5px 0;
+}
+
+.active {
+    background-color: #1E1E28;
+    color: #F0F0F0;
+}
+
+.disable {
+    background-color: #C7C7C9;
+    color: #fff;
+}
+
+.login-cont{
+    width: 290px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+
+    h4 {
+        color: #333;
+        text-align: center;
+        font-family: Plus Jakarta Sans;
+        font-size: 16px;
+        font-weight: 700;
+    }
+
+    form {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+        margin: 0;
+        padding: 0;
+    }
+
+    label {
+        display: inline-block;
+        // width: 115px;
+        margin-bottom: 9px;
+        color: #666;
+        font-family: Plus Jakarta Sans;
+        font-size: 16px;
+        font-weight: 400;
+    }
+
+    input {
+        display: block;
+        width: 100%;
+        height: 35px;
+        padding: 3px 10px;
+        border-radius: 2.556px;
+        border: 0.639px solid rgba(102, 102, 102, 0.35);
+    }
+
+    .hide-cont {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .hide-btn{
+        background-color: transparent;
+        border: 1px solid transparent;
+        display: flex;
+        align-items: center;
+        gap: 4px;
+        
+        color: rgba(102, 102, 102, 0.80);
+        text-align: right;
+        font-family: Urbanist;
+        font-size: 16px;
+        font-weight: 400;
+        text-transform: capitalize;
+    }
+
+    .or-cont{
+        display: flex;
+        width: 290.097px;
+        align-items: center;
+        gap: 14.697px;
+
+        span {
+            color: #666;
+            font-family: Urbanist;
+            font-size: 16.41px;
+            font-weight: 400;
+        }
+
+        .line{
+            width: 117px;
+            height: 1px;
+            background-color: rgba(102, 102, 102, 0.25);
+        }
+    }
+
+    .name-input-cont{
+        display: flex;
+        gap: 10px;
+    }
+
+    .btn-submit {
+        width: 290px;
+        height: 40px;
+        justify-content: center;
+        align-items: center;
+        border: 1px solid transparent;
+        border-radius: 2.556px;
+        // opacity: 0.25;
+        // background: #111;
+        background-color: var(--ui-primary-blue-color);
+        color: #F0F0F0;
+        font-family: 'Plus Jakarta Sans';
+        font-size: 16px;
+        font-weight: 500;
+        text-transform: uppercase;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+    
+        &:focus,
+        &:hover {
+            background-color: var(--ui-primary-hovered-blue);
+        }
+    }
+
+    
+}
+
+.extra-btn{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+    button{
+       border-radius: 2.556px;
+        border: 0.639px solid #333;
+        background-color: #FFF;
+        width: 100%;
+        height: 40px;
+        display: flex;
+        align-items: center;
+        justify-content: center; 
+        gap: 10.224px;
+        cursor: pointer;
+
+        color: #333;
+        font-family: Plus Jakarta Sans;
+        font-size: 14px;
+        font-weight: 400;
+    }
+    
+}
