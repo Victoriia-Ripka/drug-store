@@ -26,17 +26,17 @@
         <h4>Password change</h4>
         <div>
             <label for="c-password">Current password</label>
-            <input type="text" name="c-password" id="c-password" placeholder="*********" [formControl]="passwordControl"/>
+            <input type="text" name="c-password" type="password" id="c-password" placeholder="*********" [formControl]="passwordControl"/>
             <p>Leave blank to leave unchanged</p>
         </div>
         <div>
             <label for="n-password">New password</label>
-            <input type="text" name="n-password" id="n-password" placeholder="*********" [formControl]="emailControl"/>
+            <input type="text" name="n-password" type="password" id="n-password" placeholder="*********" [formControl]="emailControl"/>
             <p>Leave blank to leave unchanged</p>
         </div>
         <div>
             <label for="n-password2">Confirm new password</label>
-            <input type="text" name="n-password2" id="n-password2" placeholder="*********" [formControl]="newPasswordControl"/>
+            <input type="text" name="n-password2" type="password" id="n-password2" placeholder="*********" [formControl]="newPasswordControl"/>
         </div>
 
         <button type="submit" [disabled]="!accountForm.valid">SAVE</button>

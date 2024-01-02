@@ -1,5 +1,174 @@
-<p>shopping-information-second works!</p>
+<div class="section-cont">
+    <div>
+        <div class="title-cont">
+            <h2>BILLING DETAILS</h2>
 
-<button (click)="emitClickToThirdStep()">
-    Place order
-</button>
+            <p>Have an account? <a href="/account">Log in</a></p>
+
+        </div>
+
+        <form>
+            <div>
+                <label for="name">First Name</label>
+                <input id="name" type="text" placeholder="Nina" [formControl]="nameControl">
+            </div>
+            <div>
+                <label for="name">Last name</label>
+                <input id="name" type="text" placeholder="Jone" [formControl]="nameControl">
+            </div>
+            <div>
+                <label for="name">Email</label>
+                <input id="name" type="email" placeholder="ninajone@gmail.com" [formControl]="nameControl">
+            </div>
+            <div>
+                <label for="name">Phone</label>
+                <input id="name" email="name" placeholder="+574939393373" [formControl]="nameControl">
+            </div>
+            <div>
+                <label for="name">Country/Region</label>
+                <input id="name" email="name" placeholder="Nina" [formControl]="nameControl">
+            </div>
+            <div>
+                <label for="name">Street Address</label>
+                <input id="name" type="text" placeholder="456 Elmwood Avenue" [formControl]="nameControl">
+            </div>
+            <div>
+                <label for="name">Apartment</label>
+                <input id="name" type="text" placeholder="150/2" [formControl]="nameControl">
+            </div>
+            <div>
+                <label for="name">Town/City</label>
+                <input id="name" type="text" placeholder="Toronto" [formControl]="nameControl">
+            </div>
+            <div>
+                <label for="name">Postcode/Zip</label>
+                <input id="name" type="text" placeholder="57449" [formControl]="nameControl">
+            </div>
+
+            <div class="checkbox-cont">
+                <input type="checkbox" id="checkbox" name="checkbox" class="chackbox-input">
+                <label for="checkbox" class="chackbox-label">My shipping information is not the same as my billing
+                    information
+                </label>
+            </div>
+
+        </form>
+
+        <h2>
+            Payment information
+        </h2>
+        <p class="after-title-text">All transactions are secure and encrypted.</p>
+        <div class="payment-cont">
+            <div [ngSwitch]="selectedPaymentMethod">
+                <div class="payment-credit-cont"
+                    [style.background-color]="selectedPaymentMethod === 'credit' ? '#262626' : '#F9FAFC'">
+                    <div class="input-cont">
+                        <input type="checkbox" id="credit" (click)="selectMethod('credit')" value="credit"
+                            [checked]="selectedPaymentMethod === 'credit'">
+                        <label [style.color]="selectedPaymentMethod === 'credit' ? '#fff' : '#262626'">Credit
+                            card</label>
+                    </div>
+                    <div class="img-cont">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="43" height="26" viewBox="0 0 43 26" fill="none">
+                            <rect x="0.622994" y="1.04462" width="41.8714" height="24.1792" rx="2.06408" fill="#F9FAFC"
+                                stroke="#262626" stroke-width="0.589737" />
+                            <path
+                                d="M22.1255 11.2203C22.1062 12.6995 23.449 13.5239 24.4604 14.0144C25.5001 14.5177 25.8484 14.84 25.8446 15.2907C25.8368 15.9803 25.0151 16.2833 24.2476 16.2962C22.9072 16.3167 22.1268 15.9353 21.5076 15.6477L21.0251 17.8974C21.6469 18.1824 22.7976 18.4315 23.9921 18.4418C26.794 18.4418 28.6284 17.0653 28.6374 14.9299C28.6477 12.2206 24.8719 12.0703 24.8977 10.8595C24.9067 10.4922 25.2589 10.1006 26.0303 10.0004C26.4122 9.95036 27.4661 9.91184 28.6606 10.4588L29.1302 8.28238C28.4878 8.04996 27.6622 7.82654 26.6328 7.82654C23.9947 7.82654 22.1397 9.2223 22.1242 11.2203M33.6375 8.01401C33.1253 8.01401 32.6945 8.31063 32.5023 8.76775L28.4994 18.2826H31.3L31.8573 16.7494H35.2796L35.6034 18.2826H38.0712L35.9156 8.01401H33.6362M34.0283 10.7876L34.8372 14.6436H32.6235L34.0283 10.7876ZM18.7302 8.01401L16.523 18.2813H19.192L21.3967 8.01401H18.7289M14.7815 8.01401L12.0042 15.0031L10.8806 9.06051C10.749 8.39666 10.2278 8.01401 9.64991 8.01401H5.10911L5.0459 8.31191C5.97857 8.51351 7.03766 8.83837 7.67879 9.18507C8.07095 9.39694 8.18318 9.58312 8.31218 10.0878L10.4407 18.2813H13.2606L17.5847 8.01401H14.7828"
+                                fill="url(#paint0_linear_228_3579)" />
+                            <defs>
+                                <linearGradient id="paint0_linear_228_3579" x1="20.2369" y1="18.6443" x2="20.5114"
+                                    y2="7.75704" gradientUnits="userSpaceOnUse">
+                                    <stop stop-color="#222357" />
+                                    <stop offset="1" stop-color="#254AA5" />
+                                </linearGradient>
+                            </defs>
+                        </svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="43" height="26" viewBox="0 0 43 26" fill="none">
+                            <rect x="0.340279" y="1.04462" width="41.8714" height="24.1792" rx="2.06408" fill="#F9FAFC"
+                                stroke="#262626" stroke-width="0.589737" />
+                            <circle cx="15.4458" cy="12.6113" r="8.32323" fill="#EB0100" />
+                            <circle cx="25.9282" cy="12.6113" r="8.32323" fill="#FFA310" />
+                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                d="M20.6848 19.0702C22.5651 17.5441 23.7667 15.2145 23.7667 12.6042C23.7667 9.99396 22.5651 7.66433 20.6848 6.13831C18.8046 7.66433 17.603 9.99396 17.603 12.6042C17.603 15.2145 18.8046 17.5441 20.6848 19.0702Z"
+                                fill="#EF5601" />
+                        </svg>
+                        <img src="assets/img/amex.png" />
+                    </div>
+                </div>
+                <div *ngIf="selectedPaymentMethod==='credit'" class="payment-credit-cart-info-cont">
+                    <form class="payment-form" action="">
+                        <input placeholder="Card number">
+                        <input placeholder="Name on Card">
+                        <div>
+                            <input placeholder="MM / YY">
+                            <input placeholder="Security code">
+                        </div>
+
+                    </form>
+                </div>
+                <div class="payment-paypal-cont"
+                    [style.background-color]="selectedPaymentMethod === 'paypal' ? '#262626' : '#F9FAFC'"
+                    [style.border-radius]="selectedPaymentMethod === 'paypal' ? '0' : '0 0 10px 10px'">
+                    <div class="input-cont">
+                        <input type="checkbox" id="paypal" (click)="selectMethod('paypal')" value="paypal"
+                            [checked]="selectedPaymentMethod === 'paypal'">
+                        <label [style.color]="selectedPaymentMethod === 'paypal' ? '#fff' : '#262626'">PayPal</label>
+                    </div>
+                    <div class="img-cont" [style.background-color]="selectedPaymentMethod === 'paypal' ? 'rgb(249, 250, 252)' : ''">
+                        <img src="assets/img/paypal.png" />
+                    </div>
+                </div>
+                <div *ngIf="selectedPaymentMethod==='paypal'" class="payment-paypal-cart-info-cont">
+                    <form class="payment-form" action="">
+                        <input placeholder="Card number">
+                        <input placeholder="Name on Card">
+                        <div>
+                            <input placeholder="MM / YY">
+                            <input placeholder="Security code">
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+
+        <button (click)="emitClickToThirdStep()">
+            Place order
+        </button>
+    </div>
+
+    <div class="summary-cont">
+        <h3>Cart totals</h3>
+
+        <ul>
+            <li *ngFor="let product of orderList">
+                <div>
+                    <p class="bold-text">{{product.title}}</p>
+                    <p>{{product.dose}}</p>
+                    <p>QTY <span class="bold-text">X {{product.quantity}}</span></p>
+                </div>
+                <p class="bold-text">€{{product.price}}</p>
+            </li>
+        </ul>
+        <div class="delivery-info-cont">
+            <div>
+                <p class="bold-text caps-text">Express Delivery</p>
+                <p class="gray-text">Free for orders over $300
+                    Delivery takes a few days. Online tracking is available</p>
+            </div>
+
+            <p class="bold-text">€{{deliveryPrice}}</p>
+        </div>
+        <div class="coupon-cont">
+            <p class="bold-text caps-text">coupon</p>
+            <form>
+                <input type="text" placeholder="Code">
+                <button>APPLY</button>
+            </form>
+        </div>
+        <div class="total-info-cont">
+            <p class="bold-text caps-text">total</p>
+            <p class="total-price">€{{totalPrice}}</p>
+        </div>
+    </div>
+</div>
