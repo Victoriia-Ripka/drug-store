@@ -8,14 +8,11 @@ import { FormControl, FormGroup, Validators } from '@angular/forms';
 })
 export class LoginModalComponent {
   hidePassword: boolean = true;
-  passwordControl = new FormControl('', Validators.required)
   openedSignUp: boolean = true
   @Input() isModalOpen: boolean = false;
   @Output() toggleModal: EventEmitter<void> = new EventEmitter<void>();
 
-  togglePassword() {
-    this.hidePassword = !this.hidePassword;
-  }
+  passwordControl = new FormControl('', Validators.required)
 
   loginForm = new FormGroup({
     email: new FormControl('', Validators.required),
@@ -44,10 +41,6 @@ export class LoginModalComponent {
     return this.signUpForm.get('lname') as FormControl;
   }
 
-  loginWithGoogle(): void {
-    // this.socialAuthService.signIn(GoogleLoginProvider.PROVIDER_ID);
-  }
-
   sendData(type: string): void {
     if (type === 'sign-up') {
       console.log(this.signUpForm.value)
@@ -70,5 +63,9 @@ export class LoginModalComponent {
 
   closeModel(): void {
     this.toggleModal.emit();
+  }
+
+  togglePassword() {
+    this.hidePassword = !this.hidePassword;
   }
 }

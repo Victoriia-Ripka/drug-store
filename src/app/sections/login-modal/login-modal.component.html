@@ -37,7 +37,8 @@
                             </svg> {{ hidePassword ? 'Hide' : 'Show' }}
                         </button>
                     </div>
-                    <input type="{{ hidePassword ? 'password' : 'text' }}" id="password" [formControl]="passwordControl"/>
+                    <input type="{{ hidePassword ? 'password' : 'text' }}" id="password"
+                        [formControl]="passwordControl" />
                 </div>
 
                 <button class="btn-submit" type="submit" [disabled]="loginForm.invalid"
@@ -58,17 +59,19 @@
                             fill="white" />
                     </svg>Log in with Facebook
                 </button>
-                <!-- <div id="g_id_onload"
-                    data-client_id="1012723123447-jmbl6n6ovfpbve5paf05ho9m27sa7qfe.apps.googleusercontent.com"
-                    data-context="signin" data-ux_mode="popup" data-login_uri="http://localhost:3000/api/login"
-                    data-auto_select="true" data-itp_support="true">
-                </div>
+                <!-- <button>
+                    <div id="g_id_onload"
+                        data-client_id="1012723123447-jmbl6n6ovfpbve5paf05ho9m27sa7qfe.apps.googleusercontent.com"
+                        data-context="signin" data-ux_mode="popup" data-login_uri="http://localhost:3000/api/login"
+                        data-auto_select="true" data-itp_support="true">
+                    </div>
 
-                <div class="g_id_signin" data-type="standard" data-shape="rectangular" data-theme="outline"
-                    data-text="signin_with" data-size="large" data-logo_alignment="center" data-width="290">
-                </div> -->
+                    <div class="g_id_signin" data-type="standard" data-shape="rectangular" data-theme="outline"
+                        data-text="signin_with" data-size="large" data-logo_alignment="center" data-width="290">
+                    </div>
+                </button> -->
 
-                <button (click)="loginWithGoogle()"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="17" viewBox="0 0 16 17" fill="none">
+                <button><svg xmlns="http://www.w3.org/2000/svg" width="16" height="17" viewBox="0 0 16 17" fill="none">
                         <path
                             d="M14.3702 8.74508C14.3702 8.19343 14.3245 7.79087 14.2257 7.37341H7.79785V9.86328H11.5708C11.4948 10.482 11.084 11.4139 10.1712 12.0401L10.1584 12.1234L12.1907 13.6664L12.3316 13.6801C13.6247 12.5097 14.3702 10.7877 14.3702 8.74508Z"
                             fill="#4285F4" />
