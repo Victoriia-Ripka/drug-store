@@ -72,13 +72,98 @@ h2{
         padding: 8px 0;
     }
 
+    .left-padding {
+        display: block !important;
+        padding-left: 24px;
+    }
+
+    .right-padding {
+        display: block !important;
+        padding-right: 24px;
+    }
+
     .table-text{
+        height: 80px;
+        display: flex;
+        align-items: center;
         padding: 18px 0;
         border-bottom: 0.5px solid rgba(15, 103, 254, 0.30);
+        color: var(--Light-Colors-Black---Light, #000);
+        font-family: Plus Jakarta Sans;
+        font-size: 20px;
+        font-weight: 700;
+        line-height: 1.21;
+
+        span{
+            display: block;
+            font-size: 13px;
+            color: #0F67FE;
+            font-weight: 500;
+        }
     }
+
+    .delete-btn{
+        background-color: transparent;
+        border: 1px solid transparent;
+        border-bottom: 0.5px solid rgba(15, 103, 254, 0.30);
+        cursor: pointer;
+        padding-right: 15px;
+    }
+
+    .btn-cont{
+        display: flex;
+        padding: 0 70px 0 0;
+    }
+
+    .right-table-column-padding {
+        padding-right: 168px;
+    }
+
+    .btn{
+        width: 25px;
+        height: 40px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: #E0ECFC;
+        border: 1px solid transparent;
+        cursor: pointer;
+        color: #707070;
+        font-family: Urbanist;
+        font-size: 11.869px;
+        line-height: 1.7;
+    }
+
+    .left-btn {
+        border-radius: 3px 0 0 3px;
+    }
+
+    .right-btn {
+        border-radius: 0 3px 3px 0;
+    }
+
 
     .extra-row {
         margin: 28px 0 20px;
+
+        .title {
+            color: #585B5E;
+            font-family: Plus Jakarta Sans;
+            font-size: 16px;
+            font-weight: 700;
+            line-height: 1.5;
+        }
+
+        .discription{
+            width: 230px;
+            color: #585B5E;
+            font-family: Plus Jakarta Sans;
+            font-size: 13px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 16.8px;
+            /* 129.231% */
+        }
     }
 
     .price {
@@ -104,10 +189,8 @@ h2{
         background: #E0ECFC;
         height: 52.461px;
         align-items: center;
-        padding: 14px 24px;
+        padding: 14px 57px 14px 24px;
         justify-content: space-between;
-
-        
     }
 
     .text{
@@ -132,7 +215,7 @@ h2{
         display: flex;
         align-items: center;
         justify-content: space-between;
-        padding: 18px 40px;
+        padding: 18px 24px 18px 20px;
 
         a{
             color: #0F67FE;

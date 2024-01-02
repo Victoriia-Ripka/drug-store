@@ -1,0 +1,127 @@
+.success-cont{
+    width: 1100px;
+    height: 50px;
+    border-radius: 13px;
+    background: #ECF4FF;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 60px;
+
+    p{
+        color: #1E1E28;
+        font-family: Urbanist;
+        font-size: 15px;
+        font-weight: 700;
+        line-height: 1.35;
+        text-transform: uppercase;
+    }
+}
+
+.info-cont{
+    display: flex;
+    width: 1100px;
+    gap: 40px;
+    align-items: flex-start;
+
+    .details-cont{
+        h3{
+            color:#000;
+            font-family: Plus Jakarta Sans;
+            font-size: 25px;
+            font-weight: 600;
+            line-height: 0.75;
+            text-transform: uppercase;
+            margin-bottom: 45px;
+        }
+
+        .details-text-cont{
+            display: flex;
+            gap: 207px;
+        }
+
+        .title {
+            color: #000;
+            font-family: Urbanist;
+            font-size: 18px;
+            font-weight: 500;
+            line-height: 1.12;
+            margin-bottom: 7px;
+        }
+
+        .details{
+            color: #707070;
+            font-family: Urbanist;
+            font-size: 16px;
+            font-weight: 400;
+            line-height: 1.26;
+            margin-bottom: 20px;
+            width: 270px;
+        }
+    }   
+
+    .summary-cont{
+        border-radius: 21.224px;
+        background: rgba(208, 228, 255, 0.40);
+        width: 294px;
+        padding: 21px;
+
+        h3{
+            color:#000;
+            font-family: Plus Jakarta Sans;
+            font-size: 19.101px;
+            font-weight: 600;
+            line-height: 0.65;
+            text-transform: uppercase;
+            margin-bottom: 10px;
+        }
+
+        ul{
+            margin: 0;
+        }
+
+        li {
+            display: flex;
+            align-items: flex-start;
+            justify-content: space-between;
+            padding: 15px 0;
+            border-bottom: 1px solid rgba(36, 46, 73, 0.30);
+        }
+
+        .delivery-info-cont{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 15px 0;
+            border-bottom: 1px solid rgba(36, 46, 73, 0.30);
+            
+        }
+
+        .total-info-cont{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 15px 0 0;
+        }
+
+        .total-price{
+            color: #0F67FE;
+            text-align: right;
+            font-family: Plus Jakarta Sans;
+            font-size: 16.979px;
+            font-weight: 700;
+        }
+
+        .bold-text {
+            color: #000;
+            font-family: Plus Jakarta Sans;
+            font-size: 16.979px;
+            font-weight: 600;
+        }
+
+        .caps-text{
+            text-transform: uppercase;
+        }
+    }
+}

@@ -24,4 +24,8 @@ export class ShoppingInforationComponent {
     this.step = 'second'
   }
 
+  clickToThirdStep() {
+    this.step = 'third'
+  }
+
 }

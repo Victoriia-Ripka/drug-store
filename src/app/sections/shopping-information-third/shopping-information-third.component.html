@@ -1,0 +1,73 @@
+<div class="success-cont">
+    <svg xmlns="http://www.w3.org/2000/svg" width="21" height="21" viewBox="0 0 21 21" fill="none">
+        <path fill-rule="evenodd" clip-rule="evenodd"
+            d="M0.251953 10.25C0.251953 4.65812 4.86947 0.125 10.5655 0.125C13.3008 0.125 15.9241 1.19174 17.8582 3.09054C19.7924 4.98935 20.879 7.56468 20.879 10.25C20.879 15.8419 16.2615 20.375 10.5655 20.375C4.86947 20.375 0.251953 15.8419 0.251953 10.25ZM9.25586 13.6419L15.052 7.95167C15.2419 7.75611 15.2419 7.44861 15.052 7.25305L14.5054 6.71642C14.3049 6.52347 13.984 6.52347 13.7835 6.71642L8.89488 11.5157L7.34786 10.007C7.25428 9.90916 7.12363 9.85364 6.98688 9.85364C6.85014 9.85364 6.71949 9.90916 6.62591 10.007L6.07929 10.5437C5.98167 10.6387 5.92676 10.7681 5.92676 10.9031C5.92676 11.0381 5.98167 11.1675 6.07929 11.2626L8.53391 13.6419C8.62749 13.7398 8.75814 13.7953 8.89488 13.7953C9.03162 13.7953 9.16228 13.7398 9.25586 13.6419Z"
+            fill="#1E1E28" />
+    </svg>
+    <p>We’ve received your order</p>
+</div>
+<div class="info-cont">
+    <div class="details-cont">
+        <h3>Order Details</h3>
+        <div class="details-text-cont">
+            <div>
+                <div>
+                    <p class="title">ORDER NUMBER</p>
+                    <p class="details">1879605573994</p>
+                </div>
+                <div>
+                    <p class="title">EMAIL</p>
+                    <p class="details">Vitathemes@gmail.com</p>
+                </div>
+                <div>
+                    <p class="title">CONTACT NUMBER</p>
+                    <p class="details">+44 8749790988</p>
+                </div>
+            </div>
+
+            <div>
+                <div>
+                    <p class="title">DELIVERY OPTIONS</p>
+                    <p class="details">Standard delivery</p>
+                </div>
+                <div>
+                    <p class="title">DELIVERY ADDRESS</p>
+                    <p class="details">Kristian holst 34 old street W1F 7NU london United Kingdom
+                    </p>
+                </div>
+                <div>
+                    <p class="title">PAYMENT METHOD</p>
+                    <p class="details">Mastercard*************7865</p>
+                </div>
+                <div>
+                    <p class="title">ORDER DATE</p>
+                    <p class="details">October 8,2020</p>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <div class="summary-cont">
+        <h3>ORDER Summary</h3>
+
+        <ul>
+            <li *ngFor="let product of orderList">
+                <div>
+                    <p class="bold-text">{{product.title}}</p>
+                    <p>{{product.dose}}</p>
+                    <p>QTY <span class="bold-text">X {{product.quantity}}</span></p>
+                </div>
+                <p class="bold-text">€{{product.price}}</p>
+            </li>
+        </ul>
+        <div class="delivery-info-cont">
+            <p class="bold-text caps-text">Express Delivery</p>
+            <p class="bold-text">€{{deliveryPrice}}</p>
+        </div>
+        <div class="total-info-cont">
+            <p class="bold-text caps-text">total</p>
+            <p class="total-price">€{{totalPrice}}</p>
+        </div>
+    </div>
+</div>

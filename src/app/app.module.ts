@@ -42,7 +42,9 @@ import {
   LogoutComponent,
   ShoppingCartModalComponent,
   ShoppingInforationComponent,
-  LoginModalComponent
+  LoginModalComponent,
+  ShoppingInformationSecondComponent,
+  ShoppingInformationThirdComponent
 } from 'src/app/sections/index'
 import {
   ButtonComponent,
@@ -104,7 +106,9 @@ import {
     ShoppingCartModalComponent,
     ShoppingCartPageComponent,
     ShoppingInforationComponent,
-    LoginModalComponent
+    LoginModalComponent,
+    ShoppingInformationSecondComponent,
+    ShoppingInformationThirdComponent
   ],
   imports: [
     BrowserModule,

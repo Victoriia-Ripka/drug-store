@@ -10,14 +10,18 @@
 
             <div class="table">
                 <div>
-                    <p class="table-head-text">Package</p>
-                    <p class="table-text" *ngFor="let product of items">{{product.title}}
-                        <span *ngFor="let product of items">{{product.dose}}</span>
-                    </p>
+                    <p class="table-head-text left-padding">Package</p>
 
-                    <div class="extra-row">
-                        <p>Express Delivery</p>
-                        <p>Free for orders over $300
+                    <div class="table-text left-padding" *ngFor="let product of items">
+                        <p class="left-padding">{{product.title}}</p>
+                        <span *ngFor="let product of items" class="left-padding">{{product.dose}}</span>
+                    </div>
+
+
+
+                    <div class="extra-row left-padding">
+                        <p class="title">Express Delivery</p>
+                        <p class="discription">Free for orders over $300
                             Delivery takes a few days. Online tracking is available</p>
                     </div>
                 </div>
@@ -25,9 +29,12 @@
                     <p class="table-head-text">QTY</p>
                     <div *ngFor="let product of items">
                         <div class="table-text">
-                            <button>-</button>
-                            <span>{{product.amount}}</span>
-                            <button>+</button>
+                            <div class="btn-cont">
+                                <button class="btn left-btn">-</button>
+                                <p class="btn">{{product.amount}}</p>
+                                <button class="btn right-btn">+</button>
+                            </div>
+
                         </div>
 
                     </div>
@@ -37,22 +44,35 @@
                     </div>
                 </div>
                 <div>
-                    <p class="table-head-text">Per Package</p>
-                    <p class="table-text price" *ngFor="let product of items">€{{product.price}}</p>
+                    <p class="table-head-text right-table-column-padding">Per Package</p>
+                    <p class="table-text price right-table-column-padding" *ngFor="let product of items">
+                        €{{product.price}}</p>
 
                     <div class="extra-row">
-                        <p>Regular Delivery</p>
-                        <p>Free for orders over $200
+                        <p class="title">Regular Delivery</p>
+                        <p class="discription">Free for orders over $200
                             Delivery takes a few weeks. Online tracking is not available</p>
                     </div>
                 </div>
                 <div>
-                    <p class="table-head-text">Price</p>
-                    <p class="table-text cost" *ngFor="let product of items">€{{product.cost}}</p>
+                    <p class="table-head-text right-padding">Price</p>
+                    <div class="">
+                        <p class="table-text cost" *ngFor="let product of items">€{{product.cost}}</p>
+                    </div>
 
-                    <div class="extra-row price">
+
+                    <div class="extra-row price right-padding">
                         <p>€23.30</p>
                     </div>
+                </div>
+                <div>
+                    <p class="table-head-text right-padding"></p>
+                    <button class="table-text delete-btn" *ngFor="let product of items">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
+                            <path d="M1.6333 1.71577L14.3924 14.2778M1.6333 14.0828L14.3924 1.52075" stroke="black"
+                                stroke-width="1.63967" stroke-linecap="round" />
+                        </svg>
+                    </button>
                 </div>
             </div>
             <div class="table-footer">
@@ -78,5 +98,13 @@
                 medicines again or
                 refunding your money</p>
         </div>
+    </div>
+
+    <div class="content" *ngIf="step === 'second'">
+        <shopping-information-second [step]="step" (clickToThirdStep)="clickToThirdStep()"></shopping-information-second>
+    </div>
+
+    <div class="content" *ngIf="step === 'third'">
+        <shopping-information-third ></shopping-information-third>
     </div>
 </section>

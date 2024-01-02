@@ -1,0 +1,21 @@
+button {
+    width: 100%;
+    height: 54px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid transparent;
+    border-radius: 8px;
+    background-color: #0F67FE;
+    color: #FFF;
+    font-family: 'Plus Jakarta Sans';
+    font-size: 18px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+
+    &:focus,
+    &:hover {
+        background-color: var(--ui-primary-hovered-blue);
+    }
+}
