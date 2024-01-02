@@ -7,14 +7,19 @@ import { FormControl, FormGroup, Validators } from '@angular/forms';
   styleUrls: ['./login-modal.component.scss']
 })
 export class LoginModalComponent {
+  hidePassword: boolean = true;
+  passwordControl = new FormControl('', Validators.required)
   openedSignUp: boolean = true
   @Input() isModalOpen: boolean = false;
   @Output() toggleModal: EventEmitter<void> = new EventEmitter<void>();
 
+  togglePassword() {
+    this.hidePassword = !this.hidePassword;
+  }
 
   loginForm = new FormGroup({
     email: new FormControl('', Validators.required),
-    password: new FormControl('', Validators.required)
+    password: this.passwordControl
   })
 
   signUpForm = new FormGroup({
@@ -25,10 +30,6 @@ export class LoginModalComponent {
 
   get loginEmailControl() {
     return this.loginForm.get('email') as FormControl;
-  }
-
-  get passwordControl() {
-    return this.loginForm.get('password') as FormControl;
   }
 
   get signUpEmailControl() {
@@ -43,6 +44,10 @@ export class LoginModalComponent {
     return this.signUpForm.get('lname') as FormControl;
   }
 
+  loginWithGoogle(): void {
+    // this.socialAuthService.signIn(GoogleLoginProvider.PROVIDER_ID);
+  }
+
   sendData(type: string): void {
     if (type === 'sign-up') {
       console.log(this.signUpForm.value)
@@ -51,8 +56,7 @@ export class LoginModalComponent {
     else {
       console.log(this.loginForm.value)
       this.loginForm.reset()
-    }
-       
+    } 
   }
 
   toogleSignUp(button: string): void {

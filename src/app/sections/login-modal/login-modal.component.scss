@@ -123,6 +123,7 @@
         display: flex;
         align-items: center;
         gap: 4px;
+        cursor: pointer;
         
         color: rgba(102, 102, 102, 0.80);
         text-align: right;
@@ -190,7 +191,7 @@
     gap: 10px;
 
     button{
-       border-radius: 2.556px;
+        border-radius: 2.556px;
         border: 0.639px solid #333;
         background-color: #FFF;
         width: 100%;

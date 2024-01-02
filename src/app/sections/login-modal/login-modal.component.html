@@ -1,6 +1,5 @@
 <div class="backdrop">
-    <div class="modal"> 
-        <!--   -->
+    <div class="modal">
         <button class="close-btn" (click)="closeModel()">
             <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 25 25" fill="none">
                 <path fill-rule="evenodd" clip-rule="evenodd"
@@ -26,7 +25,7 @@
                 <div>
                     <div class="hide-cont">
                         <label for="password">Password</label>
-                        <button class="hide-btn">
+                        <button class="hide-btn" type="button" (click)="togglePassword()">
                             <svg xmlns="http://www.w3.org/2000/svg" width="20" height="17" viewBox="0 0 20 17"
                                 fill="none">
                                 <path
@@ -35,10 +34,10 @@
                                 <path
                                     d="M19.0347 8.5717C18.4747 7.45165 17.7386 6.44372 16.8267 5.62769L13.8507 8.5717V8.89165C13.8507 11.0196 12.1387 12.7317 10.0107 12.7317H9.69072L7.80273 14.6196C8.50679 14.7636 9.24274 14.8596 9.96274 14.8596C13.9149 14.8596 17.3386 12.5557 18.9868 9.22751C19.1307 9.00345 19.1307 8.77954 19.0347 8.57153L19.0347 8.5717Z"
                                     fill="#666666" fill-opacity="0.8" />
-                            </svg> hide
+                            </svg> {{ hidePassword ? 'Hide' : 'Show' }}
                         </button>
                     </div>
-                    <input type="password" id="password" [formControl]="passwordControl" />
+                    <input type="{{ hidePassword ? 'password' : 'text' }}" id="password" [formControl]="passwordControl"/>
                 </div>
 
                 <button class="btn-submit" type="submit" [disabled]="loginForm.invalid"
@@ -57,8 +56,19 @@
                         <path
                             d="M14.1722 13.8524L14.5695 11.3275H12.0837V9.68975C12.0837 8.99883 12.4303 8.32494 13.5437 8.32494H14.6746V6.17536C14.6746 6.17536 13.6487 6.00476 12.6684 6.00476C10.6202 6.00476 9.28267 7.21431 9.28267 9.40314V11.3275H7.00684V13.8524H9.28267V19.9565C9.73957 20.0265 10.207 20.0623 10.6832 20.0623C11.1593 20.0623 11.6268 20.0265 12.0837 19.9565V13.8524H14.1722Z"
                             fill="white" />
-                    </svg>Sign up with Facebook</button>
-                <button><svg xmlns="http://www.w3.org/2000/svg" width="16" height="17" viewBox="0 0 16 17" fill="none">
+                    </svg>Log in with Facebook
+                </button>
+                <!-- <div id="g_id_onload"
+                    data-client_id="1012723123447-jmbl6n6ovfpbve5paf05ho9m27sa7qfe.apps.googleusercontent.com"
+                    data-context="signin" data-ux_mode="popup" data-login_uri="http://localhost:3000/api/login"
+                    data-auto_select="true" data-itp_support="true">
+                </div>
+
+                <div class="g_id_signin" data-type="standard" data-shape="rectangular" data-theme="outline"
+                    data-text="signin_with" data-size="large" data-logo_alignment="center" data-width="290">
+                </div> -->
+
+                <button (click)="loginWithGoogle()"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="17" viewBox="0 0 16 17" fill="none">
                         <path
                             d="M14.3702 8.74508C14.3702 8.19343 14.3245 7.79087 14.2257 7.37341H7.79785V9.86328H11.5708C11.4948 10.482 11.084 11.4139 10.1712 12.0401L10.1584 12.1234L12.1907 13.6664L12.3316 13.6801C13.6247 12.5097 14.3702 10.7877 14.3702 8.74508Z"
                             fill="#4285F4" />
@@ -71,8 +81,10 @@
                         <path
                             d="M7.79762 4.48096C9.08316 4.48096 9.95034 5.02515 10.4448 5.47992L12.377 3.63113C11.1903 2.5502 9.64607 1.88672 7.79762 1.88672C5.11996 1.88672 2.80745 3.39257 1.68164 5.58425L3.89524 7.26905C4.4506 5.65137 5.98718 4.48096 7.79762 4.48096Z"
                             fill="#EB4335" />
-                    </svg>Sign up with Google</button>
+                    </svg>Log in with Google</button>
             </div>
+
+
 
         </div>
 
@@ -86,6 +98,14 @@
                             d="M14.1722 13.8524L14.5695 11.3275H12.0837V9.68975C12.0837 8.99883 12.4303 8.32494 13.5437 8.32494H14.6746V6.17536C14.6746 6.17536 13.6487 6.00476 12.6684 6.00476C10.6202 6.00476 9.28267 7.21431 9.28267 9.40314V11.3275H7.00684V13.8524H9.28267V19.9565C9.73957 20.0265 10.207 20.0623 10.6832 20.0623C11.1593 20.0623 11.6268 20.0265 12.0837 19.9565V13.8524H14.1722Z"
                             fill="white" />
                     </svg>Sign up with Facebook</button>
+                <!-- <div id="g_id_onload" data-client_id="1012723123447-jmbl6n6ovfpbve5paf05ho9m27sa7qfe.apps.googleusercontent.com"
+                    data-context="signin" data-ux_mode="popup" data-login_uri="http://localhost" data-auto_select="true"
+                    data-itp_support="true">
+                </div>
+                
+                <div class="g_id_signin" data-type="standard" data-shape="rectangular" data-theme="outline" data-text="signin_with"
+                    data-size="medium" data-locale="en-GB" data-logo_alignment="center" data-width="29">
+                </div> -->
                 <button><svg xmlns="http://www.w3.org/2000/svg" width="16" height="17" viewBox="0 0 16 17" fill="none">
                         <path
                             d="M14.3702 8.74508C14.3702 8.19343 14.3245 7.79087 14.2257 7.37341H7.79785V9.86328H11.5708C11.4948 10.482 11.084 11.4139 10.1712 12.0401L10.1584 12.1234L12.1907 13.6664L12.3316 13.6801C13.6247 12.5097 14.3702 10.7877 14.3702 8.74508Z"

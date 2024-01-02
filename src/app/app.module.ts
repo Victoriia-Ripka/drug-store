@@ -3,12 +3,12 @@ import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatIconModule } from '@angular/material/icon';
 import { MatMenuModule } from '@angular/material/menu';
-import { ReactiveFormsModule } from '@angular/forms';
 import { MatSelectModule } from '@angular/material/select';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MatInputModule } from '@angular/material/input';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { AppRoutingModule } from './app-routing.module';
+import { CommonModule } from '@angular/common';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { HttpClientModule } from '@angular/common/http';
 import { MatButtonModule } from '@angular/material/button';
@@ -112,7 +112,9 @@ import {
   ],
   imports: [
     BrowserModule,
+    // SocialLoginModule,
     AppRoutingModule,
+    CommonModule,
     BrowserAnimationsModule,
     HttpClientModule,
     MatIconModule,
@@ -126,7 +128,20 @@ import {
     MatButtonModule,
     MatBadgeModule
   ],
-  providers: [],
+  providers: [
+    // {
+    //   provide: 'SocialAuthServiceConfig',
+    //   useValue: {
+    //     autoLogin: false,
+    //     providers: [
+    //       {
+    //         id: GoogleLoginProvider.PROVIDER_ID,
+    //         provider: new GoogleLoginProvider('Google-Client-ID-Goes-Here'),
+    //       },
+    //     ],
+    //   } as SocialAuthServiceConfig,
+    // },
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
