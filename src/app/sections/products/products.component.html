@@ -25,10 +25,16 @@
     </div>
     <mat-drawer-container class="main-container">
         <mat-drawer mode="side" class="sider" opened>
-            <p>General</p>            
+            <p>General</p>
             <ul>
-                <li (click)="selectCategory('All Products')">All Products</li>
-                <li *ngFor="let category of categories" (click)="selectCategory(category)">{{ category }}</li>
+                <li (click)="selectCategory('All Products')"
+                    [ngStyle]="{'border': 'All Products' === selectedCategory ? '1px solid #0F67FE' : '1px solid #CCC'}">
+                    All Products
+                </li>
+                <li *ngFor="let category of categories" (click)="selectCategory(category)"
+                    [ngStyle]="{'border': category === selectedCategory ? '1px solid #0F67FE' : '1px solid #CCC'}">
+                    {{ category }}
+                </li>
             </ul>
         </mat-drawer>
 
@@ -41,10 +47,7 @@
                 </li>
             </ul>
 
-            <pagination-controls 
-                class="my-pagination"
-                (pageChange)="currentPage = $event" 
-                previousLabel=""
+            <pagination-controls class="my-pagination" (pageChange)="currentPage = $event" previousLabel=""
                 nextLabel="">
             </pagination-controls>
 
