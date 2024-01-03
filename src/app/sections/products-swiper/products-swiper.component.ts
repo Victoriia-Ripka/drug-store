@@ -16,6 +16,12 @@ export class ProductsSwiperComponent {
       slidesPerView: 4,
       spaceBetween: 19,
       loop: true,
+      breakpoints: {
+        1000: {
+          slidesPerView: 4,
+          spaceBetween: 19
+        }
+      },
       pagination: {
         el: ".swiper-pagination",
         type: "progressbar",

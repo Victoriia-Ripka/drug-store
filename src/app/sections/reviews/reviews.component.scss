@@ -37,21 +37,20 @@ section {
     width: 1280px;
     margin: 0 auto 40px;
     display: flex;
-    // justify-content: center;
     gap: 20px;
 
     .swiper-slide {
         padding: 30px 0 0;
-        width: calc((100% - #{20 * 2}) / 3);
+        width: 413px !important;
         height: 315px;
+        display: flex;
+        flex-direction: column;
         
         background-color: #fff;
         border-radius: 16px;
         margin: 0 !important;
     }
-}    
-
-
+}
 
 .rewiev-text {
     color: #333;
@@ -86,7 +85,6 @@ section {
     line-height: 1.5;
     margin-left: 10px;
 }
-
 
 .pagination-section {
     display: flex;
