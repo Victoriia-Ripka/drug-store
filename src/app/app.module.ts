@@ -8,6 +8,8 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MatInputModule } from '@angular/material/input';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { AppRoutingModule } from './app-routing.module';
+import { MatPaginatorModule } from '@angular/material/paginator';
+import { NgxPaginationModule } from 'ngx-pagination';
 import { CommonModule } from '@angular/common';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { HttpClientModule } from '@angular/common/http';
@@ -49,7 +51,9 @@ import {
 import {
   ButtonComponent,
   QuestionItemComponent,
-  ProductCardComponent
+  ProductCardComponent,
+  PrevIconComponent,
+  NextIconComponent
 } from 'src/app/components/index';
 import {
   HomePageComponent,
@@ -108,11 +112,13 @@ import {
     ShoppingInforationComponent,
     LoginModalComponent,
     ShoppingInformationSecondComponent,
-    ShoppingInformationThirdComponent
+    ShoppingInformationThirdComponent,
+    PrevIconComponent,
+    NextIconComponent
   ],
   imports: [
     BrowserModule,
-    // SocialLoginModule,
+    MatPaginatorModule,
     AppRoutingModule,
     CommonModule,
     BrowserAnimationsModule,
@@ -124,6 +130,7 @@ import {
     MatInputModule,
     MatSelectModule,
     MatSidenavModule,
+    NgxPaginationModule,
     FormsModule,
     MatButtonModule,
     MatBadgeModule

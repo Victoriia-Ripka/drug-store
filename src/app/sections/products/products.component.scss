@@ -97,12 +97,34 @@ h2{
 
 .main-container{
     width: 1155px;
-    height: 1254px;
+    // height: 1254px;
     margin: 0 auto;
 }
 
 .mat-drawer-side{
     border-right-color: transparent;
+}
+
+.my-pagination ::ng-deep .ngx-pagination{
+    li {
+        margin-right: 13px;
+        font-size: 20px;
+        width: 40px;
+        height: 40px;
+        border-radius: 9.502px;
+        span {
+            margin: 0 2px;
+        }
+    }
+    
+}
+
+.ngx-pagination .pagination-next a:after{
+    margin: 0 !important;
+}
+
+.my-pagination ::ng-deep .ngx-pagination .current {
+    background: #1E1E28;
 }
 
 .sider{
@@ -161,6 +183,7 @@ h2{
         display: flex;
         flex-wrap: wrap;
         gap: 23px;
+        margin: 0 0 40px 0;
     }
 }
 

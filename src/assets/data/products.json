@@ -187,5 +187,572 @@
             }
         ]
 
+    },
+    {
+        "id": 10,
+        "title": "Amoxil",
+        "substance": "Amoxicillin",
+        "shortDescription": "Dutas combines dutasteride and tamsulosin hydrochloride to quickly alleviate urination issues and reduce the risk of urine retention. The fixed dosage mix has similar effects to using dutasteride and tamsulosin separately.",
+        "price": 0.49,
+        "availableAmount": 70,
+        "fullDescription": "Dutas (Dutasteride) Frequent need of urination together with pain or difficulty with passing the urine may seriously disturb a life of any man. Nevertheless, some of them choose to do nothing and suffer whereas some males start looking for some treatment and find it in Dutas capsules.",
+        "packaging": "",
+        "reviews" : [
+            {
+                "name": "Robert",
+                "review": "lalalala"
+            },
+            {
+                "name": "Robert",
+                "review": "lalalala"
+            }
+        ]
+
+    },
+    {
+        "id": 11,
+        "title": "Ampicillin",
+        "substance": "Acillin",
+        "shortDescription": "Dutas combines dutasteride and tamsulosin hydrochloride to quickly alleviate urination issues and reduce the risk of urine retention. The fixed dosage mix has similar effects to using dutasteride and tamsulosin separately.",
+        "price": 0.49,
+        "availableAmount": 70,
+        "fullDescription": "Dutas (Dutasteride) Frequent need of urination together with pain or difficulty with passing the urine may seriously disturb a life of any man. Nevertheless, some of them choose to do nothing and suffer whereas some males start looking for some treatment and find it in Dutas capsules.",
+        "packaging": "",
+        "reviews" : [
+            {
+                "name": "Robert",
+                "review": "lalalala"
+            },
+            {
+                "name": "Robert",
+                "review": "lalalala"
+            }
+        ]
+
+    },
+    {
+        "id": 12,
+        "title": "Augmentin",
+        "substance": "Amoxicillin and clavulanate potassium",
+        "shortDescription": "Dutas combines dutasteride and tamsulosin hydrochloride to quickly alleviate urination issues and reduce the risk of urine retention. The fixed dosage mix has similar effects to using dutasteride and tamsulosin separately.",
+        "price": 0.49,
+        "availableAmount": 70,
+        "fullDescription": "Dutas (Dutasteride) Frequent need of urination together with pain or difficulty with passing the urine may seriously disturb a life of any man. Nevertheless, some of them choose to do nothing and suffer whereas some males start looking for some treatment and find it in Dutas capsules.",
+        "packaging": "",
+        "reviews" : [
+            {
+                "name": "Robert",
+                "review": "lalalala"
+            },
+            {
+                "name": "Robert",
+                "review": "lalalala"
+            }
+        ]
+
+    },
+    {
+        "id": 13,
+        "title": "Bactrim",
+        "substance": "Sulfamethoxazole and trimethoprim",
+        "shortDescription": "Dutas combines dutasteride and tamsulosin hydrochloride to quickly alleviate urination issues and reduce the risk of urine retention. The fixed dosage mix has similar effects to using dutasteride and tamsulosin separately.",
+        "price": 0.49,
+        "availableAmount": 70,
+        "fullDescription": "Dutas (Dutasteride) Frequent need of urination together with pain or difficulty with passing the urine may seriously disturb a life of any man. Nevertheless, some of them choose to do nothing and suffer whereas some males start looking for some treatment and find it in Dutas capsules.",
+        "packaging": "",
+        "reviews" : [
+            {
+                "name": "Robert",
+                "review": "lalalala"
+            },
+            {
+                "name": "Robert",
+                "review": "lalalala"
+            }
+        ]
+
+    },
+    {
+        "id": 14,
+        "title": "Cefadroxil",
+        "substance": "Cefadroxil",
+        "shortDescription": "Dutas combines dutasteride and tamsulosin hydrochloride to quickly alleviate urination issues and reduce the risk of urine retention. The fixed dosage mix has similar effects to using dutasteride and tamsulosin separately.",
+        "price": 0.49,
+        "availableAmount": 70,
+        "fullDescription": "Dutas (Dutasteride) Frequent need of urination together with pain or difficulty with passing the urine may seriously disturb a life of any man. Nevertheless, some of them choose to do nothing and suffer whereas some males start looking for some treatment and find it in Dutas capsules.",
+        "packaging": "",
+        "reviews" : [
+            {
+                "name": "Robert",
+                "review": "lalalala"
+            },
+            {
+                "name": "Robert",
+                "review": "lalalala"
+            }
+        ]
+
+    },
+    {
+        "id": 15,
+        "title": "Cefixime",
+        "substance": "Cefixime",
+        "shortDescription": "Dutas combines dutasteride and tamsulosin hydrochloride to quickly alleviate urination issues and reduce the risk of urine retention. The fixed dosage mix has similar effects to using dutasteride and tamsulosin separately.",
+        "price": 0.49,
+        "availableAmount": 70,
+        "fullDescription": "Dutas (Dutasteride) Frequent need of urination together with pain or difficulty with passing the urine may seriously disturb a life of any man. Nevertheless, some of them choose to do nothing and suffer whereas some males start looking for some treatment and find it in Dutas capsules.",
+        "packaging": "",
+        "reviews" : [
+            {
+                "name": "Robert",
+                "review": "lalalala"
+            },
+            {
+                "name": "Robert",
+                "review": "lalalala"
+            }
+        ]
+
+    },
+    {
+        "id": 16,
+        "title": "Ceftin",
+        "substance": "Cefuroxime",
+        "shortDescription": "Dutas combines dutasteride and tamsulosin hydrochloride to quickly alleviate urination issues and reduce the risk of urine retention. The fixed dosage mix has similar effects to using dutasteride and tamsulosin separately.",
+        "price": 0.49,
+        "availableAmount": 70,
+        "fullDescription": "Dutas (Dutasteride) Frequent need of urination together with pain or difficulty with passing the urine may seriously disturb a life of any man. Nevertheless, some of them choose to do nothing and suffer whereas some males start looking for some treatment and find it in Dutas capsules.",
+        "packaging": "",
+        "reviews" : [
+            {
+                "name": "Robert",
+                "review": "lalalala"
+            },
+            {
+                "name": "Robert",
+                "review": "lalalala"
+            }
+        ]
+
+    },
+    {
+        "id": 17,
+        "title": "Cephalexin",
+        "substance": "Cephalexin",
+        "shortDescription": "Dutas combines dutasteride and tamsulosin hydrochloride to quickly alleviate urination issues and reduce the risk of urine retention. The fixed dosage mix has similar effects to using dutasteride and tamsulosin separately.",
+        "price": 0.49,
+        "availableAmount": 70,
+        "fullDescription": "Dutas (Dutasteride) Frequent need of urination together with pain or difficulty with passing the urine may seriously disturb a life of any man. Nevertheless, some of them choose to do nothing and suffer whereas some males start looking for some treatment and find it in Dutas capsules.",
+        "packaging": "",
+        "reviews" : [
+            {
+                "name": "Robert",
+                "review": "lalalala"
+            },
+            {
+                "name": "Robert",
+                "review": "lalalala"
+            }
+        ]
+
+    },
+    {
+        "id": 18,
+        "title": "Ciplox",
+        "substance": "Ciprofloxacin",
+        "shortDescription": "Dutas combines dutasteride and tamsulosin hydrochloride to quickly alleviate urination issues and reduce the risk of urine retention. The fixed dosage mix has similar effects to using dutasteride and tamsulosin separately.",
+        "price": 0.49,
+        "availableAmount": 70,
+        "fullDescription": "Dutas (Dutasteride) Frequent need of urination together with pain or difficulty with passing the urine may seriously disturb a life of any man. Nevertheless, some of them choose to do nothing and suffer whereas some males start looking for some treatment and find it in Dutas capsules.",
+        "packaging": "",
+        "reviews" : [
+            {
+                "name": "Robert",
+                "review": "lalalala"
+            },
+            {
+                "name": "Robert",
+                "review": "lalalala"
+            }
+        ]
+
+    },
+    {
+        "id": 1,
+        "title": "Amoxil",
+        "substance": "Amoxicillin",
+        "shortDescription": "Dutas combines dutasteride and tamsulosin hydrochloride to quickly alleviate urination issues and reduce the risk of urine retention. The fixed dosage mix has similar effects to using dutasteride and tamsulosin separately.",
+        "price": 0.49,
+        "availableAmount": 70,
+        "fullDescription": "Dutas (Dutasteride) Frequent need of urination together with pain or difficulty with passing the urine may seriously disturb a life of any man. Nevertheless, some of them choose to do nothing and suffer whereas some males start looking for some treatment and find it in Dutas capsules.",
+        "packaging": "",
+        "reviews" : [
+            {
+                "name": "Robert",
+                "review": "lalalala"
+            },
+            {
+                "name": "Robert",
+                "review": "lalalala"
+            }
+        ]
+
+    },
+    {
+        "id": 2,
+        "title": "Ampicillin",
+        "substance": "Acillin",
+        "shortDescription": "Dutas combines dutasteride and tamsulosin hydrochloride to quickly alleviate urination issues and reduce the risk of urine retention. The fixed dosage mix has similar effects to using dutasteride and tamsulosin separately.",
+        "price": 0.49,
+        "availableAmount": 70,
+        "fullDescription": "Dutas (Dutasteride) Frequent need of urination together with pain or difficulty with passing the urine may seriously disturb a life of any man. Nevertheless, some of them choose to do nothing and suffer whereas some males start looking for some treatment and find it in Dutas capsules.",
+        "packaging": "",
+        "reviews" : [
+            {
+                "name": "Robert",
+                "review": "lalalala"
+            },
+            {
+                "name": "Robert",
+                "review": "lalalala"
+            }
+        ]
+
+    },
+    {
+        "id": 3,
+        "title": "Augmentin",
+        "substance": "Amoxicillin and clavulanate potassium",
+        "shortDescription": "Dutas combines dutasteride and tamsulosin hydrochloride to quickly alleviate urination issues and reduce the risk of urine retention. The fixed dosage mix has similar effects to using dutasteride and tamsulosin separately.",
+        "price": 0.49,
+        "availableAmount": 70,
+        "fullDescription": "Dutas (Dutasteride) Frequent need of urination together with pain or difficulty with passing the urine may seriously disturb a life of any man. Nevertheless, some of them choose to do nothing and suffer whereas some males start looking for some treatment and find it in Dutas capsules.",
+        "packaging": "",
+        "reviews" : [
+            {
+                "name": "Robert",
+                "review": "lalalala"
+            },
+            {
+                "name": "Robert",
+                "review": "lalalala"
+            }
+        ]
+
+    },
+    {
+        "id": 4,
+        "title": "Bactrim",
+        "substance": "Sulfamethoxazole and trimethoprim",
+        "shortDescription": "Dutas combines dutasteride and tamsulosin hydrochloride to quickly alleviate urination issues and reduce the risk of urine retention. The fixed dosage mix has similar effects to using dutasteride and tamsulosin separately.",
+        "price": 0.49,
+        "availableAmount": 70,
+        "fullDescription": "Dutas (Dutasteride) Frequent need of urination together with pain or difficulty with passing the urine may seriously disturb a life of any man. Nevertheless, some of them choose to do nothing and suffer whereas some males start looking for some treatment and find it in Dutas capsules.",
+        "packaging": "",
+        "reviews" : [
+            {
+                "name": "Robert",
+                "review": "lalalala"
+            },
+            {
+                "name": "Robert",
+                "review": "lalalala"
+            }
+        ]
+
+    },
+    {
+        "id": 5,
+        "title": "Cefadroxil",
+        "substance": "Cefadroxil",
+        "shortDescription": "Dutas combines dutasteride and tamsulosin hydrochloride to quickly alleviate urination issues and reduce the risk of urine retention. The fixed dosage mix has similar effects to using dutasteride and tamsulosin separately.",
+        "price": 0.49,
+        "availableAmount": 70,
+        "fullDescription": "Dutas (Dutasteride) Frequent need of urination together with pain or difficulty with passing the urine may seriously disturb a life of any man. Nevertheless, some of them choose to do nothing and suffer whereas some males start looking for some treatment and find it in Dutas capsules.",
+        "packaging": "",
+        "reviews" : [
+            {
+                "name": "Robert",
+                "review": "lalalala"
+            },
+            {
+                "name": "Robert",
+                "review": "lalalala"
+            }
+        ]
+
+    },
+    {
+        "id": 6,
+        "title": "Cefixime",
+        "substance": "Cefixime",
+        "shortDescription": "Dutas combines dutasteride and tamsulosin hydrochloride to quickly alleviate urination issues and reduce the risk of urine retention. The fixed dosage mix has similar effects to using dutasteride and tamsulosin separately.",
+        "price": 0.49,
+        "availableAmount": 70,
+        "fullDescription": "Dutas (Dutasteride) Frequent need of urination together with pain or difficulty with passing the urine may seriously disturb a life of any man. Nevertheless, some of them choose to do nothing and suffer whereas some males start looking for some treatment and find it in Dutas capsules.",
+        "packaging": "",
+        "reviews" : [
+            {
+                "name": "Robert",
+                "review": "lalalala"
+            },
+            {
+                "name": "Robert",
+                "review": "lalalala"
+            }
+        ]
+
+    },
+    {
+        "id": 7,
+        "title": "Ceftin",
+        "substance": "Cefuroxime",
+        "shortDescription": "Dutas combines dutasteride and tamsulosin hydrochloride to quickly alleviate urination issues and reduce the risk of urine retention. The fixed dosage mix has similar effects to using dutasteride and tamsulosin separately.",
+        "price": 0.49,
+        "availableAmount": 70,
+        "fullDescription": "Dutas (Dutasteride) Frequent need of urination together with pain or difficulty with passing the urine may seriously disturb a life of any man. Nevertheless, some of them choose to do nothing and suffer whereas some males start looking for some treatment and find it in Dutas capsules.",
+        "packaging": "",
+        "reviews" : [
+            {
+                "name": "Robert",
+                "review": "lalalala"
+            },
+            {
+                "name": "Robert",
+                "review": "lalalala"
+            }
+        ]
+
+    },
+    {
+        "id": 8,
+        "title": "Cephalexin",
+        "substance": "Cephalexin",
+        "shortDescription": "Dutas combines dutasteride and tamsulosin hydrochloride to quickly alleviate urination issues and reduce the risk of urine retention. The fixed dosage mix has similar effects to using dutasteride and tamsulosin separately.",
+        "price": 0.49,
+        "availableAmount": 70,
+        "fullDescription": "Dutas (Dutasteride) Frequent need of urination together with pain or difficulty with passing the urine may seriously disturb a life of any man. Nevertheless, some of them choose to do nothing and suffer whereas some males start looking for some treatment and find it in Dutas capsules.",
+        "packaging": "",
+        "reviews" : [
+            {
+                "name": "Robert",
+                "review": "lalalala"
+            },
+            {
+                "name": "Robert",
+                "review": "lalalala"
+            }
+        ]
+
+    },
+    {
+        "id": 9,
+        "title": "Ciplox",
+        "substance": "Ciprofloxacin",
+        "shortDescription": "Dutas combines dutasteride and tamsulosin hydrochloride to quickly alleviate urination issues and reduce the risk of urine retention. The fixed dosage mix has similar effects to using dutasteride and tamsulosin separately.",
+        "price": 0.49,
+        "availableAmount": 70,
+        "fullDescription": "Dutas (Dutasteride) Frequent need of urination together with pain or difficulty with passing the urine may seriously disturb a life of any man. Nevertheless, some of them choose to do nothing and suffer whereas some males start looking for some treatment and find it in Dutas capsules.",
+        "packaging": "",
+        "reviews" : [
+            {
+                "name": "Robert",
+                "review": "lalalala"
+            },
+            {
+                "name": "Robert",
+                "review": "lalalala"
+            }
+        ]
+
+    },
+    {
+        "id": 10,
+        "title": "Amoxil",
+        "substance": "Amoxicillin",
+        "shortDescription": "Dutas combines dutasteride and tamsulosin hydrochloride to quickly alleviate urination issues and reduce the risk of urine retention. The fixed dosage mix has similar effects to using dutasteride and tamsulosin separately.",
+        "price": 0.49,
+        "availableAmount": 70,
+        "fullDescription": "Dutas (Dutasteride) Frequent need of urination together with pain or difficulty with passing the urine may seriously disturb a life of any man. Nevertheless, some of them choose to do nothing and suffer whereas some males start looking for some treatment and find it in Dutas capsules.",
+        "packaging": "",
+        "reviews" : [
+            {
+                "name": "Robert",
+                "review": "lalalala"
+            },
+            {
+                "name": "Robert",
+                "review": "lalalala"
+            }
+        ]
+
+    },
+    {
+        "id": 11,
+        "title": "Ampicillin",
+        "substance": "Acillin",
+        "shortDescription": "Dutas combines dutasteride and tamsulosin hydrochloride to quickly alleviate urination issues and reduce the risk of urine retention. The fixed dosage mix has similar effects to using dutasteride and tamsulosin separately.",
+        "price": 0.49,
+        "availableAmount": 70,
+        "fullDescription": "Dutas (Dutasteride) Frequent need of urination together with pain or difficulty with passing the urine may seriously disturb a life of any man. Nevertheless, some of them choose to do nothing and suffer whereas some males start looking for some treatment and find it in Dutas capsules.",
+        "packaging": "",
+        "reviews" : [
+            {
+                "name": "Robert",
+                "review": "lalalala"
+            },
+            {
+                "name": "Robert",
+                "review": "lalalala"
+            }
+        ]
+
+    },
+    {
+        "id": 12,
+        "title": "Augmentin",
+        "substance": "Amoxicillin and clavulanate potassium",
+        "shortDescription": "Dutas combines dutasteride and tamsulosin hydrochloride to quickly alleviate urination issues and reduce the risk of urine retention. The fixed dosage mix has similar effects to using dutasteride and tamsulosin separately.",
+        "price": 0.49,
+        "availableAmount": 70,
+        "fullDescription": "Dutas (Dutasteride) Frequent need of urination together with pain or difficulty with passing the urine may seriously disturb a life of any man. Nevertheless, some of them choose to do nothing and suffer whereas some males start looking for some treatment and find it in Dutas capsules.",
+        "packaging": "",
+        "reviews" : [
+            {
+                "name": "Robert",
+                "review": "lalalala"
+            },
+            {
+                "name": "Robert",
+                "review": "lalalala"
+            }
+        ]
+
+    },
+    {
+        "id": 13,
+        "title": "Bactrim",
+        "substance": "Sulfamethoxazole and trimethoprim",
+        "shortDescription": "Dutas combines dutasteride and tamsulosin hydrochloride to quickly alleviate urination issues and reduce the risk of urine retention. The fixed dosage mix has similar effects to using dutasteride and tamsulosin separately.",
+        "price": 0.49,
+        "availableAmount": 70,
+        "fullDescription": "Dutas (Dutasteride) Frequent need of urination together with pain or difficulty with passing the urine may seriously disturb a life of any man. Nevertheless, some of them choose to do nothing and suffer whereas some males start looking for some treatment and find it in Dutas capsules.",
+        "packaging": "",
+        "reviews" : [
+            {
+                "name": "Robert",
+                "review": "lalalala"
+            },
+            {
+                "name": "Robert",
+                "review": "lalalala"
+            }
+        ]
+
+    },
+    {
+        "id": 14,
+        "title": "Cefadroxil",
+        "substance": "Cefadroxil",
+        "shortDescription": "Dutas combines dutasteride and tamsulosin hydrochloride to quickly alleviate urination issues and reduce the risk of urine retention. The fixed dosage mix has similar effects to using dutasteride and tamsulosin separately.",
+        "price": 0.49,
+        "availableAmount": 70,
+        "fullDescription": "Dutas (Dutasteride) Frequent need of urination together with pain or difficulty with passing the urine may seriously disturb a life of any man. Nevertheless, some of them choose to do nothing and suffer whereas some males start looking for some treatment and find it in Dutas capsules.",
+        "packaging": "",
+        "reviews" : [
+            {
+                "name": "Robert",
+                "review": "lalalala"
+            },
+            {
+                "name": "Robert",
+                "review": "lalalala"
+            }
+        ]
+
+    },
+    {
+        "id": 15,
+        "title": "Cefixime",
+        "substance": "Cefixime",
+        "shortDescription": "Dutas combines dutasteride and tamsulosin hydrochloride to quickly alleviate urination issues and reduce the risk of urine retention. The fixed dosage mix has similar effects to using dutasteride and tamsulosin separately.",
+        "price": 0.49,
+        "availableAmount": 70,
+        "fullDescription": "Dutas (Dutasteride) Frequent need of urination together with pain or difficulty with passing the urine may seriously disturb a life of any man. Nevertheless, some of them choose to do nothing and suffer whereas some males start looking for some treatment and find it in Dutas capsules.",
+        "packaging": "",
+        "reviews" : [
+            {
+                "name": "Robert",
+                "review": "lalalala"
+            },
+            {
+                "name": "Robert",
+                "review": "lalalala"
+            }
+        ]
+
+    },
+    {
+        "id": 16,
+        "title": "Ceftin",
+        "substance": "Cefuroxime",
+        "shortDescription": "Dutas combines dutasteride and tamsulosin hydrochloride to quickly alleviate urination issues and reduce the risk of urine retention. The fixed dosage mix has similar effects to using dutasteride and tamsulosin separately.",
+        "price": 0.49,
+        "availableAmount": 70,
+        "fullDescription": "Dutas (Dutasteride) Frequent need of urination together with pain or difficulty with passing the urine may seriously disturb a life of any man. Nevertheless, some of them choose to do nothing and suffer whereas some males start looking for some treatment and find it in Dutas capsules.",
+        "packaging": "",
+        "reviews" : [
+            {
+                "name": "Robert",
+                "review": "lalalala"
+            },
+            {
+                "name": "Robert",
+                "review": "lalalala"
+            }
+        ]
+
+    },
+    {
+        "id": 17,
+        "title": "Cephalexin",
+        "substance": "Cephalexin",
+        "shortDescription": "Dutas combines dutasteride and tamsulosin hydrochloride to quickly alleviate urination issues and reduce the risk of urine retention. The fixed dosage mix has similar effects to using dutasteride and tamsulosin separately.",
+        "price": 0.49,
+        "availableAmount": 70,
+        "fullDescription": "Dutas (Dutasteride) Frequent need of urination together with pain or difficulty with passing the urine may seriously disturb a life of any man. Nevertheless, some of them choose to do nothing and suffer whereas some males start looking for some treatment and find it in Dutas capsules.",
+        "packaging": "",
+        "reviews" : [
+            {
+                "name": "Robert",
+                "review": "lalalala"
+            },
+            {
+                "name": "Robert",
+                "review": "lalalala"
+            }
+        ]
+
+    },
+    {
+        "id": 18,
+        "title": "Ciplox",
+        "substance": "Ciprofloxacin",
+        "shortDescription": "Dutas combines dutasteride and tamsulosin hydrochloride to quickly alleviate urination issues and reduce the risk of urine retention. The fixed dosage mix has similar effects to using dutasteride and tamsulosin separately.",
+        "price": 0.49,
+        "availableAmount": 70,
+        "fullDescription": "Dutas (Dutasteride) Frequent need of urination together with pain or difficulty with passing the urine may seriously disturb a life of any man. Nevertheless, some of them choose to do nothing and suffer whereas some males start looking for some treatment and find it in Dutas capsules.",
+        "packaging": "",
+        "reviews" : [
+            {
+                "name": "Robert",
+                "review": "lalalala"
+            },
+            {
+                "name": "Robert",
+                "review": "lalalala"
+            }
+        ]
+
     }
 ]

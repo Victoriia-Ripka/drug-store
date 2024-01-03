@@ -38,33 +38,20 @@
 
         <mat-drawer-content>
             <ul>
-                <li *ngFor="let item of products">
-                    <product-card 
-                        [title]="item.title" 
-                        [substance]="item.substance"
-                        [price]="item.price"
-                        [id]="item.id"
-                        >
+                <li *ngFor="let item of products | paginate: { itemsPerPage: pageSize, currentPage: currentPage }">
+                    <product-card [title]="item.title" [substance]="item.substance" [price]="item.price" [id]="item.id">
                     </product-card>
                 </li>
             </ul>
-            <div class="paggination">
-                <button type="button">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="30" height="29" viewBox="0 0 30 29" fill="none">
-                        <path
-                            d="M20.8358 14.7499L8.9585 14.7499M8.9585 14.7499L13.7094 19.5009M8.9585 14.7499L13.7094 9.99902"
-                            stroke="#1E1E28" stroke-width="2.37546" stroke-linecap="round" stroke-linejoin="round" />
-                    </svg>
-                </button>
-                paggination
-                <button type="button">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="29" height="29" viewBox="0 0 29 29" fill="none">
-                        <path
-                            d="M8.40688 14.7499L20.2842 14.7499M20.2842 14.7499L15.5333 19.5009M20.2842 14.7499L15.5333 9.99902"
-                            stroke="#1E1E28" stroke-width="2.37546" stroke-linecap="round" stroke-linejoin="round" />
-                    </svg>
-                </button>
-            </div>
+
+            <pagination-controls 
+                class="my-pagination"
+                (pageChange)="currentPage = $event" 
+                previousLabel=""
+                nextLabel=""></pagination-controls>
+                <!-- [previousTemplate]="previousIcon"
+                [nextTemplate]="nextIcon" -->
+
         </mat-drawer-content>
     </mat-drawer-container>
 </section>
