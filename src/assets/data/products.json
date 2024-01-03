@@ -2,6 +2,7 @@
     {
         "id": 1,
         "title": "Amoxil",
+        "category": "Anti Fungus",
         "substance": "Amoxicillin",
         "shortDescription": "Dutas combines dutasteride and tamsulosin hydrochloride to quickly alleviate urination issues and reduce the risk of urine retention. The fixed dosage mix has similar effects to using dutasteride and tamsulosin separately.",
         "price": 0.49,
@@ -23,6 +24,7 @@
     {
         "id": 2,
         "title": "Ampicillin",
+        "category": "Women\\'s Health",
         "substance": "Acillin",
         "shortDescription": "Dutas combines dutasteride and tamsulosin hydrochloride to quickly alleviate urination issues and reduce the risk of urine retention. The fixed dosage mix has similar effects to using dutasteride and tamsulosin separately.",
         "price": 0.49,
@@ -43,7 +45,8 @@
     },
     {
         "id": 3,
-        "title": "Augmentin",
+        "title": "Ampicillin",
+        "category": "Weight Loss",
         "substance": "Amoxicillin and clavulanate potassium",
         "shortDescription": "Dutas combines dutasteride and tamsulosin hydrochloride to quickly alleviate urination issues and reduce the risk of urine retention. The fixed dosage mix has similar effects to using dutasteride and tamsulosin separately.",
         "price": 0.49,
@@ -64,7 +67,8 @@
     },
     {
         "id": 4,
-        "title": "Bactrim",
+        "title": "Ampicillin",
+        "category": "Weight Loss",
         "substance": "Sulfamethoxazole and trimethoprim",
         "shortDescription": "Dutas combines dutasteride and tamsulosin hydrochloride to quickly alleviate urination issues and reduce the risk of urine retention. The fixed dosage mix has similar effects to using dutasteride and tamsulosin separately.",
         "price": 0.49,
@@ -85,7 +89,8 @@
     },
     {
         "id": 5,
-        "title": "Cefadroxil",
+        "title": "Ampicillin",
+        "category": "Stop Smoking",
         "substance": "Cefadroxil",
         "shortDescription": "Dutas combines dutasteride and tamsulosin hydrochloride to quickly alleviate urination issues and reduce the risk of urine retention. The fixed dosage mix has similar effects to using dutasteride and tamsulosin separately.",
         "price": 0.49,
@@ -107,6 +112,7 @@
     {
         "id": 6,
         "title": "Cefixime",
+        "category": "Sleep Aid",
         "substance": "Cefixime",
         "shortDescription": "Dutas combines dutasteride and tamsulosin hydrochloride to quickly alleviate urination issues and reduce the risk of urine retention. The fixed dosage mix has similar effects to using dutasteride and tamsulosin separately.",
         "price": 0.49,
@@ -128,6 +134,7 @@
     {
         "id": 7,
         "title": "Ceftin",
+        "category": "Sleep Aid",
         "substance": "Cefuroxime",
         "shortDescription": "Dutas combines dutasteride and tamsulosin hydrochloride to quickly alleviate urination issues and reduce the risk of urine retention. The fixed dosage mix has similar effects to using dutasteride and tamsulosin separately.",
         "price": 0.49,
@@ -149,6 +156,7 @@
     {
         "id": 8,
         "title": "Cephalexin",
+        "category": "Sleep Aid",
         "substance": "Cephalexin",
         "shortDescription": "Dutas combines dutasteride and tamsulosin hydrochloride to quickly alleviate urination issues and reduce the risk of urine retention. The fixed dosage mix has similar effects to using dutasteride and tamsulosin separately.",
         "price": 0.49,
@@ -170,6 +178,7 @@
     {
         "id": 9,
         "title": "Ciplox",
+        "category": "Sleep Aid",
         "substance": "Ciprofloxacin",
         "shortDescription": "Dutas combines dutasteride and tamsulosin hydrochloride to quickly alleviate urination issues and reduce the risk of urine retention. The fixed dosage mix has similar effects to using dutasteride and tamsulosin separately.",
         "price": 0.49,
@@ -191,6 +200,7 @@
     {
         "id": 10,
         "title": "Amoxil",
+        "category": "Sleep Aid",
         "substance": "Amoxicillin",
         "shortDescription": "Dutas combines dutasteride and tamsulosin hydrochloride to quickly alleviate urination issues and reduce the risk of urine retention. The fixed dosage mix has similar effects to using dutasteride and tamsulosin separately.",
         "price": 0.49,
@@ -212,6 +222,7 @@
     {
         "id": 11,
         "title": "Ampicillin",
+        "category": "Skin Care",
         "substance": "Acillin",
         "shortDescription": "Dutas combines dutasteride and tamsulosin hydrochloride to quickly alleviate urination issues and reduce the risk of urine retention. The fixed dosage mix has similar effects to using dutasteride and tamsulosin separately.",
         "price": 0.49,
@@ -232,7 +243,8 @@
     },
     {
         "id": 12,
-        "title": "Augmentin",
+        "title": "Skin Care",
+        "category": "Anti Fungus",
         "substance": "Amoxicillin and clavulanate potassium",
         "shortDescription": "Dutas combines dutasteride and tamsulosin hydrochloride to quickly alleviate urination issues and reduce the risk of urine retention. The fixed dosage mix has similar effects to using dutasteride and tamsulosin separately.",
         "price": 0.49,
@@ -254,6 +266,7 @@
     {
         "id": 13,
         "title": "Bactrim",
+        "category": "Skin Care",
         "substance": "Sulfamethoxazole and trimethoprim",
         "shortDescription": "Dutas combines dutasteride and tamsulosin hydrochloride to quickly alleviate urination issues and reduce the risk of urine retention. The fixed dosage mix has similar effects to using dutasteride and tamsulosin separately.",
         "price": 0.49,
@@ -275,6 +288,7 @@
     {
         "id": 14,
         "title": "Cefadroxil",
+        "category": "Pain Relief",
         "substance": "Cefadroxil",
         "shortDescription": "Dutas combines dutasteride and tamsulosin hydrochloride to quickly alleviate urination issues and reduce the risk of urine retention. The fixed dosage mix has similar effects to using dutasteride and tamsulosin separately.",
         "price": 0.49,
@@ -296,6 +310,7 @@
     {
         "id": 15,
         "title": "Cefixime",
+        "category": "Skin Care",
         "substance": "Cefixime",
         "shortDescription": "Dutas combines dutasteride and tamsulosin hydrochloride to quickly alleviate urination issues and reduce the risk of urine retention. The fixed dosage mix has similar effects to using dutasteride and tamsulosin separately.",
         "price": 0.49,
@@ -317,6 +332,7 @@
     {
         "id": 16,
         "title": "Ceftin",
+        "category": "Pain Relief",
         "substance": "Cefuroxime",
         "shortDescription": "Dutas combines dutasteride and tamsulosin hydrochloride to quickly alleviate urination issues and reduce the risk of urine retention. The fixed dosage mix has similar effects to using dutasteride and tamsulosin separately.",
         "price": 0.49,
@@ -338,6 +354,7 @@
     {
         "id": 17,
         "title": "Cephalexin",
+        "category": "Herbal",
         "substance": "Cephalexin",
         "shortDescription": "Dutas combines dutasteride and tamsulosin hydrochloride to quickly alleviate urination issues and reduce the risk of urine retention. The fixed dosage mix has similar effects to using dutasteride and tamsulosin separately.",
         "price": 0.49,
@@ -359,6 +376,7 @@
     {
         "id": 18,
         "title": "Ciplox",
+        "category": "Herbal",
         "substance": "Ciprofloxacin",
         "shortDescription": "Dutas combines dutasteride and tamsulosin hydrochloride to quickly alleviate urination issues and reduce the risk of urine retention. The fixed dosage mix has similar effects to using dutasteride and tamsulosin separately.",
         "price": 0.49,
@@ -380,6 +398,7 @@
     {
         "id": 1,
         "title": "Amoxil",
+        "category": "General Health",
         "substance": "Amoxicillin",
         "shortDescription": "Dutas combines dutasteride and tamsulosin hydrochloride to quickly alleviate urination issues and reduce the risk of urine retention. The fixed dosage mix has similar effects to using dutasteride and tamsulosin separately.",
         "price": 0.49,
@@ -401,6 +420,7 @@
     {
         "id": 2,
         "title": "Ampicillin",
+        "category": "Anti Fungus",
         "substance": "Acillin",
         "shortDescription": "Dutas combines dutasteride and tamsulosin hydrochloride to quickly alleviate urination issues and reduce the risk of urine retention. The fixed dosage mix has similar effects to using dutasteride and tamsulosin separately.",
         "price": 0.49,
@@ -422,6 +442,7 @@
     {
         "id": 3,
         "title": "Augmentin",
+        "category": "Anti Fungus",
         "substance": "Amoxicillin and clavulanate potassium",
         "shortDescription": "Dutas combines dutasteride and tamsulosin hydrochloride to quickly alleviate urination issues and reduce the risk of urine retention. The fixed dosage mix has similar effects to using dutasteride and tamsulosin separately.",
         "price": 0.49,
@@ -443,6 +464,7 @@
     {
         "id": 4,
         "title": "Bactrim",
+        "category": "General Health",
         "substance": "Sulfamethoxazole and trimethoprim",
         "shortDescription": "Dutas combines dutasteride and tamsulosin hydrochloride to quickly alleviate urination issues and reduce the risk of urine retention. The fixed dosage mix has similar effects to using dutasteride and tamsulosin separately.",
         "price": 0.49,

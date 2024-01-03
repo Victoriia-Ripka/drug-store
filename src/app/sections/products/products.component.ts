@@ -23,10 +23,20 @@ export class ProductsComponent {
     this.loadData()
   }
 
+  selectCategory(category: string) {
+    this.selectedCategory = category;
+    this.loadData();
+  }
+
   loadData() {
     this.dataService.getData().subscribe((data) => {
-      this.products = data;
-      this.producrsAmount = data.length
+      if (this.selectedCategory !== 'All Products') {
+        this.products = data.filter(item => item.category === this.selectedCategory);
+      } else {
+        this.products = data;
+      }
+
+      this.producrsAmount = this.products.length;
     });
   }
 }

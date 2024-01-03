@@ -1,5 +1,4 @@
 section{
-    // height: 1254px;
     margin: 50px auto 50px;
 }
 
@@ -12,8 +11,8 @@ section{
 }
 
 .products-nav{
-    width: 310px;
-    height: 14px;
+    height: 80px;
+
     div{
         display: flex;
         gap: 0px;
@@ -56,7 +55,6 @@ h2{
 .extra_info{
     margin-top: 32px;
     height: 48px;
-    width: 686.25px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -71,7 +69,6 @@ h2{
         font-family: Plus Jakarta Sans;
         font-size: 16px;
         font-weight: 400;
-        width: 200px;
     }
 
     span{
@@ -97,7 +94,6 @@ h2{
 
 .main-container{
     width: 1155px;
-    // height: 1254px;
     margin: 0 auto;
 }
 
@@ -137,6 +133,9 @@ h2{
         font-weight: 700;
         margin-bottom: 10px;
     }
+    ul {
+        height: 1043px;
+    }
 
     li{
         width: 200.41px;
@@ -168,27 +167,31 @@ h2{
 
 .main-container{
     margin: 40px auto 75px;
-    // height: 2071px;
 }
 
 .mat-drawer-content{
-    // width: 928.346px;
+    height: 1271px;
+    width: 990px;
     height: auto !important;
     padding-left: 27px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    
-    ul {
+
+    .products-list {
+        width: 928px;
+        height: 1191px;
         display: flex;
         flex-wrap: wrap;
-        gap: 23px;
-        margin: 0 0 40px 0;
-    }
-}
+        align-items: flex-start;
+        align-content: flex-start;
+        justify-content: flex-start;
+        margin: -10px -10px 30px -10px;
 
-product-card{
-    height: 381.618px
+        li{
+            margin: 10px;
+        }
+    }
 }
 
 .paggination {
@@ -197,8 +200,6 @@ product-card{
     display: flex;
     align-items: center;
     gap: 15px;
-
-
 
     button{
         width: 40.383px;

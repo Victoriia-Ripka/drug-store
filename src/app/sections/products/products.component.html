@@ -17,27 +17,24 @@
 
             <select id="filterCategories" name="filterCategories">
                 <option value="average">Sort by average rating</option>
-                <option value="second">second</option>
-                <option value="third">third</option>
-                <option value="fourth">fourth</option>
+                <option value="second">All products</option>
+                <option value="third">Most popular first</option>
+                <option value="fourth">The cheapest first</option>
             </select>
         </div>
     </div>
     <mat-drawer-container class="main-container">
         <mat-drawer mode="side" class="sider" opened>
-            <p>General</p>
-            <ul *ngFor="let item of categories">
-                <a href="#">
-                    <li>
-                        <p>{{item}}</p>
-                    </li>
-                </a>
+            <p>General</p>            
+            <ul>
+                <li (click)="selectCategory('All Products')">All Products</li>
+                <li *ngFor="let category of categories" (click)="selectCategory(category)">{{ category }}</li>
             </ul>
         </mat-drawer>
 
 
         <mat-drawer-content>
-            <ul>
+            <ul class="products-list">
                 <li *ngFor="let item of products | paginate: { itemsPerPage: pageSize, currentPage: currentPage }">
                     <product-card [title]="item.title" [substance]="item.substance" [price]="item.price" [id]="item.id">
                     </product-card>
@@ -48,9 +45,8 @@
                 class="my-pagination"
                 (pageChange)="currentPage = $event" 
                 previousLabel=""
-                nextLabel=""></pagination-controls>
-                <!-- [previousTemplate]="previousIcon"
-                [nextTemplate]="nextIcon" -->
+                nextLabel="">
+            </pagination-controls>
 
         </mat-drawer-content>
     </mat-drawer-container>
