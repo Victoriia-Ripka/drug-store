@@ -156,12 +156,6 @@ h3 {
     }
 }
 
-// .swiper-pagination{
-//     position: absolute;
-//     // width: 100px;
-//     // height: 40px;
-//     // background-color: #0F67FE;
-// }
 
 a {
     position: absolute;
@@ -184,8 +178,26 @@ a {
     align-items: center;
 }
 
+.pagination {
+    width: 802px;
+    height: 8px;
+    display: flex;
+    cursor: initial;
+
+    div {
+        flex: 1;
+        width: calc((100% - 32px) / 5);
+        background: #bbb;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+    }
+
+    .active {
+        background-color: #0F67FE;
+    }
+}
+
 .extra-arrows-div {
-    
     display: flex;
     gap: 16px;
 

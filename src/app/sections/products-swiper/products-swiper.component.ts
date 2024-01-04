@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, ElementRef, Renderer2 } from '@angular/core';
+import { Router } from '@angular/router';
 import Swiper from 'swiper';
 
 @Component({
@@ -8,23 +9,21 @@ import Swiper from 'swiper';
 })
 export class ProductsSwiperComponent {
   mySwiper: Swiper | undefined;
+  slidesQuantity: number = 5
+  currentPage: number = 1;
 
-  constructor() { }
+  constructor(private router: Router, private renderer: Renderer2, private el: ElementRef) { }
 
   ngAfterViewInit() {
-    this.mySwiper = new Swiper('#productsSwiper', {
+    this.mySwiper = new Swiper(this.el.nativeElement.querySelector('.swiper'), {
       slidesPerView: 4,
       spaceBetween: 19,
       loop: true,
-      breakpoints: {
-        1000: {
-          slidesPerView: 4,
-          spaceBetween: 19
-        }
-      },
       pagination: {
-        el: ".swiper-pagination",
-        type: "progressbar",
+        el: '.custom-pagination',
+        renderCustom: (swiper, current, total) => {
+          return current + ' of ' + total;
+        }
       },
       navigation: {
         nextEl: '.swiper-button-next',
@@ -33,15 +32,42 @@ export class ProductsSwiperComponent {
     });
   }
 
+  ngOnChanges() {
+    if (this.slidesQuantity) {
+      this.slidesQuantity = Math.max(1, this.slidesQuantity)
+    }
+  }
+
+  goToPage(page: number): void {
+    if (this.mySwiper) {
+      this.mySwiper.slideTo(page - 1)
+    }
+  }
+
+  goToProductDetail(id: number) {
+    this.router.navigate(['/products', id]);
+  }
+  
   nextSlide() {
     if (this.mySwiper) {
       this.mySwiper.slideNext();
+      if (this.currentPage == this.slidesQuantity) {
+        this.currentPage = 1
+      } else {
+        this.currentPage += 1
+      }
+      
     }
   }
 
   prevSlide() {
     if (this.mySwiper) {
       this.mySwiper.slidePrev();
+      if (this.currentPage == 1) {
+        this.currentPage = this.slidesQuantity
+      } else {
+        this.currentPage -= 1
+      }
     }
   }
 

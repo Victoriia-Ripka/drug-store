@@ -114,7 +114,8 @@ import {
     ShoppingInformationSecondComponent,
     ShoppingInformationThirdComponent,
     PrevIconComponent,
-    NextIconComponent
+    NextIconComponent,
+    
   ],
   imports: [
     BrowserModule,

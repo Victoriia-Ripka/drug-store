@@ -8,9 +8,11 @@
             <div class="pill-infodiv">
                 <h3>Viagra</h3>
                 <p class="after-title"><span>€0.37</span> per pill</p>
-                <p class="pill-info">Viagra is often the first treatment tried for erectile dysfunction in men and pulmonary arterial
+                <p class="pill-info">Viagra is often the first treatment tried for erectile dysfunction in men and
+                    pulmonary arterial
                     hypertension.</p>
-                <app-button [text]="'Buy Now'"></app-button>
+                <a (click)="goToProductDetail(1)">
+                    <app-button [text]="'Buy Now'"></app-button></a>
             </div>
         </li>
         <li>
@@ -21,7 +23,8 @@
                 <h3>Cialis</h3>
                 <p class="after-title"><span>€0.37</span> per pill</p>
                 <p class="pill-info">Cialis improves erection and helps to achieve a successful sexual intercourse.</p>
-                <app-button [text]="'Buy Now'"></app-button>
+                <a (click)="goToProductDetail(1)">
+                    <app-button [text]="'Buy Now'"></app-button></a>
             </div>
         </li>
         <li>
@@ -31,9 +34,11 @@
             <div class="pill-infodiv">
                 <h3>Viagra Professional</h3>
                 <p class="after-title"><span>€0.37</span> per pill</p>
-                <p class="pill-info">Viagra Professional is an extra-strength version of the first sildenafil citrate drug to treat
+                <p class="pill-info">Viagra Professional is an extra-strength version of the first sildenafil citrate
+                    drug to treat
                     erectile dysfunction.</p>
-                <app-button [text]="'Buy Now'"></app-button>
+                <a (click)="goToProductDetail(1)">
+                    <app-button [text]="'Buy Now'"></app-button></a>
             </div>
         </li>
     </ul>

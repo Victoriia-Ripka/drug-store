@@ -9,7 +9,7 @@
         </a>
     </div>
     <div class="swiper" id="productsSwiper">
-        <div class="swiper-wrapper">
+        <div class="swiper-wrapper" #swiperContainer>
             <div class="swiper-slide">
                 <div class="item-background">
                     <div class="dosage-div">
@@ -29,7 +29,8 @@
                     <p class="info-accessibility">Availability: In Stock (30 packages)</p>
                     <p class="info-title">Clomid</p>
                     <p class="info-price"><span>€0.37</span> per pill</p>
-                    <a><img src="assets/img/btn-arrow-link-min.png" alt="button" class="image-button" /></a>
+                    <a (click)="goToProductDetail(1)"><img src="assets/img/btn-arrow-link-min.png" alt="button"
+                            class="image-button" /></a>
                 </div>
             </div>
             <div class="swiper-slide">
@@ -54,7 +55,8 @@
                     <p class="info-accessibility">Availability: In Stock (31 packages)</p>
                     <p class="info-title">Zithromax</p>
                     <p class="info-price"><span>€0.37</span> per pill</p>
-                    <a><img src="assets/img/btn-arrow-link-min.png" alt="button" class="image-button" /></a>
+                    <a (click)="goToProductDetail(1)"><img src="assets/img/btn-arrow-link-min.png" alt="button"
+                            class="image-button" /></a>
                 </div>
             </div>
             <div class="swiper-slide">
@@ -73,7 +75,8 @@
                     <p class="info-accessibility">Availability: In Stock (91 packages)</p>
                     <p class="info-title">Provigil</p>
                     <p class="info-price"><span>€0.37</span> per pill</p>
-                    <a><img src="assets/img/btn-arrow-link-min.png" alt="button" class="image-button" /></a>
+                    <a (click)="goToProductDetail(1)"><img src="assets/img/btn-arrow-link-min.png" alt="button"
+                            class="image-button" /></a>
                 </div>
             </div>
             <div class="swiper-slide">
@@ -89,7 +92,8 @@
                     <p class="info-accessibility">Availability: In Stock (52 packages)</p>
                     <p class="info-title">Viagra Super Active</p>
                     <p class="info-price"><span>€0.37</span> per pill</p>
-                    <a><img src="assets/img/btn-arrow-link-min.png" alt="button" class="image-button" /></a>
+                    <a (click)="goToProductDetail(1)"><img src="assets/img/btn-arrow-link-min.png" alt="button"
+                            class="image-button" /></a>
                 </div>
             </div>
 
@@ -109,51 +113,21 @@
                     <p class="info-accessibility">Availability: In Stock (91 packages)</p>
                     <p class="info-title">Provigil</p>
                     <p class="info-price"><span>€0.37</span> per pill</p>
-                    <a><img src="assets/img/btn-arrow-link-min.png" alt="button" class="image-button" /></a>
-                </div>
-            </div>
-            <div class="swiper-slide">
-                <div class="item-background">
-                    <div class="dosage-div">
-                        <div class="dosage-container">
-                            <p class="dosage-quantity">100 mg</p>
-                        </div>
-                    </div>
-                    <img src="assets/img/Viagra-Super-Active-min.png" alt="Viagra" class="main-image" />
-                </div>
-                <div class="info">
-                    <p class="info-accessibility">Availability: In Stock (52 packages)</p>
-                    <p class="info-title">Viagra Super Active</p>
-                    <p class="info-price"><span>€0.37</span> per pill</p>
-                    <a><img src="assets/img/btn-arrow-link-min.png" alt="button" class="image-button" /></a>
-                </div>
-            </div>
-            <div class="swiper-slide">
-                <div class="item-background">
-                    <div class="dosage-div">
-                        <div class="dosage-container">
-                            <p class="dosage-quantity">25 mg</p>
-                        </div>
-                        <div class="dosage-container">
-                            <p class="dosage-quantity">50 mg</p>
-                        </div>
-                        <div class="dosage-container">
-                            <p class="dosage-quantity">100 mg</p>
-                        </div>
-                    </div>
-                    <img src="assets/img/Clomid-min.png" alt="" class="main-image" />
-                </div>
-                <div class="info">
-                    <p class="info-accessibility">Availability: In Stock (30 packages)</p>
-                    <p class="info-title">Clomid</p>
-                    <p class="info-price"><span>€0.37</span> per pill</p>
-                    <a><img src="assets/img/btn-arrow-link-min.png" alt="button" class="image-button" /></a>
+                    <a (click)="goToProductDetail(1)"><img src="assets/img/btn-arrow-link-min.png" alt="button"
+                            class="image-button" /></a>
                 </div>
             </div>
         </div>
-        
+
         <div class="extra">
-            <div class="swiper-pagination">pagination here</div>
+            <div class="custom-pagination pagination">
+                <div [class.active]="1 === currentPage" (click)="goToPage(1)"></div>
+                <div [class.active]="2 === currentPage" (click)="goToPage(2)"></div>
+                <div [class.active]="3 === currentPage" (click)="goToPage(3)"></div>
+                <div [class.active]="4 === currentPage" (click)="goToPage(4)"></div>
+                <div [class.active]="5 === currentPage" (click)="goToPage(5)"></div>
+            </div>
+
             <div class="extra-arrows-div">
                 <img src="assets/img/btn-arrow-left-min.png" alt="left" class="nav-button swiper-button-prev"
                     (click)="prevSlide()" />
