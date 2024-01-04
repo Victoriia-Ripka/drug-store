@@ -1,4 +1,4 @@
-import { Component, ElementRef, Renderer2 } from '@angular/core';
+import { Component, ElementRef } from '@angular/core';
 import { Router } from '@angular/router';
 import Swiper from 'swiper';
 
@@ -12,7 +12,7 @@ export class ProductsSwiperComponent {
   slidesQuantity: number = 5
   currentPage: number = 1;
 
-  constructor(private router: Router, private renderer: Renderer2, private el: ElementRef) { }
+  constructor(private router: Router, private el: ElementRef) { }
 
   ngAfterViewInit() {
     this.mySwiper = new Swiper(this.el.nativeElement.querySelector('.swiper'), {
@@ -56,7 +56,6 @@ export class ProductsSwiperComponent {
       } else {
         this.currentPage += 1
       }
-      
     }
   }
 

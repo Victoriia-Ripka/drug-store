@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, ElementRef } from '@angular/core';
+import { Router } from '@angular/router';
 import Swiper from 'swiper';
 
 @Component({
@@ -8,8 +9,10 @@ import Swiper from 'swiper';
 })
 export class ReviewsComponent {
   mySwiper: Swiper | undefined;
+  slidesQuantity: number = 5
+  currentPage: number = 1;
 
-  constructor() { }
+  constructor(private router: Router, private el: ElementRef) { }
 
   ngAfterViewInit() {
     this.mySwiper = new Swiper('#reviewsSwiper', {
@@ -17,8 +20,10 @@ export class ReviewsComponent {
       spaceBetween: 20,
       loop: true,
       pagination: {
-        el: '.swiper-pagination',
-        clickable: true,
+        el: '.custom-pagination',
+        renderCustom: (swiper, current, total) => {
+          return current + ' of ' + total;
+        }
       },
       navigation: {
         nextEl: '.swiper-button-next',
@@ -27,15 +32,37 @@ export class ReviewsComponent {
     });
   }
 
+  ngOnChanges() {
+    if (this.slidesQuantity) {
+      this.slidesQuantity = Math.max(1, this.slidesQuantity)
+    }
+  }
+
+  goToPage(page: number): void {
+    if (this.mySwiper) {
+      this.mySwiper.slideTo(page - 1)
+    }
+  }
+
   nextSlide() {
     if (this.mySwiper) {
       this.mySwiper.slideNext();
+      if (this.currentPage == this.slidesQuantity) {
+        this.currentPage = 1
+      } else {
+        this.currentPage += 1
+      }
     }
   }
 
   prevSlide() {
-    if (this.mySwiper) {
+    if(this.mySwiper) {
       this.mySwiper.slidePrev();
+      if (this.currentPage == 1) {
+        this.currentPage = this.slidesQuantity
+      } else {
+        this.currentPage -= 1
+      }
     }
   }
 

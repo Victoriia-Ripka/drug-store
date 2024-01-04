@@ -40,15 +40,41 @@ section {
     gap: 20px;
 
     .swiper-slide {
-        padding: 30px 0 0;
-        width: 413px !important;
-        height: 315px;
+        padding: 0;
+        width: 413px;
+        height: 320px;
         display: flex;
         flex-direction: column;
         
         background-color: #fff;
         border-radius: 16px;
         margin: 0 !important;
+    }
+}
+
+.rewiev-main{
+    margin-top: 30px;
+}
+
+.pagination {
+    width: cals( 5px*7 + 4*4px);
+    height: 8px;
+    display: flex;
+    gap: 4px;
+    cursor: initial;
+
+    div {
+        flex: 1;
+        width: 7px;
+        height: 7px;
+        border-radius: 50%;
+        background: rgba(15, 103, 254, 0.30);;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+    }
+
+    .active {
+        background-color: #0F67FE;
     }
 }
 
@@ -59,6 +85,7 @@ section {
     font-style: normal;
     font-weight: 500;
     line-height: 1.5;
+    width: 353px;
     margin: 40px 30px 30px;
 }
 
