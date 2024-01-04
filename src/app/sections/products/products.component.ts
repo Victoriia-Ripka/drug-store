@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { DataService } from 'src/app/services';
 import { categoriesList } from 'src/app/data';
+import { Router, NavigationEnd, ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'products',
@@ -17,14 +18,22 @@ export class ProductsComponent {
   pageSize: number = 9
   currentPage: number = 1
 
-  constructor(private dataService: DataService) { }
+  constructor(private dataService: DataService, private route: ActivatedRoute, private router: Router) { }
 
   ngOnInit() {
-    this.loadData()
+    this.route.queryParams.subscribe((params) => {
+      if (params['category']) {
+        const category = params['category']
+        this.selectCategory(category)
+      } else {
+        this.loadData();
+      }
+    });
   }
 
   selectCategory(category: string) {
     this.selectedCategory = category
+    this.router.navigate(['/products'], { queryParams: { category: category } })
     this.loadData()
   }
 
@@ -35,8 +44,9 @@ export class ProductsComponent {
 
   loadData() {
     this.dataService.getData().subscribe((data) => {
+      let interData = data
       if (this.selectedCategory !== 'All Products') {
-        this.products = data.filter(item => item.category === this.selectedCategory)
+        interData = data.filter(item => item.category === this.selectedCategory)
       }
 
       switch (this.selectedSortOption) {
@@ -45,17 +55,17 @@ export class ProductsComponent {
           // data = data.sort((a, b) => a.price - b.price)
           // break
         case 'popular':
-          data = data.sort((a, b) => a.popular - b.popular)
+          interData = interData.sort((a, b) => a.popular - b.popular)
           break
         case 'cheapest':
-          data = data.sort((a, b) => a.price - b.price)
+          interData = interData.sort((a, b) => a.price - b.price)
           break
         case 'expensive':
-          data = data.sort((a, b) => b.price - a.price)
+          interData = interData.sort((a, b) => b.price - a.price)
           break
       }
 
-      this.products = data
+      this.products = interData
       this.producrsAmount = this.products.length
     });
   }

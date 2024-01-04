@@ -55,7 +55,7 @@
 
                     <ul class="first-dropdown-content-container">
                         <li class="first-dropdown-content" *ngFor="let item of categories">
-                            <a href="#" class="second-dropdown">
+                            <a (click)="goToProductsPage(item)" class="second-dropdown">
                                 <p>{{item}}</p>
 
                                 <svg xmlns="http://www.w3.org/2000/svg" width="9" height="13" viewBox="0 0 9 13"

@@ -36,6 +36,10 @@ export class HeaderComponent {
     this.isModalOpen = !this.isModalOpen
   }
 
+  goToProductsPage(category: string): void {
+    this.router.navigate(['/products'], { queryParams: { category: category } })
+  }
+
   navigateToTestimonials() {
     this.router.navigate([''], { fragment: 'testimonials' });
   }
