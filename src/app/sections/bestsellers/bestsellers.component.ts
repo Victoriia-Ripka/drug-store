@@ -10,6 +10,6 @@ export class BestsellersComponent {
   constructor(private router: Router) { }
 
   goToProductDetail(id: number) {
-    this.router.navigate(['/products', id]);
+    this.router.navigate(['/product', id]);
   }
 }

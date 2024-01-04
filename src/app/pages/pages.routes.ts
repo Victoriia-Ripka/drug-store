@@ -49,7 +49,7 @@ export const routes: Routes = [
         component: ProductsPageComponent
     },
     {
-        path: 'products/:id',
+        path: 'product/:id',
         title: 'Product - Canadian Drug Store',
         component: ProductPageComponent
     },
