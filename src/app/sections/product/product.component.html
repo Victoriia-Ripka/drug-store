@@ -16,7 +16,7 @@
             <p class="main-price">from <span>€23.30</span></p>
             <p class="short-desc-text">{{product?.shortDescription}}</p>
             <div class="delivery">
-                <img src="assets/img/car.png" alt="car"/>
+                <img src="assets/img/car.png" alt="car" />
                 <p class="delivery-price">Free Standard Shipping Over €182.60</p>
             </div>
             <div class="extra">
@@ -27,6 +27,38 @@
     </div>
     <div class="price-container">
         <h3>{{product?.title}} 0.5mg</h3>
+
+        <div class="product-table">
+            <div class="head"></div>
+            <div class="body">
+                <div class="column">
+                    <div *ngFor="let package of product?.packages">
+                        €
+                    </div>
+                </div>
+
+                <div class="column">
+                    <div *ngFor="let package of product?.packages">
+                        €
+                    </div>
+                </div>
+
+                <div class="column">
+                    <div *ngFor="let package of product?.packages">
+                        €
+                    </div>
+                </div>
+
+                <div class="column">
+                    <div *ngFor="let package of product?.packages">
+                        €
+                    </div>
+                </div>
+            </div>
+
+
+
+        </div>
     </div>
     <div class="product-information">
         <ul class="product-information-navigation">
@@ -36,7 +68,8 @@
             <li><button (click)="selectInfoItem('packaging')">packaging</button>
                 <div *ngIf="selectedInfoItem === 'packaging'"></div>
             </li>
-            <li><button (click)="selectInfoItem('reviews')">reviews ()</button>
+            <li><button (click)="selectInfoItem('reviews')">reviews (<span>{{ product?.reviews.length
+                        }}</span>)</button>
                 <div *ngIf="selectedInfoItem === 'reviews'"></div>
             </li>
         </ul>
@@ -108,6 +141,11 @@
                 stages.</p>
         </div>
         <div *ngIf="selectedInfoItem === 'packaging'">packaging</div>
-        <div *ngIf="selectedInfoItem === 'reviews'">reviews</div>
+        <div *ngIf="selectedInfoItem === 'reviews'" class="reviews-container">
+            <div *ngFor="let review of product?.reviews" class="review-container">
+                <p class="name">{{review.name}}:</p>
+                <p class="review">{{review.review}}</p>
+            </div>
+        </div>
     </div>
 </section>
