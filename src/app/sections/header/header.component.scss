@@ -93,6 +93,9 @@ header {
     color: var(--ui-primary-dark-color);
     height: 40px;
     width: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     border-radius: 0 20px 20px 0;
     border: 2px solid #fff;
     font-size: 16px;
@@ -193,7 +196,7 @@ mat-icon {
 }
 
 .dropdown-content {
-    display: none;
+    display: block;
     position: absolute;
     // top: 35px;
     background-color: #fff;
@@ -216,7 +219,6 @@ mat-icon {
     }
     
     .line{
-        // position: absolute;
         position: fixed;
         top: 134px;
         width: 1285px;
@@ -232,6 +234,8 @@ mat-icon {
         margin: 19px 0 27px 46px;
         display: flex;
         flex-direction: column;
+        height: 100%;
+        border-right: 1px solid #7DA1E0;
     }
 
     .first-dropdown-content {
@@ -262,8 +266,6 @@ mat-icon {
             &:focus p{
                 font-weight: 800;
             }
-
-            
         }
         
         &:not(:last-child){
@@ -279,11 +281,6 @@ mat-icon {
         }
     }
     
-}
-
-.line-vertical{
-    position: fixed;
-    left: 420px;
 }
 
 .first-dropdown-content:focus {
