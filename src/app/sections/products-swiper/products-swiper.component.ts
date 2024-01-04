@@ -45,7 +45,7 @@ export class ProductsSwiperComponent {
   }
 
   goToProductDetail(id: number) {
-    this.router.navigate(['/products', id]);
+    this.router.navigate(['/product', id]);
   }
   
   nextSlide() {

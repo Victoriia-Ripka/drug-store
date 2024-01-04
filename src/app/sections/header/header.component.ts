@@ -12,7 +12,7 @@ import { categoriesList } from 'src/app/data';
 })
 export class HeaderComponent {
   categories = categoriesList;
-  isAuthorizedUser: boolean = false
+  isAuthorizedUser: boolean = true
   isModalOpen: boolean = false
   cartItemCount: number = 1;
   private destroy$ = new Subject<void>();
