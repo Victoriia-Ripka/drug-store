@@ -14,10 +14,34 @@ export class HeaderComponent {
   categories = categoriesList
   isAuthorizedUser: boolean = true
   isModalOpen: boolean = false
-  cartItemCount: number = 1
   query: string = ''
   category: string = ''
   private destroy$ = new Subject<void>()
+
+  itemsList: Array<any> = [
+    {
+      id: 1,
+      title: "Dutas",
+      count: 1,
+      price: 23.30,
+      dose: '10 pills x 0.5mg'
+    },
+    {
+      id: 2,
+      title: "Dutas",
+      count: 1,
+      price: 23.30,
+      dose: '10 pills x 0.5mg'
+    },
+    {
+      id: 3,
+      title: "Dutas",
+      count: 1,
+      price: 23.30,
+      dose: '10 pills x 0.5mg'
+    }
+  ]
+  itemQuantity: number = this.itemsList.length
 
   constructor(private router: Router, private route: ActivatedRoute, private scrollService: ScrollService) {
     this.router.events.pipe(takeUntil(this.destroy$)).subscribe((event) => {
@@ -61,6 +85,15 @@ export class HeaderComponent {
   search(): void {
     this.router.navigate(['/products'], { queryParams: { category: this.category, query: this.query.toLowerCase() } })
   }
+
+  deleteProductFromCart(id: number): void {
+    const index = this.itemsList.findIndex(
+      product => product.id === id
+    );
+    this.itemsList.splice(index, 1)
+    this.itemQuantity = this.itemsList.length
+  }
+
 
   private handleNavigationEnd(url: string, fragment: string) {
     if (fragment) {

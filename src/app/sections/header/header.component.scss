@@ -126,6 +126,7 @@ header {
     align-items: center;
     gap: 5px;
     cursor: pointer;
+    position: relative;
 
 
     &:hover > mat-icon,
@@ -134,6 +135,27 @@ header {
     &:focus > .header-top__text {
         color: var(--ui-primary-hovered-blue);
     }
+}
+
+.badge {
+    position: absolute;
+    top: -5px;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 16px;
+    height: 16px;
+    background-color: var(--ui-primary-blue-color);
+    border-radius: 50%;
+    border: 1px solid white;
+    z-index: 1;
+
+    color: #FFF;
+    font-family: Urbanist;
+    font-size: 10px;
+    font-weight: 500;
+    line-height: normal;
 }
 
 .unauthorized-account{

@@ -16,11 +16,12 @@
             <div class="header-top__actions">
                 <div class="shopping-cart-modal-display-cont">
                     <a href="/#/shopping-cart" class="header-top__div cart">
-                        <mat-icon [matBadge]="cartItemCount" aria-hidden="false">shopping_cart</mat-icon>
+                        <div *ngIf="itemQuantity" class="badge"><p>{{itemQuantity}}</p></div>
+                        <mat-icon aria-hidden="false">shopping_cart</mat-icon>
                         <p class="header-top__text">my cart</p>
                     </a>
 
-                    <shopping-cart-modal class="modal"></shopping-cart-modal>
+                    <shopping-cart-modal class="modal" [itemsList]="itemsList" (delete)="deleteProductFromCart($event)"></shopping-cart-modal>
                 </div>
                 <div class="shopping-cart-modal-display-cont">
                     <a *ngIf="isAuthorizedUser" class="header-top__div" routerLink="/account" routerLinkActive="active"

@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 
 @Component({
   selector: 'shopping-cart-modal',
@@ -6,35 +6,10 @@ import { Component } from '@angular/core';
   styleUrls: ['./shopping-cart-modal.component.scss']
 })
 export class ShoppingCartModalComponent {
-  itemsList: Array<any> = [
-    {
-      id: 1,
-      title: "Dutas",
-      count: 1,
-      price: 23.30,
-      dose: '10 pills x 0.5mg'
-    },
-    {
-      id: 2,
-      title: "Dutas",
-      count: 1,
-      price: 23.30,
-      dose: '10 pills x 0.5mg'
-    },
-    {
-      id: 3,
-      title: "Dutas",
-      count: 1,
-      price: 23.30,
-      dose: '10 pills x 0.5mg'
-    }
-  ]
+  @Input() itemsList: Array<any> = []
+  @Output() delete: EventEmitter<number> = new EventEmitter<number>()
 
-  deleteProductFromCart(id: number): void {
-    const index = this.itemsList.findIndex(
-      product => product.id === id
-    );
-    this.itemsList.splice(index, 1)
+  deleteProduct(id: number): void {
+    this.delete.emit(id)
   }
-
 }
