@@ -9,6 +9,8 @@ export class BackgroundService {
   public color$ = this.colorSubject.asObservable();
 
   setBackgroundColor(color: string) {
-    this.colorSubject.next(color);
+    setTimeout(() => {
+      this.colorSubject.next(color);
+    });
   }
 }

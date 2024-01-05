@@ -10,18 +10,21 @@
                 </div>
             </a>
             <div class="header-top__search">
-                <input type="" placeholder="Search" [(ngModel)]="query"/>
+                <input type="" placeholder="Search" [(ngModel)]="query" />
                 <button (click)="search()">search</button>
             </div>
             <div class="header-top__actions">
                 <div class="shopping-cart-modal-display-cont">
                     <a href="/#/shopping-cart" class="header-top__div cart">
-                        <div *ngIf="itemQuantity" class="badge"><p>{{itemQuantity}}</p></div>
+                        <div *ngIf="itemQuantity" class="badge">
+                            <p>{{itemQuantity}}</p>
+                        </div>
                         <mat-icon aria-hidden="false">shopping_cart</mat-icon>
                         <p class="header-top__text">my cart</p>
                     </a>
 
-                    <shopping-cart-modal class="modal" [itemsList]="itemsList" (delete)="deleteProductFromCart($event)"></shopping-cart-modal>
+                    <shopping-cart-modal class="modal" [itemsList]="itemsList"
+                        (delete)="deleteProductFromCart($event)"></shopping-cart-modal>
                 </div>
                 <div class="shopping-cart-modal-display-cont">
                     <a *ngIf="isAuthorizedUser" class="header-top__div" routerLink="/account" routerLinkActive="active"
@@ -87,11 +90,34 @@
                 </nav>
             </div>
             <div class="header-bottom__settings">
-                <div>
+                <div class="language">
                     <p>Languages</p>
+                    <img src="assets/img/{{selectedLanguageImg}}" class="flag-icon" />
+                    <button class="select">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="13" height="7" viewBox="0 0 13 7" fill="none">
+                            <path d="M0.833496 0.875L6.0835 6.125L11.3335 0.875" stroke="#1E1E28" stroke-width="1.5"
+                                stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+                    </button>
+                    <div class="dropdown-lang-content">
+                        <div *ngFor="let country of languages" (click)="selectLanguage(country.img)">
+                            <img src="assets/img/{{country.img}}" class="flag-icon" />
+                        </div>
+                    </div>
                 </div>
-                <div>
-                    <p>USD</p>
+                <div class="currency">
+                    <p>{{selectedCurrency}}</p>
+                    <button class="select">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="13" height="7" viewBox="0 0 13 7" fill="none">
+                            <path d="M0.833496 0.875L6.0835 6.125L11.3335 0.875" stroke="#1E1E28" stroke-width="1.5"
+                                stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+                    </button>
+                    <div class="dropdown-cur-content">
+                        <div *ngFor="let country of languages" (click)="selectCurrency(country.currency)"  class="cur-option">
+                            {{country.currency}}
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>

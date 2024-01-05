@@ -5,6 +5,13 @@ import { Subject } from 'rxjs';
 import { ScrollService } from '../../services/scroll.service';
 import { categoriesList } from 'src/app/data';
 
+const languages = [
+  { value: 'german', label: 'German', img: 'germany.png', currency: "EURO" },
+  { value: 'polish', label: 'Polish', img: 'poland.png', currency: "PLN" },
+  { value: 'japanese', label: 'Japanese', img: 'japan.png', currency: "JPY" },
+  { value: 'english', label: 'English', img: 'united-states.png', currency: "USD" },
+];
+
 @Component({
   selector: 'app-header',
   templateUrl: './header.component.html',
@@ -17,6 +24,9 @@ export class HeaderComponent {
   query: string = ''
   category: string = ''
   private destroy$ = new Subject<void>()
+  selectedCurrency: string = 'USD'
+  languages: Array<any> = languages
+  selectedLanguageImg: string = 'united-states.png';
 
   itemsList: Array<any> = [
     {
@@ -71,6 +81,14 @@ export class HeaderComponent {
 
   toggleModal() {
     this.isModalOpen = !this.isModalOpen
+  }
+
+  selectLanguage(language: any): void {
+    this.selectedLanguageImg = language;
+  }
+
+  selectCurrency(currency: any): void {
+    this.selectedCurrency = currency;
   }
 
   navigateToTestimonials() {

@@ -382,7 +382,7 @@ ul li a {
 
 .header-bottom__settings {
     display: flex;
-    width: 235px;
+    width: 250px;
     justify-content: space-between;
 }
 
@@ -391,23 +391,110 @@ p {
 }
 
 .header-bottom__settings {
-    color: #1C1C1C;
+    color: #1c1c1c;
     font-family: Inter;
     font-size: 16px;
     font-weight: 600;
     line-height: 1.37;
+    z-index: 2;
 
-    p {
+    div {
+        display: flex;
+        align-items: center;
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    .select {
+        width: 40px;
+        height: 40px;
+        background-color: transparent;
+        border: none;
+        display: flex;
+        align-items: center;
+        justify-content: center;
         cursor: pointer;
 
-       
+        svg {
+            width: 13px;
+            height: auto;
+        }
     }
-         &:hover,
-         &:focus {
-             font-weight: 900;
-         }
+
+    .language {
+        position: relative;
+        display: flex;
+
+        &:hover .dropdown-lang-content,
+        &:focus .dropdown-lang-content {
+            display: flex;
+        }
+    }
+
+    .currency {
+        position: relative;
+        display: flex;
+    
+        &:hover .dropdown-cur-content,
+        &:focus .dropdown-cur-content {
+            display: flex;
+        }
+    }
+
+    .dropdown-lang-content,
+    .dropdown-cur-content {
+        display: flex;
+        position: absolute;
+        top: 100%;
+        right: 0;
+        display: none;
+        flex-direction: column;
+        background-color: #f9f9f9;
+        // background-color: var(--ui-primary-dark-color);
+        border-radius: 0;
+        box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+    }
+
+    .dropdown-content.show {
+        display: flex;
+    }
+
+    .cur-option{
+        color: #1c1c1c;
+        font-family: Urbanist;
+        font-size: 14px;
+        font-weight: 600;
+        line-height: 1.37;
+        padding: 5px;
+        height: auto;
+        cursor: pointer;
+        transition: transform 0.3s ease;
+    
+        &:focus,
+        &:hover {
+            transform: scale(1.08);
+        }
+    }
+
+    .flag-icon {
+        width: 32px;
+        padding: 5px;
+        height: auto;
+        cursor: pointer;
+        transition: transform 0.3s ease;
+
+        &:focus,
+        &:hover {
+            transform: scale(1.08);
+        }
+    }
+
+    .dropdown-content div:hover {
+        background-color: #ddd;
+    }
 }
 
 .extra-container {
     height: 145px;
 }
+
