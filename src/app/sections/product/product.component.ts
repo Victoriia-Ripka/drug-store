@@ -4,26 +4,42 @@ import { ActivatedRoute } from '@angular/router';
 
 const packages = [
   {
-    "Package": '10 pills x 0.5mg',
-    "Per Pill": "2.33",
-    "Per Pack": "23.30",
+    "package": '10 pills x 0.5mg',
+    "per-pill": "2.33",
+    "per-pack": "23.30",
   },
   {
-    "Package": '20 pills x 0.5mg',
-    "Per Pill": "2.33",
-    "Per Pack": "23.30",
+    "package": '20 pills x 0.5mg',
+    "per-pill": "2.33",
+    "per-pack": "23.30",
   },
   {
-    "Package": '30 pills x 0.5mg',
-    "Per Pill": "1.92",
-    "Per Pack": "57.56",
+    "package": '30 pills x 0.5mg',
+    "per-pill": "1.92",
+    "per-pack": "57.56",
   },
   {
-    "Package": '60 pills x 0.5mg',
-    "Per Pill": "2.33",
-    "old price": "46.55",
+    "package": '60 pills x 0.5mg',
+    "per-pill": "1.76",
+    "old-price": "279.60",
+    "discount": "24%",
+    "per-pack": "211.75",
+    "shipping": "Free airmall shipping"
+  },
+  {
+    "package": '180 pills x 0.5mg',
+    "per-pill": "1.75",
+    "old-price": "418.94",
+    "discount": "25%",
+    "per-pack": "314.20",
+    "shipping": "Free airmall shipping"
+  },
+  {
+    "package": '270 pills x 0.5mg',
+    "per-pill": "1.73",
+    "old-price": "46.55",
     "discount": "13%",
-    "Per Pack": "40.43",
+    "per-pack": "40.43",
     "shipping": "Free airmall shipping"
   }
 ]
@@ -35,7 +51,7 @@ const packages = [
 })
 export class ProductComponent {
   product: any = {}
-  selectedInfoItem: string = 'reviews'
+  selectedInfoItem: string = 'product-description'
 
   constructor(private route: ActivatedRoute, private dataService: DataService) { }
 
@@ -51,6 +67,10 @@ export class ProductComponent {
 
   selectInfoItem(item: string): void {
     this.selectedInfoItem = item
+  }
+
+  addPackageToCart(id: number): void {
+    console.log(id)
   }
 
 }

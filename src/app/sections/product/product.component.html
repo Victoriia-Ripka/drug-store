@@ -29,29 +29,48 @@
         <h3>{{product?.title}} 0.5mg</h3>
 
         <div class="product-table">
-            <div class="head"></div>
+            <div class="head">
+                <div class="column package">
+                    <p>Package</p>
+                </div>
+                <div class="column">
+                    <p>Per Pill</p>
+                </div>
+                <div class="column max-width">
+                    <div>Per Pack</div>
+                </div>
+                <div class="column">
+                    <p>Order</p>
+                </div>
+            </div>
             <div class="body">
-                <div class="column">
+
+                <div class="column package">
                     <div *ngFor="let package of product?.packages">
-                        €
+                        {{package.package}}
                     </div>
                 </div>
 
                 <div class="column">
                     <div *ngFor="let package of product?.packages">
-                        €
+                        €{{package["per-pill"]}}
+                    </div>
+                </div>
+
+                <div class="column max-width">
+                    <div *ngFor="let package of product?.packages" class="price">
+                        <p *ngIf="package.discount">
+                            <span class="old-price">€{{package["old-price"]}}</span> 
+                            <span class="discount">{{package.discount}}</span>
+                            Only
+                        </p>
+                        €{{package["per-pack"]}}
                     </div>
                 </div>
 
                 <div class="column">
                     <div *ngFor="let package of product?.packages">
-                        €
-                    </div>
-                </div>
-
-                <div class="column">
-                    <div *ngFor="let package of product?.packages">
-                        €
+                        <button (click)="addPackageToCart(product?.id)"><mat-icon>shopping_cart</mat-icon> add </button>
                     </div>
                 </div>
             </div>
