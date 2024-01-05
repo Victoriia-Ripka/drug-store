@@ -12,6 +12,7 @@ export class ProductsComponent {
   categories = categoriesList
   products: any[] = []
   producrsAmount: number = 0
+  query : string = ''
   selectedCategory: string = 'All Products'
   selectedSortOption: string = 'all'
 
@@ -22,18 +23,29 @@ export class ProductsComponent {
 
   ngOnInit() {
     this.route.queryParams.subscribe((params) => {
-      if (params['category']) {
-        const category = params['category']
-        this.selectCategory(category)
+      if (params['category'] || params['query']) {
+        if (params['category']) {
+          const category = params['category']
+          this.selectCategory(category)
+        }
+        if (params['query']) {
+          const query = params['query']
+          this.serchQuery(query)
+        }
       } else {
         this.loadData();
       }
     });
   }
 
+  serchQuery(query: string): void {
+    this.query = query
+    this.loadData()
+  }
+
   selectCategory(category: string) {
     this.selectedCategory = category
-    this.router.navigate(['/products'], { queryParams: { category: category } })
+    this.router.navigate(['/products'], { queryParams: { category: category, query: this.query.toLowerCase() } })
     this.loadData()
   }
 
@@ -47,6 +59,11 @@ export class ProductsComponent {
       let interData = data
       if (this.selectedCategory !== 'All Products') {
         interData = data.filter(item => item.category === this.selectedCategory)
+      }
+
+      if (this.query !== '') {
+        const filteredData = interData.filter(product => product.title.toLowerCase().includes(this.query))
+        interData = filteredData
       }
 
       switch (this.selectedSortOption) {

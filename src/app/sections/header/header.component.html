@@ -10,8 +10,8 @@
                 </div>
             </a>
             <div class="header-top__search">
-                <input type="" placeholder="Search" />
-                <button>search</button>
+                <input type="" placeholder="Search" [(ngModel)]="query"/>
+                <button (click)="search()">search</button>
             </div>
             <div class="header-top__actions">
                 <div class="shopping-cart-modal-display-cont">

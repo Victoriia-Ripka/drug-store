@@ -104,6 +104,12 @@ header {
     letter-spacing: 0.05em;
     text-align: center;
     text-transform: capitalize;
+    transition: font-size 0.3s ease;
+
+    &:focus,
+    &:hover{
+        font-size: 18px;
+    }
 }
 
 // CART AND ACCOUNT
@@ -183,6 +189,7 @@ mat-icon {
 // DROPDOWN MENU
 .header-bottom {
     background-color: #fff;
+    border-bottom: 1px solid #F2F5F9;
 }
 
 .dropdown{
