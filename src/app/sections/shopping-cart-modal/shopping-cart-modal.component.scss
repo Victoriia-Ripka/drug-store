@@ -26,9 +26,22 @@ h4{
 }
 
 ul {
-    // margin-bottom: -15px;
     height: 170px;
-    overflow: hidden;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    padding-right: 10px;
+
+    &::-webkit-scrollbar {
+        width: 6px;
+    }
+
+    &::-webkit-scrollbar-track {
+        background: #f1f1f1;
+    }
+
+    &::-webkit-scrollbar-thumb {
+        background: var(--ui-primary-blue-color);
+    }
 }
 
 li{
@@ -48,7 +61,6 @@ li{
         justify-content: center;
         border-radius: 6.728px;
         background-color: #EDF5FF;
-        // margin-right: 21px;
     }
 
     .title{
@@ -127,11 +139,6 @@ li{
     &:focus,
     &:hover {
         background-color: var(--ui-primary-hovered-blue);
-    }
-
-    &:visited,
-    &:active {
-        background-color: var(--ui-primary-pressed-blue);
     }
 }
 
