@@ -194,6 +194,7 @@ mat-icon {
 
 .modal{
     display: none;
+    z-index: 3;
     position: absolute;
     bottom: -970%;
     left: -257px;
