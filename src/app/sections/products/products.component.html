@@ -28,11 +28,11 @@
         <mat-drawer mode="side" class="sider" opened>
             <p>General</p>
             <ul>
-                <li (click)="selectCategory('All Products')"
+                <li (click)="selectCategoryAndSearchQuery('All Products', query)"
                     [ngStyle]="{'border': 'All Products' === selectedCategory ? '1px solid #0F67FE' : '1px solid #CCC'}">
                     All Products
                 </li>
-                <li *ngFor="let category of categories" (click)="selectCategory(category)"
+                <li *ngFor="let category of categories" (click)="selectCategoryAndSearchQuery(category, query)"
                     [ngStyle]="{'border': category === selectedCategory ? '1px solid #0F67FE' : '1px solid #CCC'}">
                     {{ category }}
                 </li>

@@ -24,29 +24,18 @@ export class ProductsComponent {
   ngOnInit() {
     this.route.queryParams.subscribe((params) => {
       if (params['category'] || params['query']) {
-        if (params['category']) {
-          const category = params['category']
-          this.selectCategory(category)
-        }
-        if (params['query']) {
-          const query = params['query']
-          this.serchQuery(query)
-        }
+        this.selectCategoryAndSearchQuery(params['category'], params['query'])
       } else {
         this.loadData();
       }
     });
   }
 
-  serchQuery(query: string): void {
-    this.query = query
-    this.loadData()
-  }
-
-  selectCategory(category: string) {
+  selectCategoryAndSearchQuery(category: string, query: string) {
+    this.query = query.toLowerCase()
     this.selectedCategory = category
-    this.router.navigate(['/products'], { queryParams: { category: category, query: this.query.toLowerCase() } })
-    this.loadData()
+    this.router.navigate(['/products'], { queryParams: { category: category, query: this.query} })
+    this.loadData(query)
   }
 
   selectSortOption(option: string) {
@@ -54,17 +43,17 @@ export class ProductsComponent {
     this.loadData()
   }
 
-  loadData() {
+  loadData(query: string = '') {
     this.dataService.getData().subscribe((data) => {
       let interData = data
       if (this.selectedCategory !== 'All Products') {
         interData = data.filter(item => item.category === this.selectedCategory)
       }
 
-      if (this.query !== '') {
-        const filteredData = interData.filter(product => product.title.toLowerCase().includes(this.query))
+      if (query !== '') {
+        const filteredData = interData.filter(product => product.title.toLowerCase().includes(query))
         interData = filteredData
-      }
+      } 
 
       switch (this.selectedSortOption) {
         // case 'average':

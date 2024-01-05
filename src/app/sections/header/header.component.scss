@@ -206,7 +206,7 @@ mat-icon {
     display: none;
     position: absolute;
     background-color: #fff;
-    width: 1285px;
+    // width: 1285px;
     max-height: 781px;
     z-index: 1;
     overflow-y: scroll;
@@ -215,7 +215,6 @@ mat-icon {
 
     &::-webkit-scrollbar {
         width: 6px;
-        height: 751px;
     }
     &::-webkit-scrollbar-track {
         background: #f1f1f1;
@@ -227,7 +226,8 @@ mat-icon {
     .line{
         position: fixed;
         top: 134px;
-        width: 1285px;
+        width: 312px;
+        // width: 1285px;
         margin: 0 auto;
         height: 19px;
         background-color: #fff;
@@ -241,7 +241,7 @@ mat-icon {
         display: flex;
         flex-direction: column;
         height: 100%;
-        border-right: 1px solid #7DA1E0;
+        // border-right: 1px solid #7DA1E0;
     }
 
     .first-dropdown-content {

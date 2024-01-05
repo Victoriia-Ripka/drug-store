@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { Router, NavigationEnd } from '@angular/router';
+import { Router, NavigationEnd, ActivatedRoute } from '@angular/router';
 import { takeUntil } from 'rxjs/operators';
 import { Subject } from 'rxjs';
 import { ScrollService } from '../../services/scroll.service';
@@ -19,7 +19,7 @@ export class HeaderComponent {
   category: string = ''
   private destroy$ = new Subject<void>()
 
-  constructor(private router: Router, private scrollService: ScrollService) {
+  constructor(private router: Router, private route: ActivatedRoute, private scrollService: ScrollService) {
     this.router.events.pipe(takeUntil(this.destroy$)).subscribe((event) => {
       if (event instanceof NavigationEnd) {
         const urlTree = this.router.parseUrl(event.url)
@@ -27,6 +27,17 @@ export class HeaderComponent {
         this.handleNavigationEnd(event.url, fragment)
       }
     });
+  }
+
+  ngOnInit() {
+    this.route.queryParams.subscribe((params) => {
+      if (params['category']) {
+        this.category = params['category']
+      }
+      if (params['query']) {
+        this.query = params['query']
+      }
+    })
   }
 
   ngOnDestroy() {
