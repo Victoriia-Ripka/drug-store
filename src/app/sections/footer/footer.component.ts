@@ -37,8 +37,8 @@ export class FooterComponent {
 
   private handleNavigationEnd(url: string, fragment: string | null) {
     if (fragment === 'testimonials') {
-    this.scrollService.scrollToSection('testimonials', -250);
-  }
+      this.scrollService.scrollToSection('testimonials', -250);
+    }
     if (fragment) {
       this.scrollService.scrollToSection(fragment);
     }

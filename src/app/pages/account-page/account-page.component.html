@@ -18,9 +18,13 @@
         </li>
     </ul>
     <div>
-        <track-order *ngIf="selectedAccountItem === 'track-order'"></track-order>
-        <orders *ngIf="selectedAccountItem === 'orders'"></orders>
-        <addresses *ngIf="selectedAccountItem === 'addresses'"></addresses>
+        <track-order *ngIf="selectedAccountItem === 'track-order'" [ordersList]="ordersList" [billingEmails]="billingEmails"></track-order>
+        <orders *ngIf="selectedAccountItem === 'orders'" [ordersList]="ordersList" [ordersCount]="ordersCount"></orders>
+        <addresses *ngIf="selectedAccountItem === 'addresses'" 
+            [billingAddresses]="billingEmails" 
+            (addBillingAddresses)="addBillingAddress($event)" 
+            [shippingAddresses]="shippingEmails"
+            (addShippingAddresses)="addShippingAddress($event)"></addresses>
         <account-details *ngIf="selectedAccountItem === 'account-details'"></account-details>
         <logout *ngIf="selectedAccountItem === 'logout'"></logout>
     </div>

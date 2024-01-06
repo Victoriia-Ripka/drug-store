@@ -19,7 +19,7 @@
             </div>
         </div>
 
-        <form [formGroup]="form" class="billing-form" *ngIf="isOpenedBillingForm" (ngSubmit)="addBillingAddress()">
+        <form [formGroup]="form" class="billing-form" *ngIf="isOpenedBillingForm" (ngSubmit)="addBillAddress()">
             <div class="billing-field">
                 <label for="name">First Name</label>
                 <input id="name" name="name" placeholder="Nina" [formControl]="nameControl" />
@@ -65,7 +65,7 @@
             </div>
         </div>
 
-        <form [formGroup]="form" class="billing-form" *ngIf="isOpenedShippingForm" (ngSubmit)="addShippingAddress()">
+        <form [formGroup]="form" class="billing-form" *ngIf="isOpenedShippingForm" (ngSubmit)="addShippAddress()">
             <div class="billing-field">
                 <label for="name">First Name</label>
                 <input id="name" name="name" placeholder="Nina" [formControl]="nameControl">

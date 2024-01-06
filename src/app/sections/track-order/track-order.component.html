@@ -2,12 +2,22 @@
     on
     your receipt and in the confirmation email you should have received.</p>
 
-<div class="form">
+<form class="form" [formGroup]="form" (ngSubmit)="sendData()">
     <label for="order">Order ID</label>
-    <input id="order" type="text" placeholder="Found in your order confirmation email.">
+    <select id="order" name="order" formControlName="order">
+        <option value="" disabled selected class="placeholder">Found in your order confirmation email.</option>
+        <option *ngFor="let order of ordersList" value="{{order.id}}">{{order.id}}</option>
+    </select>
 
     <label for="email">Billing email</label>
-    <input id="email" type="text" placeholder="Email you used during checkout.">
+    <select id="email" name="email" formControlName="email">
+        <option value="" disabled selected class="placeholder">Email you used during checkout.</option>
+        <option *ngFor="let email of billingEmails" value="{{email.email}}">{{email.email}}</option>
+    </select>
 
-    <button type="submit">TRACK</button>
-</div>
+    <button type="submit" 
+        [disabled]="form.invalid"
+        [style.background-color]="form.invalid ? 'gray' : '#0F67FE'">
+        TRACK
+    </button>
+</form>
