@@ -7,7 +7,7 @@
 
         </div>
 
-        <form>
+        <form [formGroup]="formBilling">
             <div>
                 <label for="name">First Name</label>
                 <input id="name" type="text" placeholder="Nina" [formControl]="nameControl">
@@ -148,7 +148,7 @@
                     <p>{{product.dose}}</p>
                     <p>QTY <span class="bold-text">X {{product.amount}}</span></p>
                 </div>
-                <p class="bold-text">€{{product.price}}</p>
+                <p class="bold-text">€{{normalizePrice(product.cost)}}</p>
             </li>
         </ul>
         <div class="delivery-info-cont">

@@ -27,8 +27,8 @@ export class ShoppingInformationSecondComponent {
   }
 
   emitClickToThirdStep() {
-    console.log(this.form.value)
-    this.form.reset()
+    console.log(this.formBilling.value)
+    this.formBilling.reset()
     this.clickToThirdStep.emit()
   }
 
@@ -53,7 +53,11 @@ export class ShoppingInformationSecondComponent {
     return this.delivery[1].description
   }
 
-  form = new FormGroup({
+  normalizePrice(price: number): string {
+    return price.toFixed(2)
+  }
+
+  formBilling = new FormGroup({
     name: new FormControl('', Validators.required),
     surname: new FormControl('', Validators.required),
     email: new FormControl('', Validators.required),
@@ -65,39 +69,47 @@ export class ShoppingInformationSecondComponent {
     postcode: new FormControl('', Validators.required)
   });
 
+  formShipping = new FormGroup({
+    country: new FormControl('', Validators.required),
+    street: new FormControl('', Validators.required),
+    apartment: new FormControl('', Validators.required),
+    city: new FormControl('', Validators.required),
+    postcode: new FormControl('', Validators.required)
+  });
+
   get nameControl() {
-    return this.form.get('name') as FormControl
+    return this.formBilling.get('name') as FormControl
   }
 
   get surnameControl() {
-    return this.form.get('surname') as FormControl
+    return this.formBilling.get('surname') as FormControl
   }
 
   get emailControl() {
-    return this.form.get('email') as FormControl
+    return this.formBilling.get('email') as FormControl
   }
 
   get phoneControl() {
-    return this.form.get('phone') as FormControl
+    return this.formBilling.get('phone') as FormControl
   }
 
   get countryControl() {
-    return this.form.get('country') as FormControl
+    return this.formBilling.get('country') as FormControl
   }
 
   get streetControl() {
-    return this.form.get('street') as FormControl
+    return this.formBilling.get('street') as FormControl
   }
 
   get apartmentControl() {
-    return this.form.get('apartment') as FormControl
+    return this.formBilling.get('apartment') as FormControl
   }
 
   get cityControl() {
-    return this.form.get('city') as FormControl
+    return this.formBilling.get('city') as FormControl
   }
 
   get postcodeControl() {
-    return this.form.get('postcode') as FormControl
+    return this.formBilling.get('postcode') as FormControl
   }
 }
