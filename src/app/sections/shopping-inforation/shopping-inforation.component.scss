@@ -155,13 +155,14 @@ h2{
         }
 
         .discription{
-            width: 230px;
+            width: 193px;
             color: #585B5E;
             font-family: Plus Jakarta Sans;
             font-size: 13px;
             font-style: normal;
             font-weight: 400;
             line-height: 16.8px;
+            margin-left: 38px;
             /* 129.231% */
         }
     }
@@ -171,7 +172,7 @@ h2{
         font-family: Plus Jakarta Sans;
         font-size: 18px;
         font-weight: 600;
-        line-height: 1.35
+        line-height: 1.35;
     }
 
     .cost {
@@ -303,4 +304,22 @@ h2{
         line-height: 1.2;
         margin-top: 5px;
     }
+}
+
+.input-cont {
+    display: flex;
+    align-items: center;
+    margin-bottom: 5px;
+}
+
+input{
+    width: 25px;
+    height: 25px;
+    margin: 0;
+    border-radius: 50%;
+    border: 1px solid var(--ui-primary-blue-color)
+}
+
+label{
+    margin-left: 13px;
 }
