@@ -44,8 +44,9 @@ export class ShoppingInforationComponent {
   items: Array<any> = products
   delivery: Array<any> = deliveryTypes
   totalPrice: number = this.calculateTotalPrice()
-  step: 'first' | 'second' | 'third' = 'first'
+  step: 'first' | 'second' | 'third' = 'third'
   deliveryForm: FormGroup;
+  userData: object = {}
 
   constructor(private fb: FormBuilder) { 
     this.deliveryForm = this.fb.group({

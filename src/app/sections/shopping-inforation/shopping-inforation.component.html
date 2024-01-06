@@ -110,10 +110,16 @@
             [totalPrice]="normalizePrice(totalPrice)" 
             [orderList]="items" 
             [delivery]="delivery"
+            [user]="userData"
             (clickToThirdStep)="clickToThirdStep()"></shopping-information-second>
     </div>
 
     <div class="content" *ngIf="step === 'third'">
-        <shopping-information-third></shopping-information-third>
+        <shopping-information-third
+            [orderList]="items" 
+            [totalPrice]="normalizePrice(totalPrice)"
+            [delivery]="delivery"
+            [user]="userData"
+        ></shopping-information-third>
     </div>
 </section>

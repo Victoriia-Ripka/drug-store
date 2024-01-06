@@ -12,6 +12,7 @@ export class ShoppingInformationSecondComponent {
   @Input() totalPrice: string = '0'
   @Input() orderList: Array<any> = []
   @Input() delivery: Array<any> = []
+  @Input() user: object = {}
   @Input() step: 'first' | 'second' | 'third' = 'second'
   
   @Output() clickToThirdStep: EventEmitter<void> = new EventEmitter<void>();

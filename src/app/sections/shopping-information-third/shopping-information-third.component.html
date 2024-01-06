@@ -56,14 +56,14 @@
                 <div>
                     <p class="bold-text">{{product.title}}</p>
                     <p>{{product.dose}}</p>
-                    <p>QTY <span class="bold-text">X {{product.quantity}}</span></p>
+                    <p>QTY <span class="bold-text">X {{product.amount}}</span></p>
                 </div>
-                <p class="bold-text">€{{product.price}}</p>
+                <p class="bold-text">€{{normalizePrice(product.cost)}}</p>
             </li>
         </ul>
         <div class="delivery-info-cont">
-            <p class="bold-text caps-text">Express Delivery</p>
-            <p class="bold-text">€{{deliveryPrice}}</p>
+            <p class="bold-text caps-text">{{getDeliveryType()}}</p>
+            <p class="bold-text">€{{getDeliveryPrice()}}</p>
         </div>
         <div class="total-info-cont">
             <p class="bold-text caps-text">total</p>
