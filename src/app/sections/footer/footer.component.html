@@ -1,5 +1,5 @@
 <footer id="contactus">
-    <a routerLink="/" routerLinkActive="active" ariaCurrentWhenActive="page" class="footer__logo">
+    <a routerLink="/" routerLinkActive="active" ariaCurrentWhenActive="page" class="footer__logo layout">
         <img class="footer__logo-img" src="assets/img/logo-min.png" alt="logo" />
         <div>
             <span class="footer__logo-text italic">Canadian</span>
@@ -7,11 +7,11 @@
         </div>
     </a>
 
-    <p class="text">
+    <p class="text layout">
         Revolutionizing The Personalized Health Industry through the power of AI Technology and Machine Learning.
     </p>
 
-    <div>
+    <div class="layout">
         <nav>
             <ul class="footer__nav-ul">
                 <li><a (click)="navigateToBestsellers()">BestSellers</a></li>
@@ -25,7 +25,7 @@
             </ul>
         </nav>
     </div>
-    <div>
+    <div class="layout">
         <ul class="footer__social-media">
             <li><a><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
                         viewBox="0,0,256,256" width="32px" height="32px">
@@ -81,10 +81,12 @@
                     </svg></a></li>
         </ul>
     </div>
-    <div class="footer__extra-info">
+    <div class="footer__extra-info layout">
         <p>Copyright© 2023 asklepios. inc</p>
         <p><a routerLink="/policies" routerLinkActive="active" ariaCurrentWhenActive="page">Privacy Policy</a></p>
         <p><a>Terms & Conditions</a></p>
     </div>
 
+    <div class="bcgr-down"></div>
+    <div class="bcgr-up"></div>
 </footer>

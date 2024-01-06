@@ -8,19 +8,14 @@ footer {
     border-radius: 24px;
     background: #242E49;
     color: #fff;
-    // margin-top: auto;
+    position: relative;
+    overflow: hidden;
 }
 
 .footer__logo {
     display: flex;
     text-align: center;
-}
-
-.footer__logo {
-    display: flex;
-    align-items: center;
     justify-content: center;
-    // gap: 5px;
     cursor: pointer;
 }
 
@@ -135,4 +130,32 @@ footer {
             }
         }
     }
+}
+
+.bcgr-up{
+    width: 720px;
+    height: 720px;
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-image: url('/assets/img/footer-bcgr-up.png');
+    background-repeat: no-repeat;
+}
+
+.bcgr-down {
+    width: 720px;
+    height: 720px;
+    overflow: hidden;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    transform: rotate(180deg);
+    background-image: url('/assets/img/footer-bcgr-up.png');
+    background-repeat: no-repeat;
+}
+
+.layout{
+    position: relative;
+    z-index: 3;
 }
