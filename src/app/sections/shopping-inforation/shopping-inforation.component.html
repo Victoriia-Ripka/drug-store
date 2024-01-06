@@ -20,11 +20,10 @@
                     <div class="extra-row left-padding">
                         <div class="input-cont">
                             <input id="express" type="checkbox" value="23.30" formControlName="express" (change)="onCheckboxChange('express')">
-                            <label class="title" for="express">Express Delivery</label>
+                            <label class="title" for="express">{{delivery[0].type}}</label>
                         </div>
 
-                        <p class="discription">Free for orders over $300
-                            Delivery takes a few days. Online tracking is available</p>
+                        <p class="discription">{{delivery[0].description}}</p>
                     </div>
                 </div>
                 <div>
@@ -40,7 +39,7 @@
                     </div>
 
                     <div class="extra-row price">
-                        <p>€{{normalizePrice(expressPrice)}}</p>
+                        <p>€{{normalizePrice(delivery[0].price)}}</p>
                     </div>
                 </div>
                 <div>
@@ -51,11 +50,10 @@
                     <div class="extra-row">
                         <div class="input-cont">
                             <input id="regular" type="checkbox" value="23.30" formControlName="regular" (change)="onCheckboxChange('regular')">
-                            <label class="title" for="regular">Regular Delivery</label>
+                            <label class="title" for="regular">{{delivery[1].type}}</label>
                             </div>
 
-                        <p class="discription">Free for orders over $200
-                            Delivery takes a few weeks. Online tracking is not available</p>
+                        <p class="discription">{{delivery[1].description}}</p>
                     </div>
                 </div>
                 <div>
@@ -66,7 +64,7 @@
 
 
                     <div class="extra-row price right-padding">
-                        <p>€{{normalizePrice(regularPrice)}}</p>
+                        <p>€{{normalizePrice(delivery[1].price)}}</p>
                     </div>
                 </div>
                 <div>
@@ -107,7 +105,11 @@
     </div>
 
     <div class="content" *ngIf="step === 'second'">
-        <shopping-information-second [step]="step"
+        <shopping-information-second 
+            [step]="step"  
+            [totalPrice]="normalizePrice(totalPrice)" 
+            [orderList]="items" 
+            [delivery]="delivery"
             (clickToThirdStep)="clickToThirdStep()"></shopping-information-second>
     </div>
 

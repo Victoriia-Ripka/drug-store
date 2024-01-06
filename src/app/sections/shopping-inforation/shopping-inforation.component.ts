@@ -20,6 +20,21 @@ const products = [
   }
 ]
 
+const deliveryTypes = [
+  {
+    "type": "Express Delivery",
+    "price": 25.45,
+    "description": "Free for orders over $300. Delivery takes a few days.Online tracking is available",
+    "choosen": false
+  },
+  {
+    "type": "Regular Delivery",
+    "price": 16.75,
+    "description": "Free for orders over $200. Delivery takes a few weeks.Online tracking is not available",
+    "choosen": false
+  },
+]
+
 @Component({
   selector: 'shopping-inforation',
   templateUrl: './shopping-inforation.component.html',
@@ -27,8 +42,7 @@ const products = [
 })
 export class ShoppingInforationComponent {
   items: Array<any> = products
-  expressPrice = 25.45
-  regularPrice = 16.75
+  delivery: Array<any> = deliveryTypes
   totalPrice: number = this.calculateTotalPrice()
   step: 'first' | 'second' | 'third' = 'first'
   deliveryForm: FormGroup;
@@ -53,11 +67,15 @@ export class ShoppingInforationComponent {
     const regularControl = this.deliveryForm.get('regular')
 
     if (checkedCheckbox === 'express' && expressControl) {
+      this.delivery[0].choosen = true
+      this.delivery[1].choosen = false
       expressControl.setValue(true)
       regularControl?.setValue(false)
     } else if (checkedCheckbox === 'regular' && regularControl) {
       regularControl.setValue(true)
       expressControl?.setValue(false)
+      this.delivery[1].choosen = true
+      this.delivery[0].choosen = false
     }
     this.totalPrice = this.calculateTotalPrice()
   }
@@ -74,7 +92,7 @@ export class ShoppingInforationComponent {
     if (this.expressControl && this.regularControl) {
       const expressSelected = this.expressControl.value ?? false
       const regularSelected = this.regularControl.value ?? false
-      return expressSelected ? this.expressPrice : (regularSelected ? this.regularPrice : 0)
+      return expressSelected ? this.delivery[0].price : (regularSelected ? this.delivery[1].price : 0)
     }
 
     return 0

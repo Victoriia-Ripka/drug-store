@@ -114,7 +114,8 @@
                             [checked]="selectedPaymentMethod === 'paypal'">
                         <label [style.color]="selectedPaymentMethod === 'paypal' ? '#fff' : '#262626'">PayPal</label>
                     </div>
-                    <div class="img-cont" [style.background-color]="selectedPaymentMethod === 'paypal' ? 'rgb(249, 250, 252)' : ''">
+                    <div class="img-cont"
+                        [style.background-color]="selectedPaymentMethod === 'paypal' ? 'rgb(249, 250, 252)' : ''">
                         <img src="assets/img/paypal.png" />
                     </div>
                 </div>
@@ -145,19 +146,18 @@
                 <div>
                     <p class="bold-text">{{product.title}}</p>
                     <p>{{product.dose}}</p>
-                    <p>QTY <span class="bold-text">X {{product.quantity}}</span></p>
+                    <p>QTY <span class="bold-text">X {{product.amount}}</span></p>
                 </div>
                 <p class="bold-text">€{{product.price}}</p>
             </li>
         </ul>
         <div class="delivery-info-cont">
             <div>
-                <p class="bold-text caps-text">Express Delivery</p>
-                <p class="gray-text">Free for orders over $300
-                    Delivery takes a few days. Online tracking is available</p>
+                <p class="bold-text caps-text">{{getDeliveryType()}}</p>
+                <p class="gray-text">{{getDeliveryDesc()}}</p>
             </div>
 
-            <p class="bold-text">€{{deliveryPrice}}</p>
+            <p class="bold-text">€{{getDeliveryPrice()}}</p>
         </div>
         <div class="coupon-cont">
             <p class="bold-text caps-text">coupon</p>

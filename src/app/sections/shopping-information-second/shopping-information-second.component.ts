@@ -7,18 +7,14 @@ import { FormControl, FormGroup, Validators } from '@angular/forms';
   styleUrls: ['./shopping-information-second.component.scss']
 })
 export class ShoppingInformationSecondComponent {
-  orderList: Array<any> = [
-    {
-      title: 'Dutas',
-      dose: '10 pills x 0.5mg',
-      quantity: 1,
-      price: '23.30'
-    },
-
-  ]
-  deliveryPrice: string = '23.30'
-  totalPrice: string = '46.60'
   selectedPaymentMethod: 'credit' | 'paypal' | '' = 'credit'
+  
+  @Input() totalPrice: string = '0'
+  @Input() orderList: Array<any> = []
+  @Input() delivery: Array<any> = []
+  @Input() step: 'first' | 'second' | 'third' = 'second'
+  
+  @Output() clickToThirdStep: EventEmitter<void> = new EventEmitter<void>();
 
   selectMethod(method: string) {
     if (this.selectedPaymentMethod === method) {
@@ -29,17 +25,31 @@ export class ShoppingInformationSecondComponent {
     }
   }
 
-
-  @Input()
-  step: 'first' | 'second' | 'third' = 'second'
-
-  @Output()
-  clickToThirdStep: EventEmitter<void> = new EventEmitter<void>();
-
   emitClickToThirdStep() {
     console.log(this.form.value)
     this.form.reset()
     this.clickToThirdStep.emit()
+  }
+
+  getDeliveryPrice() {
+    if (this.delivery[0].choosen) {
+      return this.delivery[0].price.toFixed(2)
+    }
+    return this.delivery[1].price.toFixed(2)
+  }
+
+  getDeliveryType() {
+    if (this.delivery[0].choosen) {
+      return this.delivery[0].type
+    }
+    return this.delivery[1].type
+  }
+
+  getDeliveryDesc() {
+    if (this.delivery[0].choosen) {
+      return this.delivery[0].description
+    }
+    return this.delivery[1].description
   }
 
   form = new FormGroup({
@@ -55,38 +65,38 @@ export class ShoppingInformationSecondComponent {
   });
 
   get nameControl() {
-    return this.form.get('name') as FormControl;
+    return this.form.get('name') as FormControl
   }
 
   get surnameControl() {
-    return this.form.get('surname') as FormControl;
+    return this.form.get('surname') as FormControl
   }
 
   get emailControl() {
-    return this.form.get('email') as FormControl;
+    return this.form.get('email') as FormControl
   }
 
   get phoneControl() {
-    return this.form.get('phone') as FormControl;
+    return this.form.get('phone') as FormControl
   }
 
   get countryControl() {
-    return this.form.get('country') as FormControl;
+    return this.form.get('country') as FormControl
   }
 
   get streetControl() {
-    return this.form.get('street') as FormControl;
+    return this.form.get('street') as FormControl
   }
 
   get apartmentControl() {
-    return this.form.get('apartment') as FormControl;
+    return this.form.get('apartment') as FormControl
   }
 
   get cityControl() {
-    return this.form.get('city') as FormControl;
+    return this.form.get('city') as FormControl
   }
 
   get postcodeControl() {
-    return this.form.get('postcode') as FormControl;
+    return this.form.get('postcode') as FormControl
   }
 }
