@@ -13,35 +13,35 @@
             <div>
                 <div>
                     <p class="title">ORDER NUMBER</p>
-                    <p class="details">1879605573994</p>
+                    <p class="details">{{user.orderId}}</p>
                 </div>
                 <div>
                     <p class="title">EMAIL</p>
-                    <p class="details">Vitathemes@gmail.com</p>
+                    <p class="details">{{user.billing?.email}}</p>
                 </div>
                 <div>
                     <p class="title">CONTACT NUMBER</p>
-                    <p class="details">+44 8749790988</p>
+                    <p class="details">{{user.billing?.phone}}</p>
                 </div>
             </div>
 
             <div>
                 <div>
                     <p class="title">DELIVERY OPTIONS</p>
-                    <p class="details">Standard delivery</p>
+                    <p class="details">{{getDeliveryType()}}</p>
                 </div>
                 <div>
                     <p class="title">DELIVERY ADDRESS</p>
-                    <p class="details">Kristian holst 34 old street W1F 7NU london United Kingdom
-                    </p>
+                    <p class="details">{{user.billing?.street}} {{user.billing?.apartment}}, {{user.billing?.city}}
+                        {{user.billing?.country}} </p>
                 </div>
                 <div>
                     <p class="title">PAYMENT METHOD</p>
-                    <p class="details">Mastercard*************7865</p>
+                    <p class="details">{{getPaymentType()}}</p>
                 </div>
                 <div>
                     <p class="title">ORDER DATE</p>
-                    <p class="details">October 8,2020</p>
+                    <p class="details">{{user.date}}</p>
                 </div>
 
             </div>

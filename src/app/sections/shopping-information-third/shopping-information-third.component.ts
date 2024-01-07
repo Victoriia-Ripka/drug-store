@@ -1,4 +1,5 @@
 import { Component, Input } from '@angular/core';
+import { User } from 'src/app/types/type';
 
 @Component({
   selector: 'shopping-information-third',
@@ -9,11 +10,7 @@ export class ShoppingInformationThirdComponent {
   @Input() totalPrice: string = '0'
   @Input() orderList: Array<any> = []
   @Input() delivery: Array<any> = []
-  @Input() user: object = {}
-
-  ngOnInit() {
-    console.log(this.orderList)
-  }
+  @Input() user: User = {}
 
   getDeliveryPrice() {
     if (this.delivery[0].choosen) {
@@ -27,6 +24,13 @@ export class ShoppingInformationThirdComponent {
       return this.delivery[0].type
     }
     return this.delivery[1].type
+  }
+
+  getPaymentType() {
+    if (this.user.payment?.paymentMethod == 'credit') {
+      return 'Credit card'
+    }
+    return 'Paypal'
   }
 
   normalizePrice(price: number): string {

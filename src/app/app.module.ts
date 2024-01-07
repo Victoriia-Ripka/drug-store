@@ -15,6 +15,7 @@ import { MatSidenavModule } from '@angular/material/sidenav';
 import { HttpClientModule } from '@angular/common/http';
 import { MatButtonModule } from '@angular/material/button';
 import { MatBadgeModule } from '@angular/material/badge';
+import { DatePipe } from '@angular/common';
 
 import { AppComponent } from './app.component';
 import {
@@ -136,20 +137,7 @@ import {
     MatButtonModule,
     MatBadgeModule
   ],
-  providers: [
-    // {
-    //   provide: 'SocialAuthServiceConfig',
-    //   useValue: {
-    //     autoLogin: false,
-    //     providers: [
-    //       {
-    //         id: GoogleLoginProvider.PROVIDER_ID,
-    //         provider: new GoogleLoginProvider('Google-Client-ID-Goes-Here'),
-    //       },
-    //     ],
-    //   } as SocialAuthServiceConfig,
-    // },
-  ],
+  providers: [DatePipe],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

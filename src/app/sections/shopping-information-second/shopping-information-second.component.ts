@@ -1,5 +1,7 @@
 import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
+import { nanoid } from 'nanoid';
+import { DatePipe } from '@angular/common';
 import { User } from 'src/app/types/type';
 
 @Component({
@@ -23,6 +25,8 @@ export class ShoppingInformationSecondComponent {
 
   @Output() clickToThirdStep: EventEmitter<void> = new EventEmitter<void>()
   @Output() userDataChanged: EventEmitter<User> = new EventEmitter<User>()
+
+  constructor(private datePipe: DatePipe) { }
 
   ngOnInit() {
     this.billingForm = new FormGroup({
@@ -59,7 +63,13 @@ export class ShoppingInformationSecondComponent {
   }
 
   createUser() {
+    const id = nanoid()
+    const today = new Date()
+    const formattedDay = this.datePipe.transform(today, 'MMMM d, yyyy')
+
     this.user = {
+      orderId: id,
+      date: formattedDay,
       billing: {
         name: this.nameControl.value.trim(),
         surname: this.surnameControl.value.trim(),
@@ -72,7 +82,11 @@ export class ShoppingInformationSecondComponent {
         postcode: this.postcodeControl.value.trim(),
       },
       shipping: this.isShippingFormNeeded ? this.shippingForm.value : null,
-      payment: this.paymentForm.value
+      payment: {
+        paymentMethod: this.selectedPaymentMethod,
+        ...this.paymentForm.value
+      }
+
     }
 
     if (this.billingForm.valid && this.paymentForm.valid) {

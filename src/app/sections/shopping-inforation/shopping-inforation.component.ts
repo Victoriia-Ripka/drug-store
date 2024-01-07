@@ -45,7 +45,7 @@ export class ShoppingInforationComponent {
   items: Array<any> = products
   delivery: Array<any> = deliveryTypes
   totalPrice: number = this.calculateTotalPrice()
-  step: 'first' | 'second' | 'third' = 'second'
+  step: 'first' | 'second' | 'third' = 'first'
   deliveryForm: FormGroup;
   userData: User = {}
 

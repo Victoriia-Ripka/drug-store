@@ -12,6 +12,8 @@ export type contactUsMessage = {
 }
 
 export type User = {
+    orderId?: string,
+    date?: string | null,
     billing?: {
         name?: string;
         surname?: string;
@@ -31,6 +33,7 @@ export type User = {
         postcode?: string;
     };
     payment?: {
+        paymentMethod?: string,
         number?: string;
         name?: string;
         date?: string;

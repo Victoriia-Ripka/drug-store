@@ -74,12 +74,10 @@ export class AccountPageComponent {
   }
 
   addBillingAddress(form: any): void {
-    console.log(form)    
     this.billingEmails.push(form)
   }
 
   addShippingAddress(form: any) {
-    console.log(form)
     this.shippingEmails.push(form)
   }
 }
