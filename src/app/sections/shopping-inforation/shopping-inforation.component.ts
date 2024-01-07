@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { FormBuilder, FormControl, FormGroup } from '@angular/forms';
+import { User } from 'src/app/types/type';
 
 const products = [
   {
@@ -46,7 +47,7 @@ export class ShoppingInforationComponent {
   totalPrice: number = this.calculateTotalPrice()
   step: 'first' | 'second' | 'third' = 'second'
   deliveryForm: FormGroup;
-  userData: object = {}
+  userData: User = {}
 
   constructor(private fb: FormBuilder) { 
     this.deliveryForm = this.fb.group({
@@ -57,6 +58,10 @@ export class ShoppingInforationComponent {
 
   clickToSecondStep() {
     this.step = 'second'
+  }
+
+  handleUserDataChange(userData: User) {
+    this.userData = { ...userData }
   }
 
   clickToThirdStep() {

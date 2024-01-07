@@ -7,52 +7,126 @@
 
         </div>
 
-        <form [formGroup]="formBilling">
+        <form [formGroup]="billingForm">
             <div>
                 <label for="name">First Name</label>
                 <input id="name" type="text" placeholder="Nina" [formControl]="nameControl">
+                <div *ngIf="nameControl.invalid && (nameControl.dirty || nameControl.touched)">
+                    <p *ngIf="nameControl.errors" class="error">First Name is required</p>
+                </div>
             </div>
             <div>
-                <label for="name">Last name</label>
-                <input id="name" type="text" placeholder="Jone" [formControl]="nameControl">
+                <label for="surname">Last name</label>
+                <input id="surname" type="text" placeholder="Jone" [formControl]="surnameControl">
+                <div *ngIf="surnameControl.invalid && (surnameControl.dirty || surnameControl.touched)">
+                    <p *ngIf="surnameControl.errors" class="error">Last Name is required</p>
+                </div>
             </div>
             <div>
-                <label for="name">Email</label>
-                <input id="name" type="email" placeholder="ninajone@gmail.com" [formControl]="nameControl">
+                <label for="email">Email</label>
+                <input id="email" type="email" placeholder="ninajone@gmail.com" [formControl]="emailControl">
+                <div *ngIf="emailControl.invalid && (emailControl.dirty || emailControl.touched)">
+                    <p *ngIf="emailControl.errors" class="error">Email is required</p>
+                </div>
             </div>
             <div>
-                <label for="name">Phone</label>
-                <input id="name" email="name" placeholder="+574939393373" [formControl]="nameControl">
+                <label for="phone">Phone</label>
+                <input id="phone" type="text" placeholder="+574939393373" [formControl]="phoneControl">
+                <div *ngIf="phoneControl.invalid && (phoneControl.dirty || phoneControl.touched)">
+                    <p *ngIf="phoneControl.errors" class="error">Phone number is required</p>
+                </div>
             </div>
             <div>
-                <label for="name">Country/Region</label>
-                <input id="name" email="name" placeholder="Nina" [formControl]="nameControl">
+                <label for="country">Country/Region</label>
+                <input id="country" type="text" placeholder="Canada" [formControl]="billingCountryControl">
+                <div *ngIf="billingCountryControl.invalid && (billingCountryControl.dirty || billingCountryControl.touched)">
+                    <p *ngIf="billingCountryControl.errors" class="error">Country is required</p>
+                </div>
             </div>
             <div>
-                <label for="name">Street Address</label>
-                <input id="name" type="text" placeholder="456 Elmwood Avenue" [formControl]="nameControl">
+                <label for="street">Street Address</label>
+                <input id="street" type="text" placeholder="456 Elmwood Avenue" [formControl]="streetControl">
+                <div *ngIf="streetControl.invalid && (streetControl.dirty || streetControl.touched)">
+                    <p *ngIf="streetControl.errors" class="error">Street is required</p>
+                </div>
             </div>
             <div>
-                <label for="name">Apartment</label>
-                <input id="name" type="text" placeholder="150/2" [formControl]="nameControl">
+                <label for="apartment">Apartment</label>
+                <input id="apartment" type="text" placeholder="150/2" [formControl]="apartmentControl">
+                <div *ngIf="apartmentControl.invalid && (apartmentControl.dirty || apartmentControl.touched)">
+                    <p *ngIf="apartmentControl.errors" class="error">Apartment is required</p>
+                </div>
             </div>
             <div>
-                <label for="name">Town/City</label>
-                <input id="name" type="text" placeholder="Toronto" [formControl]="nameControl">
+                <label for="city">Town/City</label>
+                <input id="city" type="text" placeholder="Toronto" [formControl]="cityControl">
+                <div *ngIf="cityControl.invalid && (cityControl.dirty || cityControl.touched)">
+                    <p *ngIf="cityControl.errors" class="error">City is required</p>
+                </div>
             </div>
             <div>
-                <label for="name">Postcode/Zip</label>
-                <input id="name" type="text" placeholder="57449" [formControl]="nameControl">
+                <label for="postcode">Postcode/Zip</label>
+                <input id="postcode" type="text" placeholder="57449" [formControl]="postcodeControl">
+                <div *ngIf="postcodeControl.invalid && (postcodeControl.dirty || postcodeControl.touched)">
+                    <p *ngIf="postcodeControl.errors" class="error">Postcode is required</p>
+                </div>
             </div>
 
             <div class="checkbox-cont">
-                <input type="checkbox" id="checkbox" name="checkbox" class="chackbox-input">
+                <input type="checkbox" id="checkbox" name="checkbox" class="chackbox-input"
+                    formControlName="checkboxControl">
                 <label for="checkbox" class="chackbox-label">My shipping information is not the same as my billing
                     information
                 </label>
             </div>
 
         </form>
+
+
+        <div *ngIf="isShippingFormNeeded">
+            <div class="title-cont">
+                <h2>Shipping address</h2>
+            </div>
+
+            <form [formGroup]="shippingForm">
+                <div>
+                    <label for="country">Country/Region</label>
+                    <input id="country" type="text" placeholder="Canada" [formControl]="sCountryControl">
+                    <div *ngIf="sCountryControl.invalid && (sCountryControl.dirty || sCountryControl.touched)">
+                        <p *ngIf="sCountryControl.errors" class="error">Country is required</p>
+                    </div>
+                </div>
+                <div>
+                    <label for="street">Street Address</label>
+                    <input id="street" type="text" placeholder="456 Elmwood Avenue" [formControl]="sStreetControl">
+                    <div *ngIf="sStreetControl.invalid && (sStreetControl.dirty || sStreetControl.touched)">
+                        <p *ngIf="sStreetControl.errors" class="error">Street is required</p>
+                    </div>
+                </div>
+                <div>
+                    <label for="apartment">Apartment</label>
+                    <input id="apartment" type="text" placeholder="150/2" [formControl]="sApartmentControl">
+                    <div *ngIf="sApartmentControl.invalid && (sApartmentControl.dirty || sApartmentControl.touched)">
+                        <p *ngIf="sApartmentControl.errors" class="error">Apartment is required</p>
+                    </div>
+                </div>
+                <div>
+                    <label for="city">Town/City</label>
+                    <input id="city" type="text" placeholder="Toronto" [formControl]="sCityControl">
+                    <div *ngIf="sCityControl.invalid && (sCityControl.dirty || sCityControl.touched)">
+                        <p *ngIf="sCityControl.errors" class="error">City is required</p>
+                    </div>
+                </div>
+                <div>
+                    <label for="postcode">Postcode/Zip</label>
+                    <input id="postcode" type="text" placeholder="57449" [formControl]="sPostcodeControl">
+                    <div *ngIf="sPostcodeControl.invalid && (sPostcodeControl.dirty || sPostcodeControl.touched)">
+                        <p *ngIf="sPostcodeControl.errors" class="error">Postcode is required</p>
+                    </div>
+                </div>
+
+            </form>
+        </div>
 
         <h2>
             Payment information
@@ -96,14 +170,13 @@
                     </div>
                 </div>
                 <div *ngIf="selectedPaymentMethod==='credit'" class="payment-credit-cart-info-cont">
-                    <form class="payment-form" action="">
-                        <input placeholder="Card number">
-                        <input placeholder="Name on Card">
+                    <form class="payment-form" [formGroup]="paymentForm">
+                        <input placeholder="Card number" [formControl]="numberControl">
+                        <input placeholder="Name on Card" [formControl]="cardNameControl">
                         <div>
-                            <input placeholder="MM / YY">
-                            <input placeholder="Security code">
+                            <input placeholder="MM / YY" [formControl]="dateControl">
+                            <input placeholder="Security code" [formControl]="codeControl">
                         </div>
-
                     </form>
                 </div>
                 <div class="payment-paypal-cont"
@@ -120,12 +193,12 @@
                     </div>
                 </div>
                 <div *ngIf="selectedPaymentMethod==='paypal'" class="payment-paypal-cart-info-cont">
-                    <form class="payment-form" action="">
-                        <input placeholder="Card number">
-                        <input placeholder="Name on Card">
+                    <form class="payment-form" [formGroup]="paymentForm">
+                        <input placeholder="Card number" [formControl]="numberControl">
+                        <input placeholder="Name on Card" [formControl]="cardNameControl">
                         <div>
-                            <input placeholder="MM / YY">
-                            <input placeholder="Security code">
+                            <input placeholder="MM / YY" [formControl]="dateControl">
+                            <input placeholder="Security code" [formControl]="codeControl">
                         </div>
                     </form>
                 </div>

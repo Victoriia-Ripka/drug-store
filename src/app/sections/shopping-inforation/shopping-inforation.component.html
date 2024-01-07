@@ -111,6 +111,7 @@
             [orderList]="items" 
             [delivery]="delivery"
             [user]="userData"
+            (userDataChanged)="handleUserDataChange($event)"
             (clickToThirdStep)="clickToThirdStep()"></shopping-information-second>
     </div>
 
