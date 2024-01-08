@@ -1,6 +1,16 @@
 <header>
     <div class="header-top">
         <div class="container">
+
+            <div class="burger-menu" (click)="toggleMenu()">
+                <div class="top"></div>
+                <div class="center"></div>
+                <div class="bottom"></div>
+            </div>
+
+            <div *ngIf="isMenuOpened" class="menu">
+            </div>
+            
             <a routerLink="/" routerLinkActive="active" ariaCurrentWhenActive="page" class="header-top__logo">
                 <img class="header-top__logo-img" src="assets/img/logo-min.png" alt="logo" />
                 <div>
@@ -114,7 +124,8 @@
                         </svg>
                     </button>
                     <div class="dropdown-cur-content">
-                        <div *ngFor="let country of languages" (click)="selectCurrency(country.currency)"  class="cur-option">
+                        <div *ngFor="let country of languages" (click)="selectCurrency(country.currency)"
+                            class="cur-option">
                             {{country.currency}}
                         </div>
                     </div>

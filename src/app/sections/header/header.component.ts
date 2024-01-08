@@ -19,6 +19,7 @@ const languages = [
 })
 export class HeaderComponent {
   categories = categoriesList
+  isMenuOpened = false
   isAuthorizedUser: boolean = true
   isModalOpen: boolean = false
   query: string = ''
@@ -77,6 +78,11 @@ export class HeaderComponent {
   ngOnDestroy() {
     this.destroy$.next()
     this.destroy$.complete()
+  }
+
+  toggleMenu() {
+    console.log("clicked")
+    this.isMenuOpened != this.isMenuOpened
   }
 
   toggleModal() {

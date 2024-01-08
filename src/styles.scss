@@ -13,6 +13,17 @@
     --ui-secondary-light-color: #FFF;
 }
 
+.some {
+
+    @media screen and (min-width: 375px) {}
+
+    @media screen and (min-width: 480px) { }
+
+    @media screen and (min-width: 678px) { }
+
+    @media screen and (min-width: 1447px) { }
+}
+
 html{
     box-sizing: border-box;
 }
