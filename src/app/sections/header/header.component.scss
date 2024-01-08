@@ -234,20 +234,20 @@ header {
 
 .badge {
     position: absolute;
-    top: -3px;
-    right: -2px;
+    top: -8px;
+    right: -8px;
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 10px;
-    height: 10px;
+    width: 14px;
+    height: 14px;
     background-color: var(--ui-primary-blue-color);
     border-radius: 50%;
     z-index: 1;
 
     color: #FFF;
     font-family: Urbanist;
-    font-size: 6px;
+    font-size: 9px;
     font-weight: 500;
     line-height: 1;
 
