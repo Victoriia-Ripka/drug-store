@@ -1,16 +1,15 @@
 button {
-    width: 270px;
+    width: 252px;
     height: 64px;
     padding: 16px 32px;
     justify-content: center;
     align-items: center;
     border: 1px solid transparent;
-    gap: 10px;
     border-radius: 12px;
     background-color: #0F67FE;
     color: #FFF;
     font-family: 'Plus Jakarta Sans';
-    font-size: 18px;
+    font-size: 16px;
     font-weight: 700;
     letter-spacing: -0.18px;
     cursor: pointer;
@@ -24,5 +23,9 @@ button {
     &:visited,
     &:active {
         background-color: var(--ui-primary-pressed-blue);
+    }
+
+    @media screen and (min-width: 1447px) {
+        width: 270px;
     }
 }
