@@ -1,48 +1,79 @@
 section {
-    width: 1385px;
-    padding: 50px 188px;
+    padding: 40px 35px;
     background-color: #fff;
-    border-radius: 24px;
-    margin: 45px auto 12px;
+    
+
+    @media screen and (min-width: 375px) {
+        padding: 50px 60px;
+    }
+
+    @media screen and (min-width: 480px) { 
+        width: 1385px;
+        padding: 50px 188px;
+        border-radius: 24px;
+        margin: 45px auto 12px;
+    }
 }
 
 h2 {
     color:  #242E49;
     font-family: Plus Jakarta Sans;
-    font-size: 40px;
-    font-style: normal;
+    font-size: 25px;
+    margin-bottom: 25px;
     font-weight: 800;
     line-height: 1.4;
     letter-spacing: -0.8px;
     text-align: center;
     text-transform: capitalize;
-    margin-bottom: 56px;
+
+    @media screen and (min-width: 480px) {
+        font-size: 40px;
+        margin-bottom: 56px;
+    }
 }
 
 ul {
-    width: 859px;
+    width: 252px;
     margin: 0 auto;
+
+    @media screen and (min-width: 480px) {
+        width: 859px;
+    }
 }
 
 li {
     display: flex;
-    width: 859px;
-    align-items: flex-start;
-    gap: 128px;
-    margin-bottom: 60px;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 40px;
 
     &:last-child{
         margin-bottom: 0px;
+    }
+
+    @media screen and (min-width: 480px) {
+        width: 859px;
+        margin-bottom: 60px;
+        gap: 128px;
+        align-items: flex-start;
+        flex-direction: row;
     }
 }
 
 .img-div {
     display: flex;
-    height: 251.592px;
-    padding: 37.459px 29.955px 39.128px 46.633px;
-    justify-content: flex-end;
+    width: 192.19px;
+    height: 192.19px;
+    padding: 26.193px;
+    justify-content: center;
     align-items: center;
-    border-radius: 8.051px;
+    
+    @media screen and (min-width: 480px) {
+        border-radius: 8.051px;
+        height: 251.592px;
+        padding: 37.459px 29.955px 39.128px 46.633px;
+    }
 }
 
 .img-div.one {
@@ -58,49 +89,69 @@ li {
 }
 
 img {
-    width: 175.004px;
-    height: 175.004px;
-}
-
-h3 {
-    color:#242E49;
-    /* Heading md/ExtraBold */
-    font-family: Plus Jakarta Sans;
-    font-size: 36px;
-    font-style: normal;
-    font-weight: 800;
-    line-height: 1.22;
-    letter-spacing: -0.72px;
+    width: 145px;
+    height: 145px;
+    
+    @media screen and (min-width: 480px) {
+        width: 175px;
+        height: 175px;
+    }
 }
 
 .pill-infodiv {
-    width: 491.401px;
     display: flex;
     flex-direction: column;
+    gap: 10px;
+
+    @media screen and (min-width: 480px) {
+        width: 491.401px;
+        gap: 0;
+    }
+}
+
+h3 {
+    color: #242E49;
+    font-family: Plus Jakarta Sans;
+    font-size: 20px;
+    font-weight: 800;
+    line-height: 1.22;
+    letter-spacing: -0.72px;
+    text-align: center;
+
+    @media screen and (min-width: 480px) {
+        font-size: 36px;
+        text-align: left;
+    }
 }
 
 .after-title {
     color: #242E49;
     font-family: Plus Jakarta Sans;
-    font-size: 18px;
-    font-style: normal;
+    text-align: center;
+    font-size: 20px;
     font-weight: 400;
-    line-height: 44px;
     letter-spacing: -0.36px;
-    margin: 16px 0;
+    margin: 0;
 
     span {
         color: #0F67FE;
-        font-family: Plus Jakarta Sans;
-        font-size: 20px;
-        font-style: normal;
         font-weight: 700;
-        line-height: 44px;
         letter-spacing: -0.4px;
+    }
+
+    @media screen and (min-width: 480px) {
+        font-size: 18px;
+        text-align: left;
+        margin: 16px 0;
     }
 }
 
 .pill-info {
+    display: none;
     margin-bottom: 21px;
+
+    @media screen and (min-width: 480px){
+        display: block;
+    }
 }
 
