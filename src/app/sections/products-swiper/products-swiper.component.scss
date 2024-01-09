@@ -1,22 +1,51 @@
 section {
-    width: 1392px;
+    background-color: #fff;
+    padding: 40px 10px;
     margin: 0 auto;
     display: flex;
     flex-direction: column;
-    padding: 50px;
-    gap: 50px;
+    gap: 25px;
+    
+    @media screen and (min-width: 375px) {
+        padding: 60px 10px;
+    }
+
+    @media screen and (min-width: 480px) {
+        background-color: transparent;
+        width: 1392px;
+        gap: 50px;
+        padding: 50px;
+    }
 }
 
 .info-div {
-    width: 1156px;
     margin: 0 auto;
     display: flex;
-    justify-content: space-between;
-    align-items: flex-end;
+
+    @media screen and (min-width: 480px) {
+        width: 1156px;
+        justify-content: space-between;
+        align-items: flex-end;
+    }
 }
 
 .link-button{
+    display: none;
+    
+    @media screen and (min-width: 480px){
+        display: block;
+        position: static;
+    }
+}
+
+.link-button-mobile{
+    display: block;
     position: static;
+    margin: 0 auto;
+
+    @media screen and (min-width: 480px) {
+        display: none;
+    }
 }
 
 .label {
@@ -24,68 +53,123 @@ section {
     color: #3D4966;
     font-family: 'Plus Jakarta Sans';
     font-size: 18px;
-    font-style: normal;
+    line-height: 1;
+    width: 91px;
+    height: 23px;
     font-weight: 700;
-    line-height: normal;
     letter-spacing: -0.18px;
-    margin-left: 15px;
+    margin: 0 auto 15px;
 
     &::before{
         content: ' ';
         display: block;
-        transform: translate(-15px, 15px);
+        transform: translate(-15px, 13px);
         width: 8px;
         height: 8px;
         border-radius: 2px;
         background: #0F67FE;
     }
+
+    @media screen and (min-width: 480px) { 
+        margin: 0 0 0 15px;
+        text-align: left;
+
+        &::before{
+            content: ' ';
+            display: block;
+            transform: translate(-15px, 13px);
+            width: 8px;
+            height: 8px;
+            border-radius: 2px;
+            background: #0F67FE;
+        }
+    }
 }
 
 h3 {
-    color: var(--asklepios-gray-80, #242E49);
+    color:#242E49;
     text-align: center;
     font-family: 'Plus Jakarta Sans';
-    font-size: 40px;
-    font-style: normal;
+    font-size: 25px;
     font-weight: 800;
     line-height: 1.7;
     letter-spacing: -0.8px;
+
+    @media screen and (min-width: 480px) {
+        font-size: 40px;
+     }
 }
 
 .swiper{
-    width: 1156px;
+    width: 300px;
+    height: auto;
     margin: 0 auto;
     overflow: hidden;
+
+    @media screen and (min-width: 480px) {
+        width: 1156px;
+    }
 }
 
 .swiper-wrapper{
-    width: 1156px;
-    margin: 0 auto 50px;
+    width: 300px;
+    height: auto;
+    margin: 0 auto;
     display: flex;
-    gap: 19px;
+    flex-direction: column;
+    gap: 25px;
 
     .swiper-slide {
-        padding: 13px;
-        width: 274px;
-        height: 404px;
+        padding: 20px;
+        width: 290px !important;
+        height: 310px;
         display: flex;
         align-items: center;
         flex-direction: column;
-        gap: 19.27px;
-        background-color: #fff;
+        gap: 10px;
+        background-color: transparent;
         border-radius: 19.3px;
         margin: 0 !important;
     }
     .item-background {
         border-radius: 12.844px;
         background: #EDF5FF;
-        height: 248px;
-        width: 248px;
+        width: 250px;
+        height: 168px;
         padding: 12.844px;
 
         img {
-            margin: 28px auto 0;
+            width: 183.542px;
+            height: 100.64px;
+            margin: 14px auto 0;
         }
+    }
+
+    @media screen and (min-width: 480px) { 
+        width: 1156px;
+        flex-direction: row;
+        gap: 19px;
+        margin: 0 auto 50px;
+
+        .swiper-slide{
+            padding: 13px;
+            width: 274px;
+            height: 404px;
+            gap: 19.27px;
+            background-color: #fff;
+        }
+
+        .item-background{
+            height: 248px;
+            width: 248px;
+            
+            img {
+                width: 223px;
+                height: 175px;
+                margin: 28px auto 0;
+            }
+        }
+
     }
 }
 
@@ -110,52 +194,58 @@ h3 {
 
 .info{
     position: relative;
-    width: 100%;
+    width: 250px;
+
+    @media screen and (min-width: 480px) {
+        width: 100%;
+    }
 }
 
 .info-accessibility{
     color: #5D6A85;
     font-family: Plus Jakarta Sans;
-    font-size: 14px;
-    font-style: normal;
+    font-size: 11px;
     font-weight: 600;
-    line-height: normal;
     letter-spacing: -0.14px;
     margin-bottom: 6.5px;
+
+    @media screen and (min-width: 480px) {
+        font-size: 14px;
+    }
 }
 
 .info-title {
     color: #242E49;
     font-family: Plus Jakarta Sans;
-    font-size: 20px;
-    font-style: normal;
+    font-size: 18px;
     font-weight: 800;
-    line-height: normal;
     letter-spacing: -0.2px;
     margin-bottom: 19.27px;
+
+    @media screen and (min-width: 480px) {
+        font-size: 20px;
+    }
 }
 
 .info-price {
     color: rgba(36, 46, 73, 0.60);
     font-family: Plus Jakarta Sans;
-    font-size: 14.45px;
-    font-style: normal;
+    font-size: 14px;
     font-weight: 400;
-    line-height: normal;
     letter-spacing: -0.144px;
-    margin-bottom: 15px;
+    margin: 0;
 
     span{
         color: #0F67FE;
-        font-family: Plus Jakarta Sans;
-        font-size: 16.056px;
-        font-style: normal;
+        font-size: 16px;
         font-weight: 700;
-        line-height: normal;
         letter-spacing: -0.161px;
     }
-}
 
+    @media screen and (min-width: 480px) { 
+        margin: 0 0 15px 0;
+    }
+}
 
 a {
     position: absolute;
@@ -164,8 +254,15 @@ a {
     cursor: pointer;
 
     img {
-        width: 51.378px;
-        height: 51.378px;
+        width: 39px;
+        height: 39px;
+    }
+
+    @media screen and (min-width: 480px) {
+        img {
+            width: 51px;
+            height: 51px;
+        }
     }
 }
 
@@ -173,9 +270,13 @@ a {
     width: 1156px;
     margin: 0 auto;
     height: 80px;
-    display: flex;
+    display: none;
     justify-content: space-between;
     align-items: center;
+
+    @media screen and (min-width: 480px) { 
+        display: flex;
+    }
 }
 
 .pagination {
