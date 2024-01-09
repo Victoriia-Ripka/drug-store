@@ -1,7 +1,6 @@
 <header>
     <div class="header-top">
         <div class="container">
-
             <div class="burger-menu" (click)="toggleMenu()">
                 <div class="top"></div>
                 <div class="center"></div>
@@ -9,8 +8,87 @@
             </div>
 
             <div *ngIf="isMenuOpened" class="menu">
+                <div class="menu-header">
+                    <a *ngIf="isAuthorizedUser" routerLink="/account" routerLinkActive="active"
+                        ariaCurrentWhenActive="page">Sign in | Register</a>
+                    <a *ngIf="!isAuthorizedUser" (click)="toggleModal()">Sign in | Register</a>
+
+                    <div class="close-btn" (click)="toggleMenu()">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="23" height="24" viewBox="0 0 23 24" fill="none">
+                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                d="M11.5 0.883301C5.14886 0.883301 0 6.03216 0 12.3833C0 18.7344 5.14886 23.8833 11.5 23.8833C17.8511 23.8833 23 18.7344 23 12.3833C23 6.03216 17.8511 0.883301 11.5 0.883301ZM15.3755 9.98607C15.5659 9.7889 15.6713 9.52482 15.6689 9.2507C15.6666 8.97659 15.5566 8.71437 15.3628 8.52054C15.1689 8.3267 14.9067 8.21675 14.6326 8.21437C14.3585 8.21199 14.0944 8.31736 13.8972 8.5078L11.5 10.905L9.10277 8.5078C9.00633 8.40795 8.89097 8.3283 8.76342 8.27351C8.63587 8.21872 8.49869 8.18988 8.35987 8.18868C8.22106 8.18747 8.0834 8.21392 7.95491 8.26649C7.82643 8.31905 7.7097 8.39668 7.61154 8.49484C7.51338 8.593 7.43575 8.70973 7.38319 8.83821C7.33062 8.9667 7.30417 9.10436 7.30538 9.24318C7.30658 9.38199 7.33542 9.51917 7.39021 9.64672C7.445 9.77427 7.52465 9.88963 7.6245 9.98607L10.0217 12.3833L7.6245 14.7805C7.52465 14.877 7.445 14.9923 7.39021 15.1199C7.33542 15.2474 7.30658 15.3846 7.30538 15.5234C7.30417 15.6622 7.33062 15.7999 7.38319 15.9284C7.43575 16.0569 7.51338 16.1736 7.61154 16.2718C7.7097 16.3699 7.82643 16.4475 7.95491 16.5001C8.0834 16.5527 8.22106 16.5791 8.35987 16.5779C8.49869 16.5767 8.63587 16.5479 8.76342 16.4931C8.89097 16.4383 9.00633 16.3587 9.10277 16.2588L11.5 13.8616L13.8972 16.2588C14.0944 16.4492 14.3585 16.5546 14.6326 16.5522C14.9067 16.5499 15.1689 16.4399 15.3628 16.2461C15.5566 16.0522 15.6666 15.79 15.6689 15.5159C15.6713 15.2418 15.5659 14.9777 15.3755 14.7805L12.9783 12.3833L15.3755 9.98607Z"
+                                fill="#F2F5F9" />
+                        </svg>
+                    </div>
+                </div>
+
+                <div class="menu-body">
+                    <div class="menu-body__search">
+                        <input type="" placeholder="Search" [(ngModel)]="query" />
+                        <button (click)="search()"><svg xmlns="http://www.w3.org/2000/svg" width="22" height="23"
+                                viewBox="0 0 22 23" fill="none">
+                                <path
+                                    d="M21.6911 21.0286L17.6125 16.9799C19.1957 15.0045 19.9624 12.497 19.7549 9.97322C19.5475 7.44941 18.3817 5.10105 16.4973 3.41102C14.6128 1.72099 12.153 0.817742 9.62348 0.887009C7.09402 0.956277 4.6872 1.99279 2.89792 3.78343C1.10865 5.57406 0.0729212 7.98271 0.00370586 10.5141C-0.0655094 13.0455 0.83705 15.5072 2.5258 17.3931C4.21455 19.279 6.56112 20.4457 9.08302 20.6532C11.6049 20.8608 14.1105 20.0936 16.0844 18.5092L20.13 22.5579C20.2322 22.661 20.3538 22.7428 20.4878 22.7987C20.6217 22.8545 20.7654 22.8833 20.9106 22.8833C21.0557 22.8833 21.1994 22.8545 21.3333 22.7987C21.4673 22.7428 21.5889 22.661 21.6911 22.5579C21.8892 22.3527 22 22.0786 22 21.7932C22 21.5079 21.8892 21.2338 21.6911 21.0286ZM9.9171 18.5092C8.39508 18.5092 6.90725 18.0575 5.64175 17.2113C4.37624 16.3651 3.3899 15.1623 2.80745 13.7551C2.225 12.3479 2.07261 10.7994 2.36953 9.30549C2.66646 7.81159 3.39938 6.43935 4.47561 5.36231C5.55183 4.28527 6.92303 3.55179 8.41579 3.25464C9.90856 2.95748 11.4559 3.10999 12.862 3.69288C14.2682 4.27577 15.47 5.26287 16.3156 6.52933C17.1612 7.7958 17.6125 9.28476 17.6125 10.8079C17.6125 12.8504 16.8018 14.8093 15.3586 16.2536C13.9154 17.6978 11.958 18.5092 9.9171 18.5092Z"
+                                    fill="#8B96A5" />
+                            </svg></button>
+                    </div>
+                    <div class="menu-body__nav">
+                        <nav>
+                            <ul>
+                                <li> <a routerLink="/about-us" routerLinkActive="active"
+                                        ariaCurrentWhenActive="page">About Us</a> </li>
+                                <li> <a routerLink="/shipping" routerLinkActive="active"
+                                        ariaCurrentWhenActive="page">Shipping</a> </li>
+                                <li><a (click)="navigateToTestimonials()">Testimonials</a></li>
+                                <li> <a routerLink="/faq" routerLinkActive="active" ariaCurrentWhenActive="page">FAQ</a>
+                                </li>
+                                <li> <a routerLink="/policies" routerLinkActive="active"
+                                        ariaCurrentWhenActive="page">Policies</a> </li>
+                                <li> <a routerLink="/contact-us" routerLinkActive="active"
+                                        ariaCurrentWhenActive="page">Contact Us</a> </li>
+                            </ul>
+                        </nav>
+                    </div>
+                    <div class="menu-body__actions">
+                        <div class="language">
+                            <p>Languages</p>
+                            <img src="assets/img/{{selectedLanguageImg}}" class="flag-icon" />
+                            <button class="select">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="13" height="7" viewBox="0 0 13 7"
+                                    fill="none">
+                                    <path d="M0.833496 0.875L6.0835 6.125L11.3335 0.875" stroke="#1E1E28"
+                                        stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                                </svg>
+                                <div class="dropdown-lang-content">
+                                    <div *ngFor="let country of languages" (click)="selectLanguage(country.img)">
+                                        <img src="assets/img/{{country.img}}" class="flag-icon" />
+                                    </div>
+                                </div>
+                            </button>
+
+                        </div>
+                        <div class="currency">
+                            <p>{{selectedCurrency}}</p>
+                            <button class="select">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="13" height="7" viewBox="0 0 13 7"
+                                    fill="none">
+                                    <path d="M0.833496 0.875L6.0835 6.125L11.3335 0.875" stroke="#1E1E28"
+                                        stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                                </svg>
+                                <div class="dropdown-cur-content">
+                                    <div *ngFor="let country of languages" (click)="selectCurrency(country.currency)"
+                                        class="cur-option">
+                                        {{country.currency}}
+                                    </div>
+                                </div>
+                            </button>
+
+                        </div>
+                    </div>
+                </div>
+
             </div>
-            
+
             <a routerLink="/" routerLinkActive="active" ariaCurrentWhenActive="page" class="header-top__logo">
                 <img class="header-top__logo-img" src="assets/img/logo-min.png" alt="logo" />
                 <div>

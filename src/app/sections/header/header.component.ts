@@ -19,7 +19,7 @@ const languages = [
 })
 export class HeaderComponent {
   categories = categoriesList
-  isMenuOpened = false
+  isMenuOpened = true
   isAuthorizedUser: boolean = true
   isModalOpen: boolean = false
   query: string = ''
@@ -81,8 +81,7 @@ export class HeaderComponent {
   }
 
   toggleMenu() {
-    console.log("clicked")
-    this.isMenuOpened != this.isMenuOpened
+    this.isMenuOpened = !this.isMenuOpened
   }
 
   toggleModal() {
@@ -107,6 +106,7 @@ export class HeaderComponent {
   }
 
   search(): void {
+    this.isMenuOpened = false
     this.router.navigate(['/products'], { queryParams: { category: this.category, query: this.query.toLowerCase() } })
   }
 
