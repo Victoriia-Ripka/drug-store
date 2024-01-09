@@ -12,7 +12,11 @@ header {
 .header-top {
     background-color: var(--ui-primary-dark-color);
     color: #fff; 
-    width: 100vw;   
+    width: 100vw;  
+    
+    // @media screen and (min-width: 480px){
+    //     width: auto;
+    // }
 }
 
 .container {
@@ -26,19 +30,14 @@ header {
     position: relative;
 
     @media screen and (min-width: 480px) {
-        width: 480px;
+        width: 1447px;
         padding: 23px 80px;
         height: 86px;
     }
 
-    @media screen and (min-width: 678px) {
-        width: 678px;
-    }
+    @media screen and (min-width: 678px) { }
 
-    @media screen and (min-width: 1447px) {
-        width: 1447px;
-        padding: 23px 80px;
-    }
+    @media screen and (min-width: 1447px) { }
 }
 
 .burger-menu{

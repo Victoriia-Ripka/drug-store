@@ -12,16 +12,18 @@ footer {
 
     @media screen and (min-width: 375px) {}
 
-    @media screen and (min-width: 480px) {}
-    
-    @media screen and (min-width: 678px) {}
-    
-    @media screen and (min-width: 1447px) {
+    @media screen and (min-width: 480px) {
         border-radius: 24px;
         width: 1392px;
         height: 408px;
         padding: 70px 0;
         margin: 24px auto 24px;
+    }
+    
+    @media screen and (min-width: 678px) {}
+    
+    @media screen and (min-width: 1447px) {
+        
     }
 }
 
@@ -70,6 +72,7 @@ footer {
     }
 
     @media screen and (min-width: 480px) {
+        font-size: 48px;
     }
 
     @media screen and (min-width: 678px) {}
@@ -103,14 +106,16 @@ footer {
         font-size: 18px;
     }
 
-    @media screen and (min-width: 480px) { }
+    @media screen and (min-width: 480px) {
+        width: 650px;
+        margin: 24px auto;
+        font-size: 18px;
+     }
 
     @media screen and (min-width: 678px) { }
 
     @media screen and (min-width: 1447px) { 
-        width: 650px;
-        margin: 24px auto;
-        font-size: 18px;
+        
     }
 }
 
@@ -126,15 +131,17 @@ footer {
         font-size: 18px;
     }
 
-    @media screen and (min-width: 480px) { }
-
-    @media screen and (min-width: 678px) { }
-
-    @media screen and (min-width: 1447px) {
+    @media screen and (min-width: 480px) {
         flex-direction: row;
         width: 950px;
         margin: 0 auto 10px;
         gap: 70px;
+     }
+
+    @media screen and (min-width: 678px) { }
+
+    @media screen and (min-width: 1447px) {
+        
     }
 
     & li
@@ -167,12 +174,14 @@ footer {
     margin: 0 auto 30px;
     gap: 32px;
     
-    @media screen and (min-width: 480px) {}
+    @media screen and (min-width: 480px) {
+        margin: 0 auto 10px;
+    }
     
     @media screen and (min-width: 678px) {}
     
     @media screen and (min-width: 1447px) {
-        margin: 0 auto 10px;
+        
     }
 
     li {
@@ -191,14 +200,16 @@ footer {
     
     @media screen and (min-width: 375px) {}
 
-    @media screen and (min-width: 480px) { }
+    @media screen and (min-width: 480px) {
+        flex-direction: row;
+        width: 540px;
+        gap: 54px;
+     }
 
     @media screen and (min-width: 678px) { }
 
     @media screen and (min-width: 1447px) { 
-        flex-direction: row;
-        width: 540px;
-        gap: 54px;
+        
     }
 
     p {
@@ -236,13 +247,15 @@ footer {
 
                 @media screen and (min-width: 375px) {}
 
-                @media screen and (min-width: 480px) { }
+                @media screen and (min-width: 480px) {
+                    top: 6px;
+                    right: -30px;
+                }
 
                 @media screen and (min-width: 678px) { }
 
                 @media screen and (min-width: 1447px) { 
-                    top: 6px;
-                    right: -30px;
+                    
                 }
 
             }
