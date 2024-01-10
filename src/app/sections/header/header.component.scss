@@ -648,6 +648,10 @@ p {
     left: 0;
     background-color: #F2F5F9;
     z-index: 10;
+
+    @media screen and (min-width: 480px) {
+        display: none;
+    }
 }
 
 .menu-header{
@@ -661,7 +665,7 @@ p {
 }
 
 .menu-body__search{
-    padding: 21px 10px 30px;
+    padding: 25px 10px 30px;
     display: flex;
     position: relative;
 
@@ -682,7 +686,7 @@ p {
         background-color: transparent;
         border-color: transparent;
         position: absolute;
-        top: 29px;
+        top: 33px;
         right: 18px;
         width: auto;
         height: auto;

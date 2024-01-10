@@ -19,7 +19,7 @@ const languages = [
 })
 export class HeaderComponent {
   categories = categoriesList
-  isMenuOpened = true
+  isMenuOpened = false
   isAuthorizedUser: boolean = true
   isModalOpen: boolean = false
   query: string = ''

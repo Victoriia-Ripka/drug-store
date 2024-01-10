@@ -6,15 +6,15 @@
                 <h3>{{item.question}}</h3>
                 <p *ngIf="selectedQuestion == item.id">{{item.answer}}</p>
             </div>
-    
+
             <button *ngIf="selectedQuestion !== item.id" type="button" (click)="selectQuestion(item.id)">
                 <mat-icon>add_circle_outline</mat-icon>
             </button>
-    
+
             <button *ngIf="selectedQuestion == item.id" type="button" (click)="hideAnswer()">
                 <mat-icon>cancel</mat-icon>
             </button>
-    
+
         </li>
     </ul>
 </section>

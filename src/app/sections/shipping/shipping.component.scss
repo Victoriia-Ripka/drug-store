@@ -1,29 +1,59 @@
 section {
-    width: 977px;
-    margin: 50px auto 75px;
+    margin: 40px auto 0;
+
+    @media screen and (min-width: 375px) {
+        margin: 50px auto 0;
+    }
+
+    @media screen and (min-width: 480px) { 
+        width: 977px;
+        margin: 50px auto 75px;
+    }
 }
-// як тут змінити колір боді на білий??
 
 h2 {
     color: #2C2C2C;
     text-align: center;
     font-family: Plus Jakarta Sans;
-    font-size: 40px;
-    font-style: normal;
+    font-size: 25px;
     font-weight: 700;
-    line-height: normal;
-    text-transform: uppercase;
-    margin-bottom: 20px;
+    text-transform: capitalize;
+    margin-bottom: 25px;
+
+    @media screen and (min-width: 480px){
+        font-size: 40px;
+        margin-bottom: 20px;
+        text-transform: uppercase;
+    }
 }
 
 li {
+    margin: 0 10px;
+    padding: 20px;
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
     background-color: #F2F5F9;
-    width: 975.708px;
-    height: 109.5px;
-    padding: 39px;
+
+    &:not(&:last-child){
+        border-bottom: 1px solid #E0E0E0;
+    }
+
+    @media screen and (min-width: 375px) {
+        width: 355px;
+        margin: 0 auto;
+    }
+
+    @media screen and (min-width: 480px){
+        width: 975.708px;
+        height: 109.5px;
+        padding: 39px;
+        margin: 0;
+
+        &:not(&:last-child) {
+            border-bottom: 1px solid transparent;
+        }
+    }
 }
 
 .selected-item {
@@ -34,21 +64,27 @@ li {
 h3{
     color: #000;
     font-family: Plus Jakarta Sans;
-    font-size: 22.5px;
-    font-style: normal;
+    font-size: 18px;
     font-weight: 700;
-    line-height: 1.2
+    line-height: 1.2;
+    max-width: 90%;
+
+    @media screen and (min-width: 480px){
+        font-size: 22.5px;
+    }
 }
 
 p {
-    width: 800px;
     color: #292929;
     font-family: Montserrat;
     font-size: 16px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 140%;
-    margin-top: 18px;
+    line-height: 1.4;
+    margin-top: 20px;
+
+    @media screen and (min-width: 480px) {
+        width: 800px;
+        margin-top: 18px;
+    }
 }
 
 button {
@@ -60,7 +96,6 @@ button {
     height: 20px;
     border-radius: 50%;
     background-color: #fff;
-    // background-color: transparent;
     border: 0px solid transparent;
     cursor: pointer;
 
