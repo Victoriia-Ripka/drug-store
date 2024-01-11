@@ -1,114 +1,179 @@
 section {
-    width: 757px;
-    margin: 50px auto 75px ;
+    padding: 20px 10px 0;
+
+    @media screen and (min-width: 375px) {
+        padding: 0;
+        width: 355px;
+        margin: 20px auto 0;
+    }
+
+    @media screen and (min-width: 480px) {
+        width: 757px;
+        margin: 50px auto 75px;
+    }
 }
 
 h2 {
     color: #2C2C2C;
     text-align: center;
     font-family: Plus Jakarta Sans;
-    font-size: 40px;
+    font-size: 25px;
     font-weight: 700;
-    text-transform: uppercase;
-    margin-bottom: 15px;
+    text-transform: capitalize;
+    margin-bottom: 20px;
+
+    @media screen and (min-width: 480px) { 
+        text-transform: uppercase;
+        font-size: 40px;
+        margin-bottom: 15px;
+    }
 }
 
 p {
     color: #2C2C2C;
     text-align: center;
     font-family: Plus Jakarta Sans;
-    font-size: 15px;
-    font-weight: 400;
+    font-size: 16px;
     line-height: 1.5;
-    margin-bottom: 17px;
+    margin-bottom: 20px;
+
+    @media screen and (min-width: 480px){
+        font-size: 15px;
+        margin-bottom: 17px;
+    }
 }
 
 .contact-info {
-    border-radius: 15.75px;
+    border-radius: 28px;
     background-color: #D0E4FF;
-    width: 755.089px;
-    height: 231.759px;
-    padding: 45px;
+    padding: 37px;
     display: flex;
+    flex-direction: column;
     align-items: center;
+    gap: 40px;
     justify-content: space-between;
     margin-bottom: 20px;
 
     h3 {
         color: #2C2C2C;
         font-family: Plus Jakarta Sans;
-        font-size: 18px;
-        font-style: normal;
+        font-size: 16px;
         font-weight: 800;
-        line-height: 19.336px;
-        width: 284.25px;
+        line-height: 1.1;
         padding-bottom: 15px;
         margin-bottom: 15px;
-        /* 107.422% */
         border-bottom: 1px solid rgba(44, 44, 44, 0.1);
+        text-align: center;
     }
 
     p{
         color: #2C2C2C;
         font-family: Plus Jakarta Sans;
-        font-size: 18px;
+        font-size: 16px;
         font-weight: 600;
         line-height: 1.71;
         margin: 0;
         padding: 0;
-        text-align: left;
+        text-align: center;
     }
 
     .gray-text{
         color: rgba(44, 44, 44, 0.6);
         font-family: Plus Jakarta Sans;
-        font-size: 18px;
-        font-weight: 400;
+        font-size: 16px;
         line-height: 1.5;
         display: block;
         margin: 0;
         padding: 0;
     }
+
+    @media screen and (min-width: 375px) {
+        width: 355px;
+        margin: 0 auto;
+    }
+
+    @media screen and (min-width: 480px) {
+        border-radius: 15px;
+        flex-direction: row;
+        width: 755.089px;
+        gap: 0;
+        padding: 45px;
+
+        h3{
+            text-align: left;
+            font-size: 18px;
+        }
+
+        p{
+            font-size: 18px;
+            text-align: left;
+        }
+
+        .gray-text{
+            font-size: 18px;
+        }
+    }
         
 }
 
 form {
-    width: 754px;
     display: flex;
     flex-direction: column;
-    gap: 22.5px;
+    gap: 20px;
     .two-inputs{
         display: flex;
-        gap: 22.5px;
+        flex-direction: column;
+        gap: 20px;
         div{
             display: flex;
             flex-direction: column;
         }
     }
+
+    @media screen and (min-width: 375px) {
+        width: 340px;
+        margin: 0 auto;
+    }
+
+    @media screen and (min-width: 480px) {
+        width: 754px;
+        gap: 22.5px;
+        margin: 0;
+
+        .two-inputs{
+            display: flex;
+            flex-direction: row;
+            gap: 22.5px;
+            div{
+                display: flex;
+                flex-direction: column;
+            }
+        }
+    }
 }
 
 label {
-    margin-bottom: 7.5px;
+    margin-bottom: 10px;
     color: #232536;
     font-family: Plus Jakarta Sans;
     font-size: 18px;
-    font-style: normal;
     font-weight: 600;
     line-height: 1.5;
+
+    @media screen and (min-width: 480px) {
+        margin-bottom: 7.5px;
+    }
 }
 
 input{
-    width: 366px;
-    height: 49px;
-    padding: 15px 23.203px 12.75px 15px;
-    border-radius: 3.75px;
+    height: 58px;
+    padding: 20px 30.937px 17px 20px;
+    border-radius: 5px;
     border: 1px solid rgba(109, 110, 118, 0.50);
     background-color: #FFF;
     color: rgba(35, 37, 54);
     font-family: Plus Jakarta Sans;
-    font-size: 15px;
-    font-style: normal;
-    font-weight: 400;
+    font-size: 18px;
     line-height: 1.8;
 
     &::placeholder{
@@ -121,26 +186,46 @@ input{
     &:focus-visible{
         border: 1px solid var(--ui-primary-blue-color);    
     }
+
+    @media screen and (min-width: 375px) {
+        width: 340px;
+    }
+
+    @media screen and (min-width: 480px) {
+        padding: 15px 23.203px 12.75px 15px;
+        width: 366px;
+        height: 49px;
+        border-radius: 3.75px;
+        font-size: 15px;
+    }
 }
 
 .input-secondtype{
-    margin-top: 7.5px;
-    width: 754px;
+    margin-top: 10px;
+    width: 100%;
+
+    @media screen and (min-width: 375px) {
+        width: 340px;
+    }
+
+    @media screen and (min-width: 480px) {
+        width: 754px;
+        margin-top: 7.5px;
+    }
 }
 
 textarea{
-    width: 754px;
-    height: 127px;
-    margin-top: 7.5px;
-    padding: 15px 23.203px 12.75px 15px;
-    border-radius: 3.75px;
+    width: 100%;
+    height: 173px;
+    margin-top: 10px;
+    padding: 20px 30.937px 17px 20px;
+    border-radius: 5px;
+    
     border: 1px solid rgba(109, 110, 118, 0.50);
     background-color: #FFF;
     color: rgba(35, 37, 54);
     font-family: Plus Jakarta Sans;
-    font-size: 15px;
-    font-style: normal;
-    font-weight: 400;
+    font-size: 18px;
     line-height: 1.8;
 
     &::placeholder {
@@ -153,18 +238,31 @@ textarea{
     &:focus-visible {
         border: 1px solid var(--ui-primary-blue-color);
     }
+
+    @media screen and (min-width: 375px) {
+        width: 340px;
+    }
+
+    @media screen and (min-width: 480px) {
+        width: 754px;
+        height: 127px;
+        border-radius: 3.75px;
+        margin-top: 7.5px;
+        font-size: 15px;
+        padding: 15px 23.203px 12.75px 15px;
+    }
 }
 
 button{
-    width: 754px;
-    height: 50.25px;
+    width: 100%;
+    height: 45px;
     border-radius: 8.75px;
     background-color: var(--ui-primary-blue-color);
     color: #fff;
     text-align: center;
     font-family: Plus Jakarta Sans;
-    font-size: 16px;
-    font-weight: 500;
+    font-size: 18px;
+    font-weight: 700;
     line-height: 1.92;
     text-transform: uppercase;
     border-color: transparent;
@@ -179,6 +277,18 @@ button{
     &:visited,
     &:active {
         background-color: var(--ui-primary-pressed-blue);
+    }
+
+    @media screen and (min-width: 375px) {
+        width: 355px;
+        margin: 0 auto;
+    }
+
+    @media screen and (min-width: 480px) { 
+        width: 754px;
+        height: 50.25px;
+        font-size: 16px;
+        font-weight: 500;
     }
 
 }
