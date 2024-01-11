@@ -1,12 +1,28 @@
 .empty-orderList {
-    width: 1129px;
-    height: 66.841px;
-    border-radius: 3.004px;
-    background-color: rgba(246, 244, 255, 0.80);
-    padding: 20px 23px;
+    height: 107px;
+    padding: 21px;
     display: flex;
+    flex-direction: column;
     justify-content: space-between;
-    border-top: 1px solid rgba(77, 66, 134, 0.60);;
+    align-items: center;
+    border-radius: 4px;
+    background-color: #CADDF6;
+    
+    @media screen and (min-width: 375px) { 
+        width: 355px;
+        margin: 0 auto;
+    }
+
+    @media screen and (min-width: 480px) {
+        width: 1129px;
+        height: 66.841px;
+        padding: 20px 23px;
+        margin: 0;
+        flex-direction: row;
+        border-radius: 3.004px;
+        background-color: rgba(246, 244, 255, 0.80);
+        border-top: 1px solid rgba(77, 66, 134, 0.60);
+    }
 }
 
 p {
@@ -18,10 +34,14 @@ p {
 }
 
 a {
-    color: #4D4286;
+    color: var(--ui-primary-blue-color);
     font-family: Plus Jakarta Sans;
     font-size: 18px;
     font-weight: 700;
+
+    @media screen and (min-width: 480px){
+        color: #4D4286;
+    }
 }
 
 .actions {
