@@ -24,54 +24,6 @@ a {
     font-weight: 700;
 }
 
-table {
-    width: 100%;
-}
-
-thead {
-    width: 100%;
-    tr {
-        // display: inline-block;
-        padding-bottom: 30px;
-
-        th{
-            text-align: left;
-            color: #000;
-            font-family: Plus Jakarta Sans;
-            font-size: 18px;
-            font-weight: 700;
-            line-height: 1.42;
-            text-transform: uppercase;
-        }
-    }
-    
-}
-
-tr{
-    padding-bottom: 30px;
-    margin-bottom: 30px;
-    // display: block;
-
-    td {
-        color: #707070;
-        font-family: Plus Jakarta Sans;
-        font-size: 18px;
-        font-style: normal;
-        font-weight: 400;
-        line-height: 1.4;
-        margin-bottom: 30px;
-    }
-
-    a{
-        color: #4D4286;
-        font-family: Plus Jakarta Sans;
-        font-size: 18px;
-        font-weight: 700;
-        cursor: pointer;
-        text-transform: capitalize;
-    }
-}
-
 .actions {
     text-align: right !important;
 }
@@ -114,8 +66,6 @@ tr{
     color: #707070;
     font-family: Plus Jakarta Sans;
     font-size: 18px;
-    font-style: normal;
-    font-weight: 400;
     line-height: 1.4;
     margin-bottom: 36px;
 }

@@ -1,37 +1,42 @@
 .phrase {
     color: #000;
     font-family: Plus Jakarta Sans;
-    font-size: 15.02px; 
-    font-weight: 400;
+    font-size: 16px; 
     line-height: 1.7;
-    margin-bottom: 40px;
+    margin-bottom: 20px;
+
+    @media screen and (min-width: 480px) { 
+        font-size: 15.02px;
+        margin-bottom: 40px;
+    }
 }
 
 .addresses-cont{
     display: flex;
-    gap: 216px;
+    flex-direction: column;
+    gap: 20px;
 
     h3{
         color: #000;
         font-family: Plus Jakarta Sans;
-        font-size: 25px;
+        font-size: 18px;
         font-weight: 600;
-        line-height: 0.75;
+        line-height: 1.4;
         text-transform: uppercase;
-        margin-bottom: 40px;
+        margin-bottom: 15px;
     }
 
     .add-btn {
-        color: #0F67FE;
+        color: var(--ui-primary-blue-color);
         font-family: Plus Jakarta Sans;
-        font-size: 18px;
+        font-size: 16px;
         font-weight: 700;
         line-height: 1.12;
         background-color: transparent;
         border: transparent;
         text-transform: uppercase;
         padding: 0;
-        margin: 0 0 7px 0;
+        margin: 0 0 15px 0;
         transition: all 0.3s ease;
         position: relative;
         cursor: pointer;
@@ -43,7 +48,7 @@
                 content: ' ';
                 width: 120%;
                 height: 1px;
-                background-color: #0F67FE;
+                background-color: var(--ui-primary-blue-color);
                 bottom: -3px;
                 left: -10%;
             }
@@ -54,23 +59,38 @@
         color: #707070;
         font-family: Plus Jakarta Sans;
         font-size: 16px;
-        font-weight: 400;
         line-height: 1.26;
         width: 268px;
+    }
+
+    @media screen and (min-width: 480px) {
+        flex-direction: row;
+        gap: 216px;
+
+        h3{
+            font-size: 25px;
+            margin-bottom: 40px;
+            line-height: 0.75;
+        }
+
+        .add-btn{
+            font-size: 18px;
+            margin: 0 0 7px 0;
+        }
     }
 }
 
 .billing-form {
     display: flex;
-    width: 391px;
+    width: 100%;
     flex-direction: column;
     align-items: flex-start;
-    gap: 7.5px;
+    gap: 15px;
 
     .billing-field{
         width: 100%;
         padding: 0;
-        margin-bottom: 20px;
+        margin-bottom: 0;
     }
 
     label {
@@ -79,39 +99,46 @@
         font-size: 18px;
         font-weight: 600;
         line-height: 1.5;
-        margin-bottom: 7.5px;
+        margin-bottom: 10px;
         display: block;
     }
 
     input {
         display: block;
         width: 100%;
-        height: 50px;
-        padding: 15px 23.203px 12.75px 15px;
+        height: 58px;
+        padding: 20px 30.937px 17px 20px;
         align-items: center;
-        border-radius: 3.75px;
+        border-radius: 5px;
         border: 0.967px solid rgba(109, 110, 118, 0.50);
         background-color: transparent;
+        transition: border 0.3s ease;
 
         &::placeholder{
             color: rgba(35, 37, 54, 0.50);
             font-family: Plus Jakarta Sans;
             font-size: 18px;
-            font-weight: 400;
             line-height: 1.5;
+        }
+
+        &:focus,
+        &:hover,
+        &:active,
+        &:focus-visible{
+            border: 1px solid var(--ui-primary-blue-color);    
         }
     }
 
     .form-btn{
         width: 100%;
-        height: 53.67px;
-        border-radius: 8.28px;
+        height: 55px;
+        border-radius: 9px;
         border: 1px transparent solid;
-        background-color: #0F67FE;
+        background-color: var(--ui-primary-blue-color);
         display: flex;
         align-items: center;
         justify-content: center;
-        color: #FFF;
+        color: var(--ui-secondary-light-color);
         text-align: center;
         font-family: Plus Jakarta Sans;
         font-size: 15.02px;
@@ -130,6 +157,32 @@
             background-color: var(--ui-primary-pressed-blue);
         }
     }
+
+    @media screen and (min-width: 375px) { 
+        width: 340px;
+        margin: 0 auto;
+    }
+
+    @media screen and (min-width: 480px) { 
+        width: 391px;
+        gap: 7.5px;
+
+        label{
+            margin-bottom: 7.5px;
+        }
+
+        .billing-field{
+            margin-bottom: 20px;
+        }
+
+        input{
+            height: 50px;
+            border-radius: 3.75px;
+            padding: 15px 23.203px 12.75px 15px;
+        }
+
+    }
+
 }
 
 .addresses-list{
@@ -144,7 +197,6 @@
             color: #707070;
             font-family: Urbanist;
             font-size: 16px;
-            font-weight: 400;
             line-height: 1.26;
         }
     }

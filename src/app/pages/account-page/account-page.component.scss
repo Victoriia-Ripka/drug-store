@@ -1,6 +1,16 @@
 section {
-    width: 1130px;
-    margin: 50px auto 75px;
+    padding: 20px 10px 0;
+
+    @media screen and (min-width: 375px) {
+        padding: 0;
+        width: 355px;
+        margin: 20px auto 0;
+    }
+
+    @media screen and (min-width: 480px) {
+        width: 1130px;
+        margin: 50px auto 75px;
+    }
 }
 
 h2 {
@@ -9,20 +19,30 @@ h2 {
     font-family: Plus Jakarta Sans;
     font-size: 30px;
     font-weight: 700;
-    line-height: 0.6;
+    line-height: 1.2;
     letter-spacing: -0.148px;
-    text-transform: uppercase;
-    margin-bottom: 40px;
+    text-transform: capitalize;
+    margin-bottom: 15px;
+
+    @media screen and (min-width: 480px) {
+        text-transform: uppercase;
+        margin-bottom: 40px;
+    }
 }
 
 ul {
     display: flex;
+    flex-direction: column;
     width: 100%;
     justify-content: space-between;
-    padding-bottom: 15px;
-    margin: 0 0 30px;
+    margin: 0 0 30px 0;    
 
-    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+    @media screen and (min-width: 480px) {
+        flex-direction: row;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+        padding-bottom: 15px;
+        margin: 0 0 30px;
+    }
 }
 
 li {
@@ -34,25 +54,45 @@ li {
         color: #5E5E5E;
         font-family: Plus Jakarta Sans;
         font-size: 20px;
-        font-weight: 400;
         line-height: 1.23;
         text-transform: capitalize;
         transition: all 0.3s ease;
+        
 
         &:focus,
         &:hover {
             color: #000;
             font-weight: 700;
         }
+
+        @media screen and (min-width: 480px) { }
     }
 
     div{
-        // width: 120%;
         height: 1px;
         width: 100%;
         background-color: #000;
-        margin-top: 15px;
+        margin-top: 20px;
         position: absolute;
-        // transform: translateX(-10%);
+
+        @media screen and (min-width: 480px) {
+            margin-top: 15px;
+        }
     }
+
+    padding: 20px 0;
+    &:not(&:last-child){
+        border-bottom: 1px solid #D8D8D8;
+    }
+
+    @media screen and (min-width: 480px) {
+        padding: 0;
+        border-bottom: 1px solid transparent;
+        &:not(&:last-child){
+            border-bottom: 1px solid transparent;
+        }
+            
+    }
+
+    
 }

@@ -1,22 +1,25 @@
 p {
-    margin: 0 0 40px;
+    margin: 0 0 20px;
     color: #000;
     font-family: Plus Jakarta Sans;
-    font-size: 15.02px;
-    font-weight: 400;
+    font-size: 16px;
     line-height: 1.7;
+    
+    @media screen and (min-width: 480px) {
+        font-size: 15px;
+        margin: 0 0 40px;
+    }
 }
 
 .form {
-    width: 803px;
-
+    
     label {
         color: #232536;
         font-family: Plus Jakarta Sans;
         font-size: 18px;
-        font-weight: 700;
+        font-weight: 600;
         line-height: 1.5;
-        margin-bottom: 7.5px;
+        margin-bottom: 10px;
         display: block;
         width: 100%;
     }
@@ -24,24 +27,28 @@ p {
     select {
         display: block;
         width: 100%;
-        margin-bottom: 25px;
-        padding: 15px 23.203px 12.75px 15px;
-        height: 55px;
-        border-radius: 3.75px;
+        margin-bottom: 15px;
+        padding: 20px 30.937px 17px 20px;
+        height: 62px;
+        border-radius: 5px;
         border: 1px solid #6D6E76;
         background-color: transparent;
-
         color: rgb(35, 37, 54);
         font-family: Plus Jakarta Sans;
         font-size: 18px;
-        font-weight: 400;
         line-height: 1.5;
+
+        &:focus,
+        &:hover,
+        &:active,
+        &:focus-visible{
+            border: 1px solid var(--ui-primary-blue-color);    
+        }
 
         .placeholder{
             color: rgba(35, 37, 54, 0.50);
             font-family: Plus Jakarta Sans;
             font-size: 18px;
-            font-weight: 400;
             line-height: 1.5;
         }
     }
@@ -54,11 +61,11 @@ p {
         align-items: center;
         border: 1px solid transparent;
         border-radius: 3px;
-        background-color: #0F67FE;
-        color: #FFF;
+        background-color: var(--ui-primary-blue-color);
+        color: var(--ui-secondary-light-color);
         font-family: 'Plus Jakarta Sans';
-        font-size: 15px;
-        font-weight: 600;
+        font-size: 20px;
+        font-weight: 700;
         cursor: pointer;
         transition: background-color 0.3s ease;
     
@@ -70,6 +77,34 @@ p {
         &:visited,
         &:active {
             background-color: var(--ui-primary-pressed-blue);
+        }        
+    }
+
+    @media screen and (min-width: 375px) { 
+        width: 340px;
+        margin: 0 auto;
+    }
+
+    @media screen and (min-width: 480px) { 
+        width: 803px;
+        margin: 0;
+
+        label {
+            margin-bottom: 7.5px;
+            font-weight: 700;
+            border-radius: 3.75px;
         }
+
+        select{
+            margin-bottom: 15px;
+            padding: 15px 23.203px 12.75px 15px;
+        }
+
+        button{
+            margin-top: 30px;
+            font-size: 15px;
+            font-weight: 600;
+        }
+        
     }
 }

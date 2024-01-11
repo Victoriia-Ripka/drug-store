@@ -1,36 +1,56 @@
 .account-det-cont{
-    width: 456.623px;
+    width: 100%;
     margin: 0 auto;
+
+    @media screen and (min-width: 375px) { 
+        width: 355px;
+    }
+
+    @media screen and (min-width: 480px) {
+        width: 456.623px;
+    }
 }
 
 h3{
-    color: #2C2C2C;
+    color: var(--ui-secondary-dark-color);
     font-family: Plus Jakarta Sans;
-    font-size: 25px;
+    font-size: 18px;
     font-weight: 700;
     line-height: 0.75;
     text-transform: uppercase;
-    margin-bottom: 30px;
-    text-align: center;
+    margin-bottom: 20px;
+    text-align: left;
+
+    @media screen and (min-width: 480px){
+        margin-bottom: 30px;
+        text-align: center;
+        font-size: 25px;
+    }
 }
 
 h4{
-    color: #2C2C2C;
+    color: var(--ui-secondary-dark-color);
     font-family: Plus Jakarta Sans;
-    font-size: 25px;
+    font-size: 18px;
     font-weight: 700;
     line-height: 0.75;
     text-transform: uppercase;
-    margin-bottom: 7px;
-    margin-top: 27px;
-    text-align: center;
+    margin-top: 13px;
+    text-align: left;
+
+    @media screen and (min-width: 480px){
+        margin-bottom: 7px;
+        margin-top: 27px;
+        text-align: center;
+        font-size: 25px;
+    }
 }
 
 form{
     width: 100%;
     display: flex;
     flex-direction: column;
-    gap: 23px;
+    gap: 15px;
 
     label{
         color: #232536;
@@ -39,17 +59,17 @@ form{
         font-weight: 600;
         line-height: 1.5;
         display: block;
-        margin-bottom: 7.5px;
+        margin-bottom: 10px;
     }
 
     input{
         width: 100%;
         display: block;
-        border-radius: 3.755px;
+        border-radius: 5px;
         border: 0.968px solid rgba(109, 110, 118, 0.50);
         background-color: transparent;
-        height: 49.568px;
-        padding: 15px 23.235px 12.767px 15px;
+        height: 58px;
+        padding: 20px 30.937px 17px 20px;
 
         &::placeholder{
             color: rgba(109, 110, 118, 0.50);
@@ -61,31 +81,29 @@ form{
     }
 
     p{
-        width: 370px;
+        width: 100%;
         color: #707070;
         font-family: Urbanist;
-        font-size: 15px;
-        font-weight: 400;
-        margin-top: 7.5px;
+        font-size: 12px;
+        margin-top: 10px;
     }
 
     button {
-        border-radius: 8.28px;
-        background-color: #0F67FE;
+        border-radius: 9px;
+        background-color: var(--ui-primary-blue-color);
         border: 1px solid transparent;
         width: 100%;
-        height: 50px;
+        height: 55px;
         display: flex;
         align-items: center;
         justify-content: center;
         cursor: pointer;
         transition: background-color 0.3s ease;
-
         color: #FFF;
         text-align: center;
         font-family: Urbanist;
-        font-size: 15.02px;
-        font-weight: 600;
+        font-size: 20px;
+        font-weight: 700;
         text-transform: uppercase;
     
         &:focus,
@@ -98,9 +116,46 @@ form{
             background-color: var(--ui-primary-pressed-blue);
         }
     }
+
+    @media screen and (min-width: 375px) {
+        width: 355px;
+        margin: 0 auto;
+    }
+
+    @media screen and (min-width: 480px) {
+        width: 100%;
+        gap: 23px;
+
+        label{
+            margin-bottom: 7.5px;
+        }
+
+        input{
+            height: 49.568px;
+            border-radius: 3.755px;
+            padding: 15px 23.235px 12.767px 15px;
+        }
+
+        p{
+            width: 370px;
+            font-size: 15px;
+            margin-top: 7.5px;
+        }
+
+        button{
+            font-size: 15.02px;
+            font-weight: 600;
+        }
+    }
 }
 
 .name-cont{
     display: flex;
-    gap: 22.531px;
+    flex-direction: column;
+    gap: 15px;
+
+    @media screen and (min-width: 480px) {
+        flex-direction: row;
+        gap: 22.531px;
+    }
 }
