@@ -1,5 +1,5 @@
 export * from './about/about-us-page.component'
-export * from './allProducts/products-page.component'
+export * from './all-products/products-page.component'
 export * from './contactus/contactus-page.component'
 export * from './faq/faq-page.component'
 export * from './home/home-page.component'

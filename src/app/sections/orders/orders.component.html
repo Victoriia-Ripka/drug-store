@@ -25,3 +25,17 @@
         <a class="table-text link" *ngFor="let product of ordersList">view order</a>
     </div>
 </div>
+
+<div *ngIf="ordersCount > 0" class="mobile-table">
+    <div *ngFor="let product of ordersList">
+        <p class="table-head-text">order number</p>
+        <p class="table-text">{{product.id}}</p>
+        <p class="table-head-text">date</p>
+        <p class="table-text">{{product.date}}</p>
+        <p class="table-head-text">status</p>
+        <p class="table-text">{{product.status}}</p>
+        <p class="table-head-text">total</p>
+        <p class="table-text">${{product.total}}</p>
+        <a class="action-link">view order</a>
+    </div>
+</div>
