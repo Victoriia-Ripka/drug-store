@@ -15,7 +15,8 @@
                 <span>{{selectedCategory}}</span>
             </p>
 
-            <select id="filterCategories" name="filterCategories" [(ngModel)]="selectedSortOption" (change)="loadData()">
+            <select id="filterCategories" name="filterCategories" [(ngModel)]="selectedSortOption"
+                (change)="loadData()">
                 <!-- <option value="average">Sort by average rating</option> -->
                 <option value="all">All products</option>
                 <option value="popular">Most popular first</option>

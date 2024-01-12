@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import { Router, NavigationEnd } from '@angular/router';
 import { takeUntil } from 'rxjs/operators';
 import { Subject } from 'rxjs';
-import { ScrollService } from '../../services/scroll.service';
+import { ScrollService } from '@services/scroll.service';
 
 @Component({
   selector: 'app-footer',
