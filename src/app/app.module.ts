@@ -54,7 +54,8 @@ import {
   QuestionItemComponent,
   ProductCardComponent,
   PrevIconComponent,
-  NextIconComponent
+  NextIconComponent,
+  CategoriesMenuComponent
 } from 'src/app/components/index';
 import {
   HomePageComponent,
@@ -116,6 +117,7 @@ import {
     ShoppingInformationThirdComponent,
     PrevIconComponent,
     NextIconComponent,
+    CategoriesMenuComponent,
     
   ],
   imports: [

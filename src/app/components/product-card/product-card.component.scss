@@ -1,20 +1,32 @@
 .card {
-    width: 285px;
-    height: 381.618px;
+    width: 140px;
+    height: 213px;
     display: flex;
     flex-direction: column;
     position: relative;
-    border-radius: 12.31px;
+    border-radius: 7px;
     background-color: #E0ECFC;
-    padding: 18px;
+    padding: 10px;
+    margin: 10px;
     z-index: 15;
+
+    @media screen and (min-width: 375px) { 
+        width: 158px;
+    }
+
+    @media screen and (min-width: 480px) { 
+        width: 285px;
+        height: 381.618px;
+        border-radius: 12.31px;
+        padding: 18px;
+    }
 }
 
 .addToCartBottom{
     border-radius: 50%;
-    width: 39.827px;
-    height: 39.827px;
-    margin-left: 217px;
+    width: 21px;
+    height: 21px;
+    margin-left: 100px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -23,6 +35,8 @@
     transition: 0.3s ease border;
 
     .cart{
+        width: 7.837px;
+        height: 7.814px;
         transition: 0.3s ease fill;
     }
 
@@ -33,54 +47,96 @@
             fill: var(--ui-primary-blue-color)
         }
     }
+
+    @media screen and (min-width: 480px){
+        width: 39.827px;
+        height: 39.827px;
+        margin-left: 217px;
+
+        .cart{
+            width: 14.562px;
+            height: 14.483px;
+        }
+    }
 }
 
 .podium {
-    width: 100%;
-    height: 162px;
+    width: 120px;
+    height: 87px;
     background-color: #fff;
-    border-radius: 14.5px;
-    margin: 18px 0;
+    border-radius: 8px;
+    margin: 10px 0;
     display: flex;
     align-items: center;
     justify-content: center;
+
+    @media screen and (min-width: 375px) {
+        width: 140px;
+    }
+
+    @media screen and (min-width: 480px) {
+        width: 100%;
+        height: 162px;
+        border-radius: 14.5px;
+        margin: 18px 0;
+    }
 }
 
 .info{
-    height: 50px;
-    margin-bottom: 27px;
+    height: 30px;
+    margin-bottom: 22px;
 
     h3{
         color: #000;
         font-family: Plus Jakarta Sans;
-        font-size: 18px;
+        font-size: 10px;
         font-weight: 600;
     }
 
     p{
         color: rgba(0, 0, 0, 0.60);
         font-family: Plus Jakarta Sans;
-        font-size: 16px;
+        font-size: 7px;
         font-weight: 400;
+    }
+
+    @media screen and (min-width: 375px) { 
+    }
+
+    @media screen and (min-width: 480px) { 
+        height: 50px;
+        margin-bottom: 27px;
+
+        h3{
+            font-size: 18px;
+        }
+
+        p{
+            font-size: 16px;
+        }
     }
 }
 
 .price{
     color: #000;
     font-family: Plus Jakarta Sans;
-    font-size: 18px;
+    font-size: 10px;
     font-weight: 700;
+
+    @media screen and (min-width: 480px){
+        font-size: 18px;
+    }
 }
 
 .button{
-    width: 58.655px;
-    height: 37.655px;
+    width: 30px;
+    height: 20px;
     position: absolute;
-    bottom: 18px;
-    right: 18px;
-    border-radius: 5.069px;
+    bottom: 10px;
+    right: 10px;
+    border-radius: 2.728px;
     border: 0.724px solid rgba(77, 66, 134, 0.50);
-    background: #0F67FE;
+    background: var(--ui-primary-blue-color);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -92,5 +148,22 @@
     &:hover {
         background-color: var(--ui-primary-hovered-blue);
         border: 0.724px solid var(--ui-primary-hovered-blue);
+    }
+
+    svg{
+        width: 10px;
+        height: 10px;
+    }
+
+    @media screen and (min-width: 480px){
+        width: 58.655px;
+        height: 37.655px;
+        bottom: 18px;
+        border-radius: 5.069px;
+
+        svg{
+            width: 17px;
+            height: 17px;
+        }
     }
 }
