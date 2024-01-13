@@ -19,7 +19,8 @@
 
                     <div class="extra-row left-padding">
                         <div class="input-cont">
-                            <input id="express" type="checkbox" value="23.30" formControlName="express" (change)="onCheckboxChange('express')">
+                            <input id="express" type="checkbox" value="23.30" formControlName="express"
+                                (change)="onCheckboxChange('express')">
                             <label class="title" for="express">{{delivery[0].type}}</label>
                         </div>
 
@@ -49,9 +50,10 @@
 
                     <div class="extra-row">
                         <div class="input-cont">
-                            <input id="regular" type="checkbox" value="23.30" formControlName="regular" (change)="onCheckboxChange('regular')">
+                            <input id="regular" type="checkbox" value="23.30" formControlName="regular"
+                                (change)="onCheckboxChange('regular')">
                             <label class="title" for="regular">{{delivery[1].type}}</label>
-                            </div>
+                        </div>
 
                         <p class="discription">{{delivery[1].description}}</p>
                     </div>
@@ -85,7 +87,7 @@
             <div class="table-nav-cont">
                 <a href="/#/products"><mat-icon>chevron_left</mat-icon> Continue shopping</a>
                 <button type="button" (click)="clickToSecondStep()" [disabled]="!isDeliveryTypeSelected()"
-                [style.background-color]="isDeliveryTypeSelected() ? '#0F67FE' : '#585B5E' ">Pay for order</button>
+                    [style.background-color]="isDeliveryTypeSelected() ? '#0F67FE' : '#585B5E' ">Pay for order</button>
             </div>
         </div>
 
@@ -105,22 +107,13 @@
     </div>
 
     <div class="content" *ngIf="step === 'second'">
-        <shopping-information-second 
-            [step]="step"  
-            [totalPrice]="normalizePrice(totalPrice)" 
-            [orderList]="items" 
-            [delivery]="delivery"
-            [user]="userData"
-            (userDataChanged)="handleUserDataChange($event)"
+        <shopping-information-second [step]="step" [totalPrice]="normalizePrice(totalPrice)" [orderList]="items"
+            [delivery]="delivery" [user]="userData" (userDataChanged)="handleUserDataChange($event)"
             (clickToThirdStep)="clickToThirdStep()"></shopping-information-second>
     </div>
 
     <div class="content" *ngIf="step === 'third'">
-        <shopping-information-third
-            [orderList]="items" 
-            [totalPrice]="normalizePrice(totalPrice)"
-            [delivery]="delivery"
-            [user]="userData"
-        ></shopping-information-third>
+        <shopping-information-third [orderList]="items" [totalPrice]="normalizePrice(totalPrice)" [delivery]="delivery"
+            [user]="userData"></shopping-information-third>
     </div>
 </section>

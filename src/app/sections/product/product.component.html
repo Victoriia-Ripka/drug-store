@@ -6,6 +6,7 @@
         <mat-icon>chevron_right</mat-icon>
         <a>{{product?.title}}</a>
     </div>
+
     <div class="main-info-div">
         <div class="img-wrapper">
             <img />
@@ -15,32 +16,36 @@
             <h2>{{product?.title}}</h2>
             <p class="main-price">from <span>€23.30</span></p>
             <p class="short-desc-text">{{product?.shortDescription}}</p>
-            <div class="delivery">
-                <img src="assets/img/car.png" alt="car" />
-                <p class="delivery-price">Free Standard Shipping Over €182.60</p>
+            <div class="extra-info">
+                <div class="delivery">
+                    <img src="assets/img/car.png" alt="car" />
+                    <p class="delivery-price">Free Standard Shipping Over €182.60</p>
+                </div>
+                <div class="extra">
+                    <p>Analogs of Dutas: <a>Avodart</a></p>
+                    <p>Availability <span>In Stock ({{product?.availableAmount}} packages)</span></p>
+                </div>
             </div>
-            <div class="extra">
-                <p>Analogs of Dutas: <a>Avodart</a></p>
-                <p>Availability <span>In Stock ({{product?.availableAmount}} packages)</span></p>
-            </div>
+
         </div>
     </div>
+
     <div class="price-container">
         <h3>{{product?.title}} 0.5mg</h3>
 
         <div class="product-table">
             <div class="head">
                 <div class="column package">
-                    <p>Package</p>
+                    Package
                 </div>
                 <div class="column">
-                    <p>Per Pill</p>
+                    Per Pill
                 </div>
                 <div class="column max-width">
-                    <div>Per Pack</div>
+                    Per Pack
                 </div>
                 <div class="column">
-                    <p>Order</p>
+                    Order
                 </div>
             </div>
             <div class="body">
@@ -60,7 +65,7 @@
                 <div class="column max-width">
                     <div *ngFor="let package of product?.packages" class="price">
                         <p *ngIf="package.discount">
-                            <span class="old-price">€{{package["old-price"]}}</span> 
+                            <span class="old-price">€{{package["old-price"]}}</span>
                             <span class="discount">{{package.discount}}</span>
                             Only
                         </p>
@@ -78,7 +83,41 @@
 
 
         </div>
+
+        <div class="product-table-mobile">
+            <div class="head">
+                <p>Package</p>
+                <p>Per Pill</p>
+                <p>Per Pack</p>
+            </div>
+            <ul class="body">
+                <li class="column" *ngFor="let package of product?.packages">
+                    <div class="product-info">
+                        <div class="package">
+                            {{package.package}}
+                        </div>
+
+                        <div class="per-pill">
+                            €{{package["per-pill"]}}
+                        </div>
+
+                        <div class="price">
+                            <div *ngIf="package.discount">
+                                <p class="old-price">€{{package["old-price"]}}</p>
+                                <p class="discount">{{package.discount}}</p>
+                                
+                            </div>
+                            <span *ngIf="package.discount">Only</span> €{{package["per-pack"]}}
+                        </div>
+                    </div>
+                    <div class="product-action">
+                        <button (click)="addPackageToCart(product?.id)"><mat-icon>shopping_cart</mat-icon> add </button>
+                    </div>
+                </li>
+            </ul>
+        </div>
     </div>
+
     <div class="product-information">
         <ul class="product-information-navigation">
             <li><button (click)="selectInfoItem('product-description')">product description</button>
