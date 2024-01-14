@@ -7,6 +7,8 @@
                     fill="#1E1E28" />
             </svg>
         </button>
+
+        <h2>Come on in</h2>
         <div class="nav">
             <button type="button" class="signup" (click)="toogleSignUp('sign-up')" [class.active]="openedSignUp"
                 [class.disable]="!openedSignUp">Sign up</button>
@@ -19,7 +21,7 @@
             <form [formGroup]="loginForm" (ngSubmit)="sendData('log-in')">
                 <div>
                     <label for="email">Email address</label>
-                    <input type="email" id="email" [formControl]="loginEmailControl" />
+                    <input type="email" id="email" [formControl]="loginEmailControl" placeholder="ninajone@gmail.com"/>
                 </div>
 
                 <div>
@@ -38,11 +40,11 @@
                         </button>
                     </div>
                     <input type="{{ hidePassword ? 'password' : 'text' }}" id="password"
-                        [formControl]="passwordControl" />
+                        [formControl]="passwordControl" placeholder="*******"/>
                 </div>
 
                 <button class="btn-submit" type="submit" [disabled]="loginForm.invalid"
-                    [style.background-color]="loginForm.invalid ? 'gray' : '#0F67FE'">Log in</button>
+                    [style.background-color]="loginForm.invalid ? '#C3C3C3' : '#0F67FE'">Log in</button>
             </form>
 
             <div class="or-cont">
@@ -86,9 +88,6 @@
                             fill="#EB4335" />
                     </svg>Log in with Google</button>
             </div>
-
-
-
         </div>
 
         <div class="login-cont" *ngIf="openedSignUp">
@@ -136,21 +135,21 @@
                 <div class="name-input-cont">
                     <div>
                         <label for="fname">First name</label>
-                        <input type="fname" id="fname" [formControl]="fnameControl" />
+                        <input type="fname" id="fname" [formControl]="fnameControl" placeholder="Nina"/>
                     </div>
                     <div>
                         <label for="lname">Last name</label>
-                        <input type="lname" id="lname" [formControl]="lnameControl" />
+                        <input type="lname" id="lname" [formControl]="lnameControl" placeholder="Jone"/>
                     </div>
 
                 </div>
                 <div>
                     <label for="email">Email address</label>
-                    <input type="email" id="email" [formControl]="signUpEmailControl" />
+                    <input type="email" id="email" [formControl]="signUpEmailControl" placeholder="ninajone@gmail.com"/>
                 </div>
 
                 <button class="btn-submit" type="submit" [disabled]="signUpForm.invalid"
-                    [style.background-color]="signUpForm.invalid ? 'gray' : '#0F67FE'">Sign up</button>
+                    [style.background-color]="signUpForm.invalid ? '#C3C3C3' : '#0F67FE'">Sign up</button>
             </form>
 
         </div>
