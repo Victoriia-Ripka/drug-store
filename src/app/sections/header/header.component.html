@@ -36,16 +36,16 @@
                         <nav>
                             <ul>
                                 <li> <a routerLink="/about-us" routerLinkActive="active"
-                                        ariaCurrentWhenActive="page">About Us</a> </li>
+                                        ariaCurrentWhenActive="page" (click)="toggleMenu()">About Us</a> </li>
                                 <li> <a routerLink="/shipping" routerLinkActive="active"
-                                        ariaCurrentWhenActive="page">Shipping</a> </li>
-                                <li><a (click)="navigateToTestimonials()">Testimonials</a></li>
-                                <li> <a routerLink="/faq" routerLinkActive="active" ariaCurrentWhenActive="page">FAQ</a>
+                                        ariaCurrentWhenActive="page" (click)="toggleMenu()">Shipping</a> </li>
+                                <li><a (click)="navigateToTestimonials()" (click)="toggleMenu()">Testimonials</a></li>
+                                <li> <a routerLink="/faq" routerLinkActive="active" ariaCurrentWhenActive="page" (click)="toggleMenu()">FAQ</a>
                                 </li>
                                 <li> <a routerLink="/policies" routerLinkActive="active"
-                                        ariaCurrentWhenActive="page">Policies</a> </li>
+                                        ariaCurrentWhenActive="page" (click)="toggleMenu()">Policies</a> </li>
                                 <li> <a routerLink="/contact-us" routerLinkActive="active"
-                                        ariaCurrentWhenActive="page">Contact Us</a> </li>
+                                        ariaCurrentWhenActive="page" (click)="toggleMenu()">Contact Us</a> </li>
                             </ul>
                         </nav>
                     </div>
