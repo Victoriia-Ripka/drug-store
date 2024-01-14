@@ -325,10 +325,14 @@ mat-icon {
 
 .shopping-cart-modal-display-cont {
     position: relative;
-    &:focus .modal,
-    &:hover .modal{
-        display: block;
+
+    @media screen and (min-width: 480px) {
+        &:focus .modal,
+        &:hover .modal{
+            display: block;
+        }
     }
+    
 }
 
 // HEADER BOTTOM 

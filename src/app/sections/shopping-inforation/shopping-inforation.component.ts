@@ -49,7 +49,7 @@ export class ShoppingInforationComponent {
   deliveryForm: FormGroup;
   userData: User = {}
 
-  constructor(private fb: FormBuilder) { 
+  constructor(private fb: FormBuilder) {
     this.deliveryForm = this.fb.group({
       express: false,
       regular: false
@@ -113,10 +113,10 @@ export class ShoppingInforationComponent {
     if (index !== -1) {
       this.items.splice(index, 1);
       this.totalPrice = this.calculateTotalPrice()
-    } 
+    }
   }
 
-  addItemQty(id: number): void {  
+  addItemQty(id: number): void {
     const index = this.items.findIndex(item => item.id === id);
     this.items[index].amount += 1
     this.calculatePrice(id)
@@ -129,7 +129,7 @@ export class ShoppingInforationComponent {
       this.items[index].amount -= 1
       this.calculatePrice(id)
     }
-    if (this.items[index].amount == 0){
+    if (this.items[index].amount == 0) {
       this.items.splice(index, 1)
     }
     this.totalPrice = this.calculateTotalPrice()
@@ -146,6 +146,6 @@ export class ShoppingInforationComponent {
   calculateTotalPrice(): number {
     const deliveryPrice = this.getDeliveryPrice()
     return this.items.reduce((total, product) => total + (product.cost), 0) + deliveryPrice
-    
+
   }
 }

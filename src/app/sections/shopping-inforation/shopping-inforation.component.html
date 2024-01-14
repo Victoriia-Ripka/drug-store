@@ -5,8 +5,9 @@
 
     <div class="content" *ngIf="step === 'first'">
         <div class="main">
+            <h2 class="pseudo-title">Shopping Cart</h2>
             <h3>Only Today. Finalw Sale. Big Discount</h3>
-            <p class="after-title">Low stock: Items in your cart are reserved for you for 30 minutes</p>
+            <p class="after-title">Low stock: Items in your cart are reserved for you for 30 minutes.</p>
 
             <div class="table" [formGroup]="deliveryForm">
                 <div>
@@ -80,18 +81,70 @@
                     </button>
                 </div>
             </div>
+
+            <ul class="table-mobile" [formGroup]="deliveryForm">
+                <li *ngFor="let product of items" class="row-mobile">
+                    <div class="row-left-mobile">
+                        <p class="title">{{product.title}}</p>
+                        <p class="dose">{{product.dose}}</p>
+                        <p class="price">€{{normalizePrice(product.price)}}</p>
+                    </div>
+
+                    <div class="row-right-mobile">
+                        <button class="delete" (click)="deleteProductFromCart(product.id)">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"
+                                fill="none">
+                                <path d="M1.6333 1.71577L14.3924 14.2778M1.6333 14.0828L14.3924 1.52075" stroke="black"
+                                    stroke-width="1.63967" stroke-linecap="round" />
+                            </svg>
+                        </button>
+                        <div class="btn-cont-mobile">
+                            <button class="btn left-btn btn-mobile" (click)="minusItemQty(product.id)">-</button>
+                            <p class="btn btn-mobile">{{product.amount}}</p>
+                            <button class="btn right-btn btn-mobile" (click)="addItemQty(product.id)">+</button>
+                        </div>
+                    </div>
+                </li>
+
+                <div class="delivery-mobile">
+                    <div class="delivery-cont-mobile">
+                        <input class="checkbox-mobile" id="express" type="checkbox" value="23.30" formControlName="express"
+                            (change)="onCheckboxChange('express')">
+                        <div class="delivery-desc-mobile">
+                            <label class="title" for="express">{{delivery[0].type}}</label>
+                            <p class="discription">{{delivery[0].description}}</p>
+                        </div>
+                        <div class="price">
+                            <p>€{{normalizePrice(delivery[0].price)}}</p>
+                        </div>
+                    </div>
+
+                    <div class="delivery-cont-mobile">
+                        <input class="checkbox-mobile" id="regular" type="checkbox" value="23.30" formControlName="regular"
+                            (change)="onCheckboxChange('regular')">
+                        <div class="delivery-desc-mobile">
+                            <label class="title" for="regular">{{delivery[1].type}}</label>
+                            <p class="discription">{{delivery[1].description}}</p>
+                        </div>
+
+                        <div class="price">
+                            <p>€{{normalizePrice(delivery[1].price)}}</p>
+                        </div>
+                    </div>
+                </div>
+            </ul>
+
             <div class="table-footer">
                 <p class="text">Total</p>
                 <p class="total-price">€{{normalizePrice(totalPrice)}}</p>
             </div>
+
             <div class="table-nav-cont">
                 <a href="/#/products"><mat-icon>chevron_left</mat-icon> Continue shopping</a>
                 <button type="button" (click)="clickToSecondStep()" [disabled]="!isDeliveryTypeSelected()"
                     [style.background-color]="isDeliveryTypeSelected() ? '#0F67FE' : '#585B5E' ">Pay for order</button>
             </div>
         </div>
-
-
 
         <div class="aside">
             <img src="assets/img/car.png" />

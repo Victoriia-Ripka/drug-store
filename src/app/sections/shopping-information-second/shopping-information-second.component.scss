@@ -1,57 +1,95 @@
 .section-cont{
     display: flex;
-    gap: 30px;
+    flex-direction: column-reverse;
+    gap: 20px;
+
+    @media screen and (min-width: 375px) { 
+        width: 355px;
+        margin: 0 auto;
+    }
+
+    @media screen and (min-width: 480px) {
+        flex-direction: row;
+        margin: 0;
+        gap: 30px;
+    }
 }
 
 .title-cont{
-    width: 800px;
     display: flex;
+    flex-direction: column;
+    align-items: center;
     justify-content: space-between;
-    margin-bottom: 25px;
+    margin-bottom: 20px;
 
     p{
         color: #262626;
         text-align: right;
         font-family: Plus Jakarta Sans;
-        font-size: 18px;
-        font-style: normal;
-        font-weight: 400;
-        line-height: normal;
+        font-size: 16px;
     }
 
     a{
         text-decoration: underline;
+    }
+
+    @media screen and (min-width: 480px) {
+        width: 800px;
+        flex-direction: row;
+        margin-bottom: 25px;
+
+        p{
+            font-size: 18px;
+        }
+        // align-items: ;
     }
 }
 
 h2{
     color: #000;
     font-family: Plus Jakarta Sans;
-    font-size: 25px;
+    font-size: 30px;
     font-weight: 600;
-    line-height: 0.75;
+    line-height: 1;
     text-transform: uppercase;
-    margin-bottom: 25px;
+    text-align: center;
+
+    @media screen and (min-width: 480px) {
+        font-size: 25px;
+        text-align: left;
+    }
+}
+
+.extra-margin {
+    margin-bottom: 20px;
+
+    @media screen and (min-width: 480px) {
+        margin-bottom: 25px;
+    }
 }
 
 .after-title-text{
     color: #262626 ;
     font-family: Urbanist;
     font-size: 18.872px;
-    margin-bottom: 25px;
+    margin-bottom: 20px;
+    text-align: center;
+
+    @media screen and (min-width: 480px) {
+        margin-bottom: 25px;
+        text-align: left;
+    }
 }
 
-
 form {
-    width: 800px;
     display: flex;
     flex-wrap: wrap;
-    gap: 20px;
-    margin-bottom: 60px;
+    gap: 15px;
+    margin-bottom: 50px;
 
     label{
         display: block;
-        margin-bottom: 7.5px;
+        margin-bottom: 10px;
         color: #232536;
         font-family: Plus Jakarta Sans;
         font-size: 18px;
@@ -65,10 +103,11 @@ form {
 
     input{
         width: 100%;
-        border-radius: 3.75px;
+        border-radius: 5px;
         border: 0.967px solid rgba(109, 110, 118, 0.50);
-        height: 50px;
-        padding: 15px 23.203px 12.75px 15px;
+        height: 58px;
+        padding: 20px 30.937px 17px 20px;
+        
 
         &::placeholder{
             color: rgba(35, 37, 54, 0.50);
@@ -86,29 +125,51 @@ form {
     }
 
     .checkbox-cont{
-        height: 50px;
-        margin-top: 35px;
         display: flex;
         align-items: center;
-        gap: 10px;
+        gap: 13px;
     }
 
     .chackbox-label {
         color: #262626;
         font-family: Plus Jakarta Sans;
         font-size: 16px;
-        font-style: normal;
-        font-weight: 500;
-        line-height: normal;
+        font-weight: 600;
+        margin: 0;
     }
 
     div{
-        width: 390px;
+        width: 100%;
+
+        @media screen and (min-width: 480px){
+            width: 390px;
+        }
+    }
+
+    @media screen and (min-width: 480px) {
+        width: 800px;
+        gap: 20px;
+        margin-bottom: 60px;
+
+        label{
+            margin-bottom: 7.5px;
+        }
+
+        input{
+            border-radius: 3.75px;
+            height: 50px;
+            padding: 15px 23.203px 12.75px 15px;
+        }
+
+        .checkbox-cont{
+            gap: 10px;
+            margin-top: 35px;
+            height: 50px;
+        }
     }
 }
 
 .payment-cont{
-    width: 800px;
     border-radius: 10px;
     border: 0.39px solid rgba(38, 38, 38, 0.5);
     background-color: #F9FAFC;
@@ -118,7 +179,6 @@ form {
     .payment-paypal-cont {
         padding: 24px;
         display: flex;
-        // border: 0.39px solid rgba(38, 38, 38, 0.5);
         align-items: center;
         justify-content: space-between;
     }
@@ -167,24 +227,28 @@ form {
     .payment-paypal-cart-info-cont {
         padding: 24px;
     }
+
+    @media screen and (min-width: 375px) { }
+
+    @media screen and (min-width: 480px) { 
+        width: 800px;
+    }
 }
 
 .summary-cont {
-    border-radius: 21.224px;
+    border-radius: 25.561px;
     background: rgba(208, 228, 255, 0.4);
     border: 1px solid rgba(0, 0, 0, 0.3);
-    width: 294px;
-    height: 100%;
-    padding: 18px 21px;
+    padding: 25px;
 
     h3 {
         color: #000;
         font-family: Plus Jakarta Sans;
-        font-size: 19.101px;
+        font-size: 20px;
         font-weight: 600;
-        line-height: 0.65;
+        line-height: 1;
         text-transform: uppercase;
-        margin-bottom: 10px;
+        margin-bottom: 13px;
     }
 
     ul {
@@ -195,7 +259,7 @@ form {
         display: flex;
         align-items: flex-start;
         justify-content: space-between;
-        padding: 15px 0;
+        padding: 17px 0;
         border-bottom: 1px solid rgba(36, 46, 73, 0.30);
     }
 
@@ -203,7 +267,7 @@ form {
         display: flex;
         align-items: flex-start;
         justify-content: space-between;
-        padding: 15px 0;
+        padding: 17px 0;
         border-bottom: 1px solid rgba(36, 46, 73, 0.30);
 
     }
@@ -212,45 +276,11 @@ form {
         display: flex;
         align-items: center;
         justify-content: space-between;
-        padding: 15px 0 0;
-    }
-
-    .coupon-cont{
-        padding: 15px 0;
-        border-bottom: 1px solid rgba(36, 46, 73, 0.30);
-        
-        p{
-            margin-bottom: 5px;
-        }
-        
-        form {
-            margin: 0;
-            display: flex;
-            gap: 5px;
-            input {
-                width: 152.704px;
-                height: 37.589px;
-                padding: 7.935px 10.414px;
-                font-family: Plus Jakarta Sans;
-                font-size: 16.979px;
-            }
-
-            button {
-                border-radius: 4.011px;
-                background: #242E49;
-                width: 94.191px;
-                height: 37.589px;
-                &:focus,
-                &:hover {
-                    background-color: var(--ui-primary-hovered-blue);
-                }
-            }
-         }
-    
+        padding: 17px 0 0;
     }
 
     .total-price {
-        color: #0F67FE;
+        color: var(--ui-primary-blue-color);
         text-align: right;
         font-family: Plus Jakarta Sans;
         font-size: 16.979px;
@@ -274,61 +304,173 @@ form {
         font-size: 13px;
         line-height: 1.4;
     }
+
+    @media screen and (min-width: 375px) {
+        width: 355px;
+        margin: 0 auto;
+        padding: 18px 21px;
+    }
+
+    @media screen and (min-width: 480px) {
+        border-radius: 21.224px;
+        width: 294px;
+        height: 100%;
+
+        h3{
+            font-size: 19.101px;
+            margin-bottom: 10px;
+        }
+
+        li,
+        .delivery-info-cont,
+        .total-info-cont {
+            padding: 15px 0;
+        }
+    }
 }
 
+.coupon-cont {
+    padding: 17px 0;
+    border-bottom: 1px solid rgba(36, 46, 73, 0.30);
+
+    p {
+        margin-bottom: 5px;
+    }
+
+    form {
+        margin: 0;
+        display: flex;
+        gap: 5px;
+
+        input {
+            width: 60%;
+            height: 37.589px;
+            padding: 7.935px 10.414px;
+            font-family: Plus Jakarta Sans;
+            font-size: 16.979px;
+        }
+
+        button {
+            border-radius: 4.011px;
+            background: var(--ui-primary-dark-color);
+            width: 35%;
+            height: 37.589px;
+
+            &:focus,
+            &:hover {
+                background-color: var(--ui-primary-hovered-blue);
+            }
+        }
+    }
+
+    @media screen and (min-width: 375px) {
+
+        // input{
+        //     width: 183.912px;
+        // }
+
+        // button{
+        //     width: 113.441px;
+        // }
+    }
+
+    @media screen and (min-width: 480px) {
+        padding: 15px 0;
+
+        form{
+            width: 250px;
+        }
+
+        input{
+            width: 152.704px;
+        }
+
+        button{
+            width: 94.191px;
+        }
+    }
+
+}
 
 button {
-    width: 800px;
-    height: 54px;
+    width: 100%;
+    height: 45px;
     display: flex;
     text-transform: uppercase;
     justify-content: center;
     align-items: center;
     border: 1px solid transparent;
     border-radius: 8px;
-    background-color: #0F67FE;
-    color: #FFF;
+    background-color: var(--ui-primary-blue-color);
+    color: var(--ui-secondary-light-color);
     font-family: 'Plus Jakarta Sans';
     font-size: 18px;
     font-weight: 700;
     cursor: pointer;
-
     transition: background-color 0.3s ease;
 
     &:focus,
     &:hover {
         background-color: var(--ui-primary-hovered-blue);
     }
+
+    @media screen and (min-width: 480px) {
+        width: 800px;
+        height: 54px;
+    }
 }
 
 .payment-form{
-    width: 750px;
     display: flex;
-    gap: 24px;
+    gap: 15px;
     flex-direction: column;
     margin: 0;
+
     div{
         display: flex;
-        gap: 24px;
+        gap: 15px;
         input{
-            width: 363px;
+            width: 50%;
+        }
+
+        @media screen and (min-width: 480px){
+            gap: 24px;
+            input{
+                width: 363px;
+            }
         }
     }
 
     input {
-        width: 750px;
-        height: 48.358px;
-        border-radius: 0;
-        padding: 10px;
+        width: 100%;
+        border-radius: 5px;
+        height: 58px;
+        padding: 20px 30.937px 17px 20px;
         border: 0.59px solid rgba(38, 38, 38, 0.70);
         background-color: transparent;
+        font-family: Plus Jakarta Sans;
+        font-size: 18px;
 
         &::placeholder{
             color: rgba(38, 38, 38, 0.70);
         }
-    
-        font-family: Plus Jakarta Sans;
-        font-size: 21px;
+    }
+
+    @media screen and (min-width: 375px) { 
+        width: 303px;
+    }
+
+    @media screen and (min-width: 480px) { 
+        width: 750px;
+        gap: 24px;
+
+        input{
+            width: 750px;
+            height: 48.358px;
+            border-radius: 0;
+            padding: 10px;
+            font-size: 21px;
+        }
     }
 }
 
