@@ -12,7 +12,7 @@ export class ProductsComponent {
   categories = categoriesList
   products: any[] = []
   producrsAmount: number = 0
-  query : string = ''
+  query: string = ''
   selectedCategory: string = 'All Products'
   selectedSortOption: string = 'all'
 
@@ -34,7 +34,7 @@ export class ProductsComponent {
   selectCategoryAndSearchQuery(category: string, query: string) {
     this.query = query.toLowerCase()
     this.selectedCategory = category
-    this.router.navigate(['/products'], { queryParams: { category: category, query: this.query} })
+    this.router.navigate(['/products'], { queryParams: { category: category, query: this.query } })
     this.loadData(query)
   }
 
@@ -53,13 +53,13 @@ export class ProductsComponent {
       if (query !== '') {
         const filteredData = interData.filter(product => product.title.toLowerCase().includes(query))
         interData = filteredData
-      } 
+      }
 
       switch (this.selectedSortOption) {
         // case 'average':
-          // what is avarage
-          // data = data.sort((a, b) => a.price - b.price)
-          // break
+        // what is avarage
+        // data = data.sort((a, b) => a.price - b.price)
+        // break
         case 'popular':
           interData = interData.sort((a, b) => a.popular - b.popular)
           break
