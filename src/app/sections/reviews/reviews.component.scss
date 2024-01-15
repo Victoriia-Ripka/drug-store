@@ -73,7 +73,8 @@ section {
     width: 280px;
     height: 870px;
     overflow: hidden;
-    margin: 0 auto 25px;
+    // overflow: scroll;
+    // margin: 0 auto 25px;
     display: flex;
     flex-direction: column;
     gap: 20px;
@@ -139,7 +140,7 @@ section {
     }
 
     .active {
-        background-color: #0F67FE;
+        background-color: var(--ui-primary-blue-color);
     }
 }
 
@@ -196,7 +197,7 @@ section {
 }
 
 .rewiev-name {
-    color: #F2F5F9;
+    color: var(--ui-primary-light-color);
     font-family: Urbanist;
     font-size: 13px;
     font-weight: 600;
@@ -210,7 +211,7 @@ section {
 }
 
 .pagination-section {
-    display: flex;
+    display: none;
     align-items: center;
     justify-content: center;
     height: 48px;
@@ -222,14 +223,14 @@ section {
         width: 48px;
         height: 48px;
         border-radius: 6px;
-        border: 1px solid #0F67FE;
+        border: 1px solid var(--ui-primary-blue-color);
         background: #C5D9FA;
         cursor: pointer;
     }
 
-    @media screen and (min-width: 375px) {}
-
-    @media screen and (min-width: 480px) { }
+    @media screen and (min-width: 480px) { 
+        display: flex;
+    }
 }
 
 .left mat-icon {
