@@ -7,10 +7,10 @@ import { FormControl, FormGroup, Validators } from '@angular/forms';
   styleUrls: ['./login-modal.component.scss']
 })
 export class LoginModalComponent {
-  hidePassword: boolean = true;
+  hidePassword: boolean = true
   openedSignUp: boolean = true
-  @Input() isModalOpen: boolean = false;
-  @Output() toggleModal: EventEmitter<void> = new EventEmitter<void>();
+  @Input() isModalOpen: boolean = false
+  @Output() toggleModal: EventEmitter<void> = new EventEmitter<void>()
 
   passwordControl = new FormControl('', Validators.required)
 
@@ -62,10 +62,10 @@ export class LoginModalComponent {
   }
 
   closeModel(): void {
-    this.toggleModal.emit();
+    this.toggleModal.emit()
   }
 
   togglePassword() {
-    this.hidePassword = !this.hidePassword;
+    this.hidePassword = !this.hidePassword
   }
 }

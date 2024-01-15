@@ -1,4 +1,11 @@
 <section>
+    <categories-menu *ngIf="isOpenedCategoriesModal" 
+        [isOpened]="isOpenedCategoriesModal"
+        [selectedCategory]="selectedCategory" 
+        (close)="toggleCategoriesModal()"
+        (selectCategoryInModal)="selectCategoryInModal($event)">
+    </categories-menu>
+
     <div class="products-header">
         <div class="products-nav">
             <div>
@@ -24,7 +31,7 @@
                 <option value="expensive">The most expensive first</option>
             </select>
 
-            <button class="categories-btn">
+            <button class="categories-btn" (click)="toggleCategoriesModal()">
                 <svg width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <g id="wrapper">
                         <path id="Vector"
@@ -33,8 +40,6 @@
                     </g>
                 </svg>
             </button>
-
-
         </div>
     </div>
     <mat-drawer-container class="main-container">

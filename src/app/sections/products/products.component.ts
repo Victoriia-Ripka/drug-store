@@ -15,6 +15,7 @@ export class ProductsComponent {
   query: string = ''
   selectedCategory: string = 'All Products'
   selectedSortOption: string = 'all'
+  isOpenedCategoriesModal: boolean = false
 
   pageSize: number = 9
   currentPage: number = 1
@@ -26,12 +27,17 @@ export class ProductsComponent {
       if (params['category'] || params['query']) {
         this.selectCategoryAndSearchQuery(params['category'], params['query'])
       } else {
-        this.loadData();
+        this.loadData()
       }
-    });
+    })
   }
 
-  selectCategoryAndSearchQuery(category: string, query: string) {
+  selectCategoryInModal(selectedCategory: string) {
+    this.selectedCategory = selectedCategory
+    this.selectCategoryAndSearchQuery(this.selectedCategory, this.query)
+  }
+
+  selectCategoryAndSearchQuery(category: string, query: string = '') {
     this.query = query.toLowerCase()
     this.selectedCategory = category
     this.router.navigate(['/products'], { queryParams: { category: category, query: this.query } })
@@ -73,6 +79,10 @@ export class ProductsComponent {
 
       this.products = interData
       this.producrsAmount = this.products.length
-    });
+    })
+  }
+
+  toggleCategoriesModal(): void {
+    this.isOpenedCategoriesModal = !this.isOpenedCategoriesModal
   }
 }

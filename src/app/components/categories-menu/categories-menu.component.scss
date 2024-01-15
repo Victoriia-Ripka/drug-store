@@ -1,0 +1,69 @@
+.categoryModalBackdrop{
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.2);
+    z-index: 10;
+
+    @media screen and (min-width: 480px) { 
+        display: none;
+    }
+}
+
+.categoryModal{
+    width: 100vw;
+    height: 100vh;
+    overflow: scroll;
+    background: #FFF;
+    padding: 25px;
+    z-index: 10;
+    position: relative;
+
+    @media screen and (min-width: 375px) { 
+        width: 312px;
+    }
+}
+
+p{
+    color: var(--dark, #1C1C1C);
+    font-family: Urbanist;
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+button{
+    position: absolute;
+    top: 25px;
+    right: 25px;
+    background-color: transparent;
+    border-color: transparent;
+}
+
+ul{
+    width: 261.521px;
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+}
+
+li{
+    height: 40px;
+    border-radius: 3px;
+    border: 0.771px solid #CCC;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 11px;
+    color:  #000;
+    font-family: Plus Jakarta Sans;
+    font-size: 14px;
+    line-height: 1.2;
+
+    svg{
+        transform: rotate(90deg);
+    }
+}
