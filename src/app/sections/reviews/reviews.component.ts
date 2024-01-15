@@ -18,10 +18,12 @@ export class ReviewsComponent {
     this.mySwiper = new Swiper('#reviewsSwiper', {
       slidesPerView: 3,
       spaceBetween: 20,
+      // direction: 'vertical',
+      enabled: false,
       loop: true,
       pagination: {
         el: '.custom-pagination',
-        renderCustom: (swiper, current, total) => {
+        renderCustom: (_, current, total) => {
           return current + ' of ' + total;
         }
       },
@@ -29,6 +31,12 @@ export class ReviewsComponent {
         nextEl: '.swiper-button-next',
         prevEl: '.swiper-button-prev'
       },
+      breakpoints: {
+        480: {
+          enabled: true,
+          // direction: 'horizontal',
+        }
+      }
     });
   }
 
