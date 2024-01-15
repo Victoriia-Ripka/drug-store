@@ -18,6 +18,7 @@ export class ProductsSwiperComponent {
     this.mySwiper = new Swiper(this.el.nativeElement.querySelector('.swiper'), {
       slidesPerView: 4,
       spaceBetween: 19,
+      enabled: false,
       loop: true,
       pagination: {
         el: '.custom-pagination',
@@ -29,6 +30,11 @@ export class ProductsSwiperComponent {
         nextEl: '.swiper-button-next',
         prevEl: '.swiper-button-prev'
       },
+      breakpoints: {
+        480: {
+          enabled: true,
+        }
+      }
     });
   }
 
